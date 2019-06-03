@@ -1,6 +1,6 @@
 # bracket-string-validator
 
-Validate bracket strings.
+Validate bracket strings (the idea is from the forum 4programmers).
 
 ## Helpful places
 
