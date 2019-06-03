@@ -1,0 +1,6 @@
+{
+    "benchmarkCaseCount": 100,
+    "maxBenchmarkCaseLength": 50,
+    "onlyBracketProbability": 0.8,
+    "bracketDominancePercent": 70
+}

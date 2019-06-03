@@ -1,0 +1,162 @@
+[
+	{
+		"argument": "(",
+		"expectedResult": false
+	},
+	{
+		"argument": ")",
+		"expectedResult": false
+	},
+	{
+		"argument": "((",
+		"expectedResult": false
+	},
+	{
+		"argument": "()",
+		"expectedResult": true
+	},
+	{
+		"argument": ")(",
+		"expectedResult": false
+	},
+	{
+		"argument": "))",
+		"expectedResult": false
+	},
+	{
+		"argument": "(((",
+		"expectedResult": false
+	},
+	{
+		"argument": "(()",
+		"expectedResult": false
+	},
+	{
+		"argument": "()(",
+		"expectedResult": false
+	},
+	{
+		"argument": "())",
+		"expectedResult": false
+	},
+	{
+		"argument": ")((",
+		"expectedResult": false
+	},
+	{
+		"argument": ")()",
+		"expectedResult": false
+	},
+	{
+		"argument": "))(",
+		"expectedResult": false
+	},
+	{
+		"argument": ")))",
+		"expectedResult": false
+	},
+	{
+		"argument": "((((",
+		"expectedResult": false
+	},
+	{
+		"argument": "((()",
+		"expectedResult": false
+	},
+	{
+		"argument": "(()(",
+		"expectedResult": false
+	},
+	{
+		"argument": "(())",
+		"expectedResult": true
+	},
+	{
+		"argument": "()((",
+		"expectedResult": false
+	},
+	{
+		"argument": "()()",
+		"expectedResult": true
+	},
+	{
+		"argument": "())(",
+		"expectedResult": false
+	},
+	{
+		"argument": "()))",
+		"expectedResult": false
+	},
+	{
+		"argument": ")(((",
+		"expectedResult": false
+	},
+	{
+		"argument": ")(()",
+		"expectedResult": false
+	},
+	{
+		"argument": ")()(",
+		"expectedResult": false
+	},
+	{
+		"argument": ")())",
+		"expectedResult": false
+	},
+	{
+		"argument": "))((",
+		"expectedResult": false
+	},
+	{
+		"argument": "))()",
+		"expectedResult": false
+	},
+	{
+		"argument": ")))(",
+		"expectedResult": false
+	},
+	{
+		"argument": "))))",
+		"expectedResult": false
+	},
+	{
+		"argument": null,
+		"expectedResult": false
+	},
+	{
+		"argument": 0,
+		"expectedResult": false
+	},
+	{
+		"argument": 1,
+		"expectedResult": false
+	},
+	{
+		"argument": 100,
+		"expectedResult": false
+	},
+	{
+		"argument": 1.1,
+		"expectedResult": false
+	},
+	{
+		"argument": {},
+		"expectedResult": false
+	},
+	{
+		"argument": [],
+		"expectedResult": false
+	},
+	{
+		"argument": "\"{'BBB':'A'}\"",
+		"expectedResult": false
+	},
+	{
+		"argument": false,
+		"expectedResult": false
+	},
+	{
+		"argument": true,
+		"expectedResult": false
+	}
+]

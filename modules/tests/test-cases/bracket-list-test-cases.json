@@ -1,0 +1,3165 @@
+[{
+    "argument": "(",
+    "expectedResult": false
+},
+{
+    "argument": "[",
+    "expectedResult": false
+},
+{
+    "argument": ")",
+    "expectedResult": false
+},
+{
+    "argument": "]",
+    "expectedResult": false
+},
+{
+    "argument": "1",
+    "expectedResult": false
+},
+{
+    "argument": "((",
+    "expectedResult": false
+},
+{
+    "argument": "([",
+    "expectedResult": false
+},
+{
+    "argument": "()",
+    "expectedResult": true
+},
+{
+    "argument": "(]",
+    "expectedResult": false
+},
+{
+    "argument": "(1",
+    "expectedResult": false
+},
+{
+    "argument": "[(",
+    "expectedResult": false
+},
+{
+    "argument": "[[",
+    "expectedResult": false
+},
+{
+    "argument": "[)",
+    "expectedResult": false
+},
+{
+    "argument": "[]",
+    "expectedResult": true
+},
+{
+    "argument": "[1",
+    "expectedResult": false
+},
+{
+    "argument": ")(",
+    "expectedResult": false
+},
+{
+    "argument": ")[",
+    "expectedResult": false
+},
+{
+    "argument": "))",
+    "expectedResult": false
+},
+{
+    "argument": ")]",
+    "expectedResult": false
+},
+{
+    "argument": ")1",
+    "expectedResult": false
+},
+{
+    "argument": "](",
+    "expectedResult": false
+},
+{
+    "argument": "][",
+    "expectedResult": false
+},
+{
+    "argument": "])",
+    "expectedResult": false
+},
+{
+    "argument": "]]",
+    "expectedResult": false
+},
+{
+    "argument": "]1",
+    "expectedResult": false
+},
+{
+    "argument": "1(",
+    "expectedResult": false
+},
+{
+    "argument": "1[",
+    "expectedResult": false
+},
+{
+    "argument": "1)",
+    "expectedResult": false
+},
+{
+    "argument": "1]",
+    "expectedResult": false
+},
+{
+    "argument": "11",
+    "expectedResult": false
+},
+{
+    "argument": "(((",
+    "expectedResult": false
+},
+{
+    "argument": "(([",
+    "expectedResult": false
+},
+{
+    "argument": "(()",
+    "expectedResult": false
+},
+{
+    "argument": "((]",
+    "expectedResult": false
+},
+{
+    "argument": "((1",
+    "expectedResult": false
+},
+{
+    "argument": "([(",
+    "expectedResult": false
+},
+{
+    "argument": "([[",
+    "expectedResult": false
+},
+{
+    "argument": "([)",
+    "expectedResult": false
+},
+{
+    "argument": "([]",
+    "expectedResult": false
+},
+{
+    "argument": "([1",
+    "expectedResult": false
+},
+{
+    "argument": "()(",
+    "expectedResult": false
+},
+{
+    "argument": "()[",
+    "expectedResult": false
+},
+{
+    "argument": "())",
+    "expectedResult": false
+},
+{
+    "argument": "()]",
+    "expectedResult": false
+},
+{
+    "argument": "()1",
+    "expectedResult": false
+},
+{
+    "argument": "(](",
+    "expectedResult": false
+},
+{
+    "argument": "(][",
+    "expectedResult": false
+},
+{
+    "argument": "(])",
+    "expectedResult": false
+},
+{
+    "argument": "(]]",
+    "expectedResult": false
+},
+{
+    "argument": "(]1",
+    "expectedResult": false
+},
+{
+    "argument": "(1(",
+    "expectedResult": false
+},
+{
+    "argument": "(1[",
+    "expectedResult": false
+},
+{
+    "argument": "(1)",
+    "expectedResult": false
+},
+{
+    "argument": "(1]",
+    "expectedResult": false
+},
+{
+    "argument": "(11",
+    "expectedResult": false
+},
+{
+    "argument": "[((",
+    "expectedResult": false
+},
+{
+    "argument": "[([",
+    "expectedResult": false
+},
+{
+    "argument": "[()",
+    "expectedResult": false
+},
+{
+    "argument": "[(]",
+    "expectedResult": false
+},
+{
+    "argument": "[(1",
+    "expectedResult": false
+},
+{
+    "argument": "[[(",
+    "expectedResult": false
+},
+{
+    "argument": "[[[",
+    "expectedResult": false
+},
+{
+    "argument": "[[)",
+    "expectedResult": false
+},
+{
+    "argument": "[[]",
+    "expectedResult": false
+},
+{
+    "argument": "[[1",
+    "expectedResult": false
+},
+{
+    "argument": "[)(",
+    "expectedResult": false
+},
+{
+    "argument": "[)[",
+    "expectedResult": false
+},
+{
+    "argument": "[))",
+    "expectedResult": false
+},
+{
+    "argument": "[)]",
+    "expectedResult": false
+},
+{
+    "argument": "[)1",
+    "expectedResult": false
+},
+{
+    "argument": "[](",
+    "expectedResult": false
+},
+{
+    "argument": "[][",
+    "expectedResult": false
+},
+{
+    "argument": "[])",
+    "expectedResult": false
+},
+{
+    "argument": "[]]",
+    "expectedResult": false
+},
+{
+    "argument": "[]1",
+    "expectedResult": false
+},
+{
+    "argument": "[1(",
+    "expectedResult": false
+},
+{
+    "argument": "[1[",
+    "expectedResult": false
+},
+{
+    "argument": "[1)",
+    "expectedResult": false
+},
+{
+    "argument": "[1]",
+    "expectedResult": false
+},
+{
+    "argument": "[11",
+    "expectedResult": false
+},
+{
+    "argument": ")((",
+    "expectedResult": false
+},
+{
+    "argument": ")([",
+    "expectedResult": false
+},
+{
+    "argument": ")()",
+    "expectedResult": false
+},
+{
+    "argument": ")(]",
+    "expectedResult": false
+},
+{
+    "argument": ")(1",
+    "expectedResult": false
+},
+{
+    "argument": ")[(",
+    "expectedResult": false
+},
+{
+    "argument": ")[[",
+    "expectedResult": false
+},
+{
+    "argument": ")[)",
+    "expectedResult": false
+},
+{
+    "argument": ")[]",
+    "expectedResult": false
+},
+{
+    "argument": ")[1",
+    "expectedResult": false
+},
+{
+    "argument": "))(",
+    "expectedResult": false
+},
+{
+    "argument": "))[",
+    "expectedResult": false
+},
+{
+    "argument": ")))",
+    "expectedResult": false
+},
+{
+    "argument": "))]",
+    "expectedResult": false
+},
+{
+    "argument": "))1",
+    "expectedResult": false
+},
+{
+    "argument": ")](",
+    "expectedResult": false
+},
+{
+    "argument": ")][",
+    "expectedResult": false
+},
+{
+    "argument": ")])",
+    "expectedResult": false
+},
+{
+    "argument": ")]]",
+    "expectedResult": false
+},
+{
+    "argument": ")]1",
+    "expectedResult": false
+},
+{
+    "argument": ")1(",
+    "expectedResult": false
+},
+{
+    "argument": ")1[",
+    "expectedResult": false
+},
+{
+    "argument": ")1)",
+    "expectedResult": false
+},
+{
+    "argument": ")1]",
+    "expectedResult": false
+},
+{
+    "argument": ")11",
+    "expectedResult": false
+},
+{
+    "argument": "]((",
+    "expectedResult": false
+},
+{
+    "argument": "]([",
+    "expectedResult": false
+},
+{
+    "argument": "]()",
+    "expectedResult": false
+},
+{
+    "argument": "](]",
+    "expectedResult": false
+},
+{
+    "argument": "](1",
+    "expectedResult": false
+},
+{
+    "argument": "][(",
+    "expectedResult": false
+},
+{
+    "argument": "][[",
+    "expectedResult": false
+},
+{
+    "argument": "][)",
+    "expectedResult": false
+},
+{
+    "argument": "][]",
+    "expectedResult": false
+},
+{
+    "argument": "][1",
+    "expectedResult": false
+},
+{
+    "argument": "])(",
+    "expectedResult": false
+},
+{
+    "argument": "])[",
+    "expectedResult": false
+},
+{
+    "argument": "]))",
+    "expectedResult": false
+},
+{
+    "argument": "])]",
+    "expectedResult": false
+},
+{
+    "argument": "])1",
+    "expectedResult": false
+},
+{
+    "argument": "]](",
+    "expectedResult": false
+},
+{
+    "argument": "]][",
+    "expectedResult": false
+},
+{
+    "argument": "]])",
+    "expectedResult": false
+},
+{
+    "argument": "]]]",
+    "expectedResult": false
+},
+{
+    "argument": "]]1",
+    "expectedResult": false
+},
+{
+    "argument": "]1(",
+    "expectedResult": false
+},
+{
+    "argument": "]1[",
+    "expectedResult": false
+},
+{
+    "argument": "]1)",
+    "expectedResult": false
+},
+{
+    "argument": "]1]",
+    "expectedResult": false
+},
+{
+    "argument": "]11",
+    "expectedResult": false
+},
+{
+    "argument": "1((",
+    "expectedResult": false
+},
+{
+    "argument": "1([",
+    "expectedResult": false
+},
+{
+    "argument": "1()",
+    "expectedResult": false
+},
+{
+    "argument": "1(]",
+    "expectedResult": false
+},
+{
+    "argument": "1(1",
+    "expectedResult": false
+},
+{
+    "argument": "1[(",
+    "expectedResult": false
+},
+{
+    "argument": "1[[",
+    "expectedResult": false
+},
+{
+    "argument": "1[)",
+    "expectedResult": false
+},
+{
+    "argument": "1[]",
+    "expectedResult": false
+},
+{
+    "argument": "1[1",
+    "expectedResult": false
+},
+{
+    "argument": "1)(",
+    "expectedResult": false
+},
+{
+    "argument": "1)[",
+    "expectedResult": false
+},
+{
+    "argument": "1))",
+    "expectedResult": false
+},
+{
+    "argument": "1)]",
+    "expectedResult": false
+},
+{
+    "argument": "1)1",
+    "expectedResult": false
+},
+{
+    "argument": "1](",
+    "expectedResult": false
+},
+{
+    "argument": "1][",
+    "expectedResult": false
+},
+{
+    "argument": "1])",
+    "expectedResult": false
+},
+{
+    "argument": "1]]",
+    "expectedResult": false
+},
+{
+    "argument": "1]1",
+    "expectedResult": false
+},
+{
+    "argument": "11(",
+    "expectedResult": false
+},
+{
+    "argument": "11[",
+    "expectedResult": false
+},
+{
+    "argument": "11)",
+    "expectedResult": false
+},
+{
+    "argument": "11]",
+    "expectedResult": false
+},
+{
+    "argument": "111",
+    "expectedResult": false
+},
+{
+    "argument": "((((",
+    "expectedResult": false
+},
+{
+    "argument": "((([",
+    "expectedResult": false
+},
+{
+    "argument": "((()",
+    "expectedResult": false
+},
+{
+    "argument": "(((]",
+    "expectedResult": false
+},
+{
+    "argument": "(((1",
+    "expectedResult": false
+},
+{
+    "argument": "(([(",
+    "expectedResult": false
+},
+{
+    "argument": "(([[",
+    "expectedResult": false
+},
+{
+    "argument": "(([)",
+    "expectedResult": false
+},
+{
+    "argument": "(([]",
+    "expectedResult": false
+},
+{
+    "argument": "(([1",
+    "expectedResult": false
+},
+{
+    "argument": "(()(",
+    "expectedResult": false
+},
+{
+    "argument": "(()[",
+    "expectedResult": false
+},
+{
+    "argument": "(())",
+    "expectedResult": true
+},
+{
+    "argument": "(()]",
+    "expectedResult": false
+},
+{
+    "argument": "(()1",
+    "expectedResult": false
+},
+{
+    "argument": "((](",
+    "expectedResult": false
+},
+{
+    "argument": "((][",
+    "expectedResult": false
+},
+{
+    "argument": "((])",
+    "expectedResult": false
+},
+{
+    "argument": "((]]",
+    "expectedResult": false
+},
+{
+    "argument": "((]1",
+    "expectedResult": false
+},
+{
+    "argument": "((1(",
+    "expectedResult": false
+},
+{
+    "argument": "((1[",
+    "expectedResult": false
+},
+{
+    "argument": "((1)",
+    "expectedResult": false
+},
+{
+    "argument": "((1]",
+    "expectedResult": false
+},
+{
+    "argument": "((11",
+    "expectedResult": false
+},
+{
+    "argument": "([((",
+    "expectedResult": false
+},
+{
+    "argument": "([([",
+    "expectedResult": false
+},
+{
+    "argument": "([()",
+    "expectedResult": false
+},
+{
+    "argument": "([(]",
+    "expectedResult": false
+},
+{
+    "argument": "([(1",
+    "expectedResult": false
+},
+{
+    "argument": "([[(",
+    "expectedResult": false
+},
+{
+    "argument": "([[[",
+    "expectedResult": false
+},
+{
+    "argument": "([[)",
+    "expectedResult": false
+},
+{
+    "argument": "([[]",
+    "expectedResult": false
+},
+{
+    "argument": "([[1",
+    "expectedResult": false
+},
+{
+    "argument": "([)(",
+    "expectedResult": false
+},
+{
+    "argument": "([)[",
+    "expectedResult": false
+},
+{
+    "argument": "([))",
+    "expectedResult": false
+},
+{
+    "argument": "([)]",
+    "expectedResult": false
+},
+{
+    "argument": "([)1",
+    "expectedResult": false
+},
+{
+    "argument": "([](",
+    "expectedResult": false
+},
+{
+    "argument": "([][",
+    "expectedResult": false
+},
+{
+    "argument": "([])",
+    "expectedResult": true
+},
+{
+    "argument": "([]]",
+    "expectedResult": false
+},
+{
+    "argument": "([]1",
+    "expectedResult": false
+},
+{
+    "argument": "([1(",
+    "expectedResult": false
+},
+{
+    "argument": "([1[",
+    "expectedResult": false
+},
+{
+    "argument": "([1)",
+    "expectedResult": false
+},
+{
+    "argument": "([1]",
+    "expectedResult": false
+},
+{
+    "argument": "([11",
+    "expectedResult": false
+},
+{
+    "argument": "()((",
+    "expectedResult": false
+},
+{
+    "argument": "()([",
+    "expectedResult": false
+},
+{
+    "argument": "()()",
+    "expectedResult": true
+},
+{
+    "argument": "()(]",
+    "expectedResult": false
+},
+{
+    "argument": "()(1",
+    "expectedResult": false
+},
+{
+    "argument": "()[(",
+    "expectedResult": false
+},
+{
+    "argument": "()[[",
+    "expectedResult": false
+},
+{
+    "argument": "()[)",
+    "expectedResult": false
+},
+{
+    "argument": "()[]",
+    "expectedResult": true
+},
+{
+    "argument": "()[1",
+    "expectedResult": false
+},
+{
+    "argument": "())(",
+    "expectedResult": false
+},
+{
+    "argument": "())[",
+    "expectedResult": false
+},
+{
+    "argument": "()))",
+    "expectedResult": false
+},
+{
+    "argument": "())]",
+    "expectedResult": false
+},
+{
+    "argument": "())1",
+    "expectedResult": false
+},
+{
+    "argument": "()](",
+    "expectedResult": false
+},
+{
+    "argument": "()][",
+    "expectedResult": false
+},
+{
+    "argument": "()])",
+    "expectedResult": false
+},
+{
+    "argument": "()]]",
+    "expectedResult": false
+},
+{
+    "argument": "()]1",
+    "expectedResult": false
+},
+{
+    "argument": "()1(",
+    "expectedResult": false
+},
+{
+    "argument": "()1[",
+    "expectedResult": false
+},
+{
+    "argument": "()1)",
+    "expectedResult": false
+},
+{
+    "argument": "()1]",
+    "expectedResult": false
+},
+{
+    "argument": "()11",
+    "expectedResult": false
+},
+{
+    "argument": "(]((",
+    "expectedResult": false
+},
+{
+    "argument": "(]([",
+    "expectedResult": false
+},
+{
+    "argument": "(]()",
+    "expectedResult": false
+},
+{
+    "argument": "(](]",
+    "expectedResult": false
+},
+{
+    "argument": "(](1",
+    "expectedResult": false
+},
+{
+    "argument": "(][(",
+    "expectedResult": false
+},
+{
+    "argument": "(][[",
+    "expectedResult": false
+},
+{
+    "argument": "(][)",
+    "expectedResult": false
+},
+{
+    "argument": "(][]",
+    "expectedResult": false
+},
+{
+    "argument": "(][1",
+    "expectedResult": false
+},
+{
+    "argument": "(])(",
+    "expectedResult": false
+},
+{
+    "argument": "(])[",
+    "expectedResult": false
+},
+{
+    "argument": "(]))",
+    "expectedResult": false
+},
+{
+    "argument": "(])]",
+    "expectedResult": false
+},
+{
+    "argument": "(])1",
+    "expectedResult": false
+},
+{
+    "argument": "(]](",
+    "expectedResult": false
+},
+{
+    "argument": "(]][",
+    "expectedResult": false
+},
+{
+    "argument": "(]])",
+    "expectedResult": false
+},
+{
+    "argument": "(]]]",
+    "expectedResult": false
+},
+{
+    "argument": "(]]1",
+    "expectedResult": false
+},
+{
+    "argument": "(]1(",
+    "expectedResult": false
+},
+{
+    "argument": "(]1[",
+    "expectedResult": false
+},
+{
+    "argument": "(]1)",
+    "expectedResult": false
+},
+{
+    "argument": "(]1]",
+    "expectedResult": false
+},
+{
+    "argument": "(]11",
+    "expectedResult": false
+},
+{
+    "argument": "(1((",
+    "expectedResult": false
+},
+{
+    "argument": "(1([",
+    "expectedResult": false
+},
+{
+    "argument": "(1()",
+    "expectedResult": false
+},
+{
+    "argument": "(1(]",
+    "expectedResult": false
+},
+{
+    "argument": "(1(1",
+    "expectedResult": false
+},
+{
+    "argument": "(1[(",
+    "expectedResult": false
+},
+{
+    "argument": "(1[[",
+    "expectedResult": false
+},
+{
+    "argument": "(1[)",
+    "expectedResult": false
+},
+{
+    "argument": "(1[]",
+    "expectedResult": false
+},
+{
+    "argument": "(1[1",
+    "expectedResult": false
+},
+{
+    "argument": "(1)(",
+    "expectedResult": false
+},
+{
+    "argument": "(1)[",
+    "expectedResult": false
+},
+{
+    "argument": "(1))",
+    "expectedResult": false
+},
+{
+    "argument": "(1)]",
+    "expectedResult": false
+},
+{
+    "argument": "(1)1",
+    "expectedResult": false
+},
+{
+    "argument": "(1](",
+    "expectedResult": false
+},
+{
+    "argument": "(1][",
+    "expectedResult": false
+},
+{
+    "argument": "(1])",
+    "expectedResult": false
+},
+{
+    "argument": "(1]]",
+    "expectedResult": false
+},
+{
+    "argument": "(1]1",
+    "expectedResult": false
+},
+{
+    "argument": "(11(",
+    "expectedResult": false
+},
+{
+    "argument": "(11[",
+    "expectedResult": false
+},
+{
+    "argument": "(11)",
+    "expectedResult": false
+},
+{
+    "argument": "(11]",
+    "expectedResult": false
+},
+{
+    "argument": "(111",
+    "expectedResult": false
+},
+{
+    "argument": "[(((",
+    "expectedResult": false
+},
+{
+    "argument": "[(([",
+    "expectedResult": false
+},
+{
+    "argument": "[(()",
+    "expectedResult": false
+},
+{
+    "argument": "[((]",
+    "expectedResult": false
+},
+{
+    "argument": "[((1",
+    "expectedResult": false
+},
+{
+    "argument": "[([(",
+    "expectedResult": false
+},
+{
+    "argument": "[([[",
+    "expectedResult": false
+},
+{
+    "argument": "[([)",
+    "expectedResult": false
+},
+{
+    "argument": "[([]",
+    "expectedResult": false
+},
+{
+    "argument": "[([1",
+    "expectedResult": false
+},
+{
+    "argument": "[()(",
+    "expectedResult": false
+},
+{
+    "argument": "[()[",
+    "expectedResult": false
+},
+{
+    "argument": "[())",
+    "expectedResult": false
+},
+{
+    "argument": "[()]",
+    "expectedResult": true
+},
+{
+    "argument": "[()1",
+    "expectedResult": false
+},
+{
+    "argument": "[(](",
+    "expectedResult": false
+},
+{
+    "argument": "[(][",
+    "expectedResult": false
+},
+{
+    "argument": "[(])",
+    "expectedResult": false
+},
+{
+    "argument": "[(]]",
+    "expectedResult": false
+},
+{
+    "argument": "[(]1",
+    "expectedResult": false
+},
+{
+    "argument": "[(1(",
+    "expectedResult": false
+},
+{
+    "argument": "[(1[",
+    "expectedResult": false
+},
+{
+    "argument": "[(1)",
+    "expectedResult": false
+},
+{
+    "argument": "[(1]",
+    "expectedResult": false
+},
+{
+    "argument": "[(11",
+    "expectedResult": false
+},
+{
+    "argument": "[[((",
+    "expectedResult": false
+},
+{
+    "argument": "[[([",
+    "expectedResult": false
+},
+{
+    "argument": "[[()",
+    "expectedResult": false
+},
+{
+    "argument": "[[(]",
+    "expectedResult": false
+},
+{
+    "argument": "[[(1",
+    "expectedResult": false
+},
+{
+    "argument": "[[[(",
+    "expectedResult": false
+},
+{
+    "argument": "[[[[",
+    "expectedResult": false
+},
+{
+    "argument": "[[[)",
+    "expectedResult": false
+},
+{
+    "argument": "[[[]",
+    "expectedResult": false
+},
+{
+    "argument": "[[[1",
+    "expectedResult": false
+},
+{
+    "argument": "[[)(",
+    "expectedResult": false
+},
+{
+    "argument": "[[)[",
+    "expectedResult": false
+},
+{
+    "argument": "[[))",
+    "expectedResult": false
+},
+{
+    "argument": "[[)]",
+    "expectedResult": false
+},
+{
+    "argument": "[[)1",
+    "expectedResult": false
+},
+{
+    "argument": "[[](",
+    "expectedResult": false
+},
+{
+    "argument": "[[][",
+    "expectedResult": false
+},
+{
+    "argument": "[[])",
+    "expectedResult": false
+},
+{
+    "argument": "[[]]",
+    "expectedResult": true
+},
+{
+    "argument": "[[]1",
+    "expectedResult": false
+},
+{
+    "argument": "[[1(",
+    "expectedResult": false
+},
+{
+    "argument": "[[1[",
+    "expectedResult": false
+},
+{
+    "argument": "[[1)",
+    "expectedResult": false
+},
+{
+    "argument": "[[1]",
+    "expectedResult": false
+},
+{
+    "argument": "[[11",
+    "expectedResult": false
+},
+{
+    "argument": "[)((",
+    "expectedResult": false
+},
+{
+    "argument": "[)([",
+    "expectedResult": false
+},
+{
+    "argument": "[)()",
+    "expectedResult": false
+},
+{
+    "argument": "[)(]",
+    "expectedResult": false
+},
+{
+    "argument": "[)(1",
+    "expectedResult": false
+},
+{
+    "argument": "[)[(",
+    "expectedResult": false
+},
+{
+    "argument": "[)[[",
+    "expectedResult": false
+},
+{
+    "argument": "[)[)",
+    "expectedResult": false
+},
+{
+    "argument": "[)[]",
+    "expectedResult": false
+},
+{
+    "argument": "[)[1",
+    "expectedResult": false
+},
+{
+    "argument": "[))(",
+    "expectedResult": false
+},
+{
+    "argument": "[))[",
+    "expectedResult": false
+},
+{
+    "argument": "[)))",
+    "expectedResult": false
+},
+{
+    "argument": "[))]",
+    "expectedResult": false
+},
+{
+    "argument": "[))1",
+    "expectedResult": false
+},
+{
+    "argument": "[)](",
+    "expectedResult": false
+},
+{
+    "argument": "[)][",
+    "expectedResult": false
+},
+{
+    "argument": "[)])",
+    "expectedResult": false
+},
+{
+    "argument": "[)]]",
+    "expectedResult": false
+},
+{
+    "argument": "[)]1",
+    "expectedResult": false
+},
+{
+    "argument": "[)1(",
+    "expectedResult": false
+},
+{
+    "argument": "[)1[",
+    "expectedResult": false
+},
+{
+    "argument": "[)1)",
+    "expectedResult": false
+},
+{
+    "argument": "[)1]",
+    "expectedResult": false
+},
+{
+    "argument": "[)11",
+    "expectedResult": false
+},
+{
+    "argument": "[]((",
+    "expectedResult": false
+},
+{
+    "argument": "[]([",
+    "expectedResult": false
+},
+{
+    "argument": "[]()",
+    "expectedResult": true
+},
+{
+    "argument": "[](]",
+    "expectedResult": false
+},
+{
+    "argument": "[](1",
+    "expectedResult": false
+},
+{
+    "argument": "[][(",
+    "expectedResult": false
+},
+{
+    "argument": "[][[",
+    "expectedResult": false
+},
+{
+    "argument": "[][)",
+    "expectedResult": false
+},
+{
+    "argument": "[][]",
+    "expectedResult": true
+},
+{
+    "argument": "[][1",
+    "expectedResult": false
+},
+{
+    "argument": "[])(",
+    "expectedResult": false
+},
+{
+    "argument": "[])[",
+    "expectedResult": false
+},
+{
+    "argument": "[]))",
+    "expectedResult": false
+},
+{
+    "argument": "[])]",
+    "expectedResult": false
+},
+{
+    "argument": "[])1",
+    "expectedResult": false
+},
+{
+    "argument": "[]](",
+    "expectedResult": false
+},
+{
+    "argument": "[]][",
+    "expectedResult": false
+},
+{
+    "argument": "[]])",
+    "expectedResult": false
+},
+{
+    "argument": "[]]]",
+    "expectedResult": false
+},
+{
+    "argument": "[]]1",
+    "expectedResult": false
+},
+{
+    "argument": "[]1(",
+    "expectedResult": false
+},
+{
+    "argument": "[]1[",
+    "expectedResult": false
+},
+{
+    "argument": "[]1)",
+    "expectedResult": false
+},
+{
+    "argument": "[]1]",
+    "expectedResult": false
+},
+{
+    "argument": "[]11",
+    "expectedResult": false
+},
+{
+    "argument": "[1((",
+    "expectedResult": false
+},
+{
+    "argument": "[1([",
+    "expectedResult": false
+},
+{
+    "argument": "[1()",
+    "expectedResult": false
+},
+{
+    "argument": "[1(]",
+    "expectedResult": false
+},
+{
+    "argument": "[1(1",
+    "expectedResult": false
+},
+{
+    "argument": "[1[(",
+    "expectedResult": false
+},
+{
+    "argument": "[1[[",
+    "expectedResult": false
+},
+{
+    "argument": "[1[)",
+    "expectedResult": false
+},
+{
+    "argument": "[1[]",
+    "expectedResult": false
+},
+{
+    "argument": "[1[1",
+    "expectedResult": false
+},
+{
+    "argument": "[1)(",
+    "expectedResult": false
+},
+{
+    "argument": "[1)[",
+    "expectedResult": false
+},
+{
+    "argument": "[1))",
+    "expectedResult": false
+},
+{
+    "argument": "[1)]",
+    "expectedResult": false
+},
+{
+    "argument": "[1)1",
+    "expectedResult": false
+},
+{
+    "argument": "[1](",
+    "expectedResult": false
+},
+{
+    "argument": "[1][",
+    "expectedResult": false
+},
+{
+    "argument": "[1])",
+    "expectedResult": false
+},
+{
+    "argument": "[1]]",
+    "expectedResult": false
+},
+{
+    "argument": "[1]1",
+    "expectedResult": false
+},
+{
+    "argument": "[11(",
+    "expectedResult": false
+},
+{
+    "argument": "[11[",
+    "expectedResult": false
+},
+{
+    "argument": "[11)",
+    "expectedResult": false
+},
+{
+    "argument": "[11]",
+    "expectedResult": false
+},
+{
+    "argument": "[111",
+    "expectedResult": false
+},
+{
+    "argument": ")(((",
+    "expectedResult": false
+},
+{
+    "argument": ")(([",
+    "expectedResult": false
+},
+{
+    "argument": ")(()",
+    "expectedResult": false
+},
+{
+    "argument": ")((]",
+    "expectedResult": false
+},
+{
+    "argument": ")((1",
+    "expectedResult": false
+},
+{
+    "argument": ")([(",
+    "expectedResult": false
+},
+{
+    "argument": ")([[",
+    "expectedResult": false
+},
+{
+    "argument": ")([)",
+    "expectedResult": false
+},
+{
+    "argument": ")([]",
+    "expectedResult": false
+},
+{
+    "argument": ")([1",
+    "expectedResult": false
+},
+{
+    "argument": ")()(",
+    "expectedResult": false
+},
+{
+    "argument": ")()[",
+    "expectedResult": false
+},
+{
+    "argument": ")())",
+    "expectedResult": false
+},
+{
+    "argument": ")()]",
+    "expectedResult": false
+},
+{
+    "argument": ")()1",
+    "expectedResult": false
+},
+{
+    "argument": ")(](",
+    "expectedResult": false
+},
+{
+    "argument": ")(][",
+    "expectedResult": false
+},
+{
+    "argument": ")(])",
+    "expectedResult": false
+},
+{
+    "argument": ")(]]",
+    "expectedResult": false
+},
+{
+    "argument": ")(]1",
+    "expectedResult": false
+},
+{
+    "argument": ")(1(",
+    "expectedResult": false
+},
+{
+    "argument": ")(1[",
+    "expectedResult": false
+},
+{
+    "argument": ")(1)",
+    "expectedResult": false
+},
+{
+    "argument": ")(1]",
+    "expectedResult": false
+},
+{
+    "argument": ")(11",
+    "expectedResult": false
+},
+{
+    "argument": ")[((",
+    "expectedResult": false
+},
+{
+    "argument": ")[([",
+    "expectedResult": false
+},
+{
+    "argument": ")[()",
+    "expectedResult": false
+},
+{
+    "argument": ")[(]",
+    "expectedResult": false
+},
+{
+    "argument": ")[(1",
+    "expectedResult": false
+},
+{
+    "argument": ")[[(",
+    "expectedResult": false
+},
+{
+    "argument": ")[[[",
+    "expectedResult": false
+},
+{
+    "argument": ")[[)",
+    "expectedResult": false
+},
+{
+    "argument": ")[[]",
+    "expectedResult": false
+},
+{
+    "argument": ")[[1",
+    "expectedResult": false
+},
+{
+    "argument": ")[)(",
+    "expectedResult": false
+},
+{
+    "argument": ")[)[",
+    "expectedResult": false
+},
+{
+    "argument": ")[))",
+    "expectedResult": false
+},
+{
+    "argument": ")[)]",
+    "expectedResult": false
+},
+{
+    "argument": ")[)1",
+    "expectedResult": false
+},
+{
+    "argument": ")[](",
+    "expectedResult": false
+},
+{
+    "argument": ")[][",
+    "expectedResult": false
+},
+{
+    "argument": ")[])",
+    "expectedResult": false
+},
+{
+    "argument": ")[]]",
+    "expectedResult": false
+},
+{
+    "argument": ")[]1",
+    "expectedResult": false
+},
+{
+    "argument": ")[1(",
+    "expectedResult": false
+},
+{
+    "argument": ")[1[",
+    "expectedResult": false
+},
+{
+    "argument": ")[1)",
+    "expectedResult": false
+},
+{
+    "argument": ")[1]",
+    "expectedResult": false
+},
+{
+    "argument": ")[11",
+    "expectedResult": false
+},
+{
+    "argument": "))((",
+    "expectedResult": false
+},
+{
+    "argument": "))([",
+    "expectedResult": false
+},
+{
+    "argument": "))()",
+    "expectedResult": false
+},
+{
+    "argument": "))(]",
+    "expectedResult": false
+},
+{
+    "argument": "))(1",
+    "expectedResult": false
+},
+{
+    "argument": "))[(",
+    "expectedResult": false
+},
+{
+    "argument": "))[[",
+    "expectedResult": false
+},
+{
+    "argument": "))[)",
+    "expectedResult": false
+},
+{
+    "argument": "))[]",
+    "expectedResult": false
+},
+{
+    "argument": "))[1",
+    "expectedResult": false
+},
+{
+    "argument": ")))(",
+    "expectedResult": false
+},
+{
+    "argument": ")))[",
+    "expectedResult": false
+},
+{
+    "argument": "))))",
+    "expectedResult": false
+},
+{
+    "argument": ")))]",
+    "expectedResult": false
+},
+{
+    "argument": ")))1",
+    "expectedResult": false
+},
+{
+    "argument": "))](",
+    "expectedResult": false
+},
+{
+    "argument": "))][",
+    "expectedResult": false
+},
+{
+    "argument": "))])",
+    "expectedResult": false
+},
+{
+    "argument": "))]]",
+    "expectedResult": false
+},
+{
+    "argument": "))]1",
+    "expectedResult": false
+},
+{
+    "argument": "))1(",
+    "expectedResult": false
+},
+{
+    "argument": "))1[",
+    "expectedResult": false
+},
+{
+    "argument": "))1)",
+    "expectedResult": false
+},
+{
+    "argument": "))1]",
+    "expectedResult": false
+},
+{
+    "argument": "))11",
+    "expectedResult": false
+},
+{
+    "argument": ")]((",
+    "expectedResult": false
+},
+{
+    "argument": ")]([",
+    "expectedResult": false
+},
+{
+    "argument": ")]()",
+    "expectedResult": false
+},
+{
+    "argument": ")](]",
+    "expectedResult": false
+},
+{
+    "argument": ")](1",
+    "expectedResult": false
+},
+{
+    "argument": ")][(",
+    "expectedResult": false
+},
+{
+    "argument": ")][[",
+    "expectedResult": false
+},
+{
+    "argument": ")][)",
+    "expectedResult": false
+},
+{
+    "argument": ")][]",
+    "expectedResult": false
+},
+{
+    "argument": ")][1",
+    "expectedResult": false
+},
+{
+    "argument": ")])(",
+    "expectedResult": false
+},
+{
+    "argument": ")])[",
+    "expectedResult": false
+},
+{
+    "argument": ")]))",
+    "expectedResult": false
+},
+{
+    "argument": ")])]",
+    "expectedResult": false
+},
+{
+    "argument": ")])1",
+    "expectedResult": false
+},
+{
+    "argument": ")]](",
+    "expectedResult": false
+},
+{
+    "argument": ")]][",
+    "expectedResult": false
+},
+{
+    "argument": ")]])",
+    "expectedResult": false
+},
+{
+    "argument": ")]]]",
+    "expectedResult": false
+},
+{
+    "argument": ")]]1",
+    "expectedResult": false
+},
+{
+    "argument": ")]1(",
+    "expectedResult": false
+},
+{
+    "argument": ")]1[",
+    "expectedResult": false
+},
+{
+    "argument": ")]1)",
+    "expectedResult": false
+},
+{
+    "argument": ")]1]",
+    "expectedResult": false
+},
+{
+    "argument": ")]11",
+    "expectedResult": false
+},
+{
+    "argument": ")1((",
+    "expectedResult": false
+},
+{
+    "argument": ")1([",
+    "expectedResult": false
+},
+{
+    "argument": ")1()",
+    "expectedResult": false
+},
+{
+    "argument": ")1(]",
+    "expectedResult": false
+},
+{
+    "argument": ")1(1",
+    "expectedResult": false
+},
+{
+    "argument": ")1[(",
+    "expectedResult": false
+},
+{
+    "argument": ")1[[",
+    "expectedResult": false
+},
+{
+    "argument": ")1[)",
+    "expectedResult": false
+},
+{
+    "argument": ")1[]",
+    "expectedResult": false
+},
+{
+    "argument": ")1[1",
+    "expectedResult": false
+},
+{
+    "argument": ")1)(",
+    "expectedResult": false
+},
+{
+    "argument": ")1)[",
+    "expectedResult": false
+},
+{
+    "argument": ")1))",
+    "expectedResult": false
+},
+{
+    "argument": ")1)]",
+    "expectedResult": false
+},
+{
+    "argument": ")1)1",
+    "expectedResult": false
+},
+{
+    "argument": ")1](",
+    "expectedResult": false
+},
+{
+    "argument": ")1][",
+    "expectedResult": false
+},
+{
+    "argument": ")1])",
+    "expectedResult": false
+},
+{
+    "argument": ")1]]",
+    "expectedResult": false
+},
+{
+    "argument": ")1]1",
+    "expectedResult": false
+},
+{
+    "argument": ")11(",
+    "expectedResult": false
+},
+{
+    "argument": ")11[",
+    "expectedResult": false
+},
+{
+    "argument": ")11)",
+    "expectedResult": false
+},
+{
+    "argument": ")11]",
+    "expectedResult": false
+},
+{
+    "argument": ")111",
+    "expectedResult": false
+},
+{
+    "argument": "](((",
+    "expectedResult": false
+},
+{
+    "argument": "](([",
+    "expectedResult": false
+},
+{
+    "argument": "](()",
+    "expectedResult": false
+},
+{
+    "argument": "]((]",
+    "expectedResult": false
+},
+{
+    "argument": "]((1",
+    "expectedResult": false
+},
+{
+    "argument": "]([(",
+    "expectedResult": false
+},
+{
+    "argument": "]([[",
+    "expectedResult": false
+},
+{
+    "argument": "]([)",
+    "expectedResult": false
+},
+{
+    "argument": "]([]",
+    "expectedResult": false
+},
+{
+    "argument": "]([1",
+    "expectedResult": false
+},
+{
+    "argument": "]()(",
+    "expectedResult": false
+},
+{
+    "argument": "]()[",
+    "expectedResult": false
+},
+{
+    "argument": "]())",
+    "expectedResult": false
+},
+{
+    "argument": "]()]",
+    "expectedResult": false
+},
+{
+    "argument": "]()1",
+    "expectedResult": false
+},
+{
+    "argument": "](](",
+    "expectedResult": false
+},
+{
+    "argument": "](][",
+    "expectedResult": false
+},
+{
+    "argument": "](])",
+    "expectedResult": false
+},
+{
+    "argument": "](]]",
+    "expectedResult": false
+},
+{
+    "argument": "](]1",
+    "expectedResult": false
+},
+{
+    "argument": "](1(",
+    "expectedResult": false
+},
+{
+    "argument": "](1[",
+    "expectedResult": false
+},
+{
+    "argument": "](1)",
+    "expectedResult": false
+},
+{
+    "argument": "](1]",
+    "expectedResult": false
+},
+{
+    "argument": "](11",
+    "expectedResult": false
+},
+{
+    "argument": "][((",
+    "expectedResult": false
+},
+{
+    "argument": "][([",
+    "expectedResult": false
+},
+{
+    "argument": "][()",
+    "expectedResult": false
+},
+{
+    "argument": "][(]",
+    "expectedResult": false
+},
+{
+    "argument": "][(1",
+    "expectedResult": false
+},
+{
+    "argument": "][[(",
+    "expectedResult": false
+},
+{
+    "argument": "][[[",
+    "expectedResult": false
+},
+{
+    "argument": "][[)",
+    "expectedResult": false
+},
+{
+    "argument": "][[]",
+    "expectedResult": false
+},
+{
+    "argument": "][[1",
+    "expectedResult": false
+},
+{
+    "argument": "][)(",
+    "expectedResult": false
+},
+{
+    "argument": "][)[",
+    "expectedResult": false
+},
+{
+    "argument": "][))",
+    "expectedResult": false
+},
+{
+    "argument": "][)]",
+    "expectedResult": false
+},
+{
+    "argument": "][)1",
+    "expectedResult": false
+},
+{
+    "argument": "][](",
+    "expectedResult": false
+},
+{
+    "argument": "][][",
+    "expectedResult": false
+},
+{
+    "argument": "][])",
+    "expectedResult": false
+},
+{
+    "argument": "][]]",
+    "expectedResult": false
+},
+{
+    "argument": "][]1",
+    "expectedResult": false
+},
+{
+    "argument": "][1(",
+    "expectedResult": false
+},
+{
+    "argument": "][1[",
+    "expectedResult": false
+},
+{
+    "argument": "][1)",
+    "expectedResult": false
+},
+{
+    "argument": "][1]",
+    "expectedResult": false
+},
+{
+    "argument": "][11",
+    "expectedResult": false
+},
+{
+    "argument": "])((",
+    "expectedResult": false
+},
+{
+    "argument": "])([",
+    "expectedResult": false
+},
+{
+    "argument": "])()",
+    "expectedResult": false
+},
+{
+    "argument": "])(]",
+    "expectedResult": false
+},
+{
+    "argument": "])(1",
+    "expectedResult": false
+},
+{
+    "argument": "])[(",
+    "expectedResult": false
+},
+{
+    "argument": "])[[",
+    "expectedResult": false
+},
+{
+    "argument": "])[)",
+    "expectedResult": false
+},
+{
+    "argument": "])[]",
+    "expectedResult": false
+},
+{
+    "argument": "])[1",
+    "expectedResult": false
+},
+{
+    "argument": "]))(",
+    "expectedResult": false
+},
+{
+    "argument": "]))[",
+    "expectedResult": false
+},
+{
+    "argument": "])))",
+    "expectedResult": false
+},
+{
+    "argument": "]))]",
+    "expectedResult": false
+},
+{
+    "argument": "]))1",
+    "expectedResult": false
+},
+{
+    "argument": "])](",
+    "expectedResult": false
+},
+{
+    "argument": "])][",
+    "expectedResult": false
+},
+{
+    "argument": "])])",
+    "expectedResult": false
+},
+{
+    "argument": "])]]",
+    "expectedResult": false
+},
+{
+    "argument": "])]1",
+    "expectedResult": false
+},
+{
+    "argument": "])1(",
+    "expectedResult": false
+},
+{
+    "argument": "])1[",
+    "expectedResult": false
+},
+{
+    "argument": "])1)",
+    "expectedResult": false
+},
+{
+    "argument": "])1]",
+    "expectedResult": false
+},
+{
+    "argument": "])11",
+    "expectedResult": false
+},
+{
+    "argument": "]]((",
+    "expectedResult": false
+},
+{
+    "argument": "]]([",
+    "expectedResult": false
+},
+{
+    "argument": "]]()",
+    "expectedResult": false
+},
+{
+    "argument": "]](]",
+    "expectedResult": false
+},
+{
+    "argument": "]](1",
+    "expectedResult": false
+},
+{
+    "argument": "]][(",
+    "expectedResult": false
+},
+{
+    "argument": "]][[",
+    "expectedResult": false
+},
+{
+    "argument": "]][)",
+    "expectedResult": false
+},
+{
+    "argument": "]][]",
+    "expectedResult": false
+},
+{
+    "argument": "]][1",
+    "expectedResult": false
+},
+{
+    "argument": "]])(",
+    "expectedResult": false
+},
+{
+    "argument": "]])[",
+    "expectedResult": false
+},
+{
+    "argument": "]]))",
+    "expectedResult": false
+},
+{
+    "argument": "]])]",
+    "expectedResult": false
+},
+{
+    "argument": "]])1",
+    "expectedResult": false
+},
+{
+    "argument": "]]](",
+    "expectedResult": false
+},
+{
+    "argument": "]]][",
+    "expectedResult": false
+},
+{
+    "argument": "]]])",
+    "expectedResult": false
+},
+{
+    "argument": "]]]]",
+    "expectedResult": false
+},
+{
+    "argument": "]]]1",
+    "expectedResult": false
+},
+{
+    "argument": "]]1(",
+    "expectedResult": false
+},
+{
+    "argument": "]]1[",
+    "expectedResult": false
+},
+{
+    "argument": "]]1)",
+    "expectedResult": false
+},
+{
+    "argument": "]]1]",
+    "expectedResult": false
+},
+{
+    "argument": "]]11",
+    "expectedResult": false
+},
+{
+    "argument": "]1((",
+    "expectedResult": false
+},
+{
+    "argument": "]1([",
+    "expectedResult": false
+},
+{
+    "argument": "]1()",
+    "expectedResult": false
+},
+{
+    "argument": "]1(]",
+    "expectedResult": false
+},
+{
+    "argument": "]1(1",
+    "expectedResult": false
+},
+{
+    "argument": "]1[(",
+    "expectedResult": false
+},
+{
+    "argument": "]1[[",
+    "expectedResult": false
+},
+{
+    "argument": "]1[)",
+    "expectedResult": false
+},
+{
+    "argument": "]1[]",
+    "expectedResult": false
+},
+{
+    "argument": "]1[1",
+    "expectedResult": false
+},
+{
+    "argument": "]1)(",
+    "expectedResult": false
+},
+{
+    "argument": "]1)[",
+    "expectedResult": false
+},
+{
+    "argument": "]1))",
+    "expectedResult": false
+},
+{
+    "argument": "]1)]",
+    "expectedResult": false
+},
+{
+    "argument": "]1)1",
+    "expectedResult": false
+},
+{
+    "argument": "]1](",
+    "expectedResult": false
+},
+{
+    "argument": "]1][",
+    "expectedResult": false
+},
+{
+    "argument": "]1])",
+    "expectedResult": false
+},
+{
+    "argument": "]1]]",
+    "expectedResult": false
+},
+{
+    "argument": "]1]1",
+    "expectedResult": false
+},
+{
+    "argument": "]11(",
+    "expectedResult": false
+},
+{
+    "argument": "]11[",
+    "expectedResult": false
+},
+{
+    "argument": "]11)",
+    "expectedResult": false
+},
+{
+    "argument": "]11]",
+    "expectedResult": false
+},
+{
+    "argument": "]111",
+    "expectedResult": false
+},
+{
+    "argument": "1(((",
+    "expectedResult": false
+},
+{
+    "argument": "1(([",
+    "expectedResult": false
+},
+{
+    "argument": "1(()",
+    "expectedResult": false
+},
+{
+    "argument": "1((]",
+    "expectedResult": false
+},
+{
+    "argument": "1((1",
+    "expectedResult": false
+},
+{
+    "argument": "1([(",
+    "expectedResult": false
+},
+{
+    "argument": "1([[",
+    "expectedResult": false
+},
+{
+    "argument": "1([)",
+    "expectedResult": false
+},
+{
+    "argument": "1([]",
+    "expectedResult": false
+},
+{
+    "argument": "1([1",
+    "expectedResult": false
+},
+{
+    "argument": "1()(",
+    "expectedResult": false
+},
+{
+    "argument": "1()[",
+    "expectedResult": false
+},
+{
+    "argument": "1())",
+    "expectedResult": false
+},
+{
+    "argument": "1()]",
+    "expectedResult": false
+},
+{
+    "argument": "1()1",
+    "expectedResult": false
+},
+{
+    "argument": "1(](",
+    "expectedResult": false
+},
+{
+    "argument": "1(][",
+    "expectedResult": false
+},
+{
+    "argument": "1(])",
+    "expectedResult": false
+},
+{
+    "argument": "1(]]",
+    "expectedResult": false
+},
+{
+    "argument": "1(]1",
+    "expectedResult": false
+},
+{
+    "argument": "1(1(",
+    "expectedResult": false
+},
+{
+    "argument": "1(1[",
+    "expectedResult": false
+},
+{
+    "argument": "1(1)",
+    "expectedResult": false
+},
+{
+    "argument": "1(1]",
+    "expectedResult": false
+},
+{
+    "argument": "1(11",
+    "expectedResult": false
+},
+{
+    "argument": "1[((",
+    "expectedResult": false
+},
+{
+    "argument": "1[([",
+    "expectedResult": false
+},
+{
+    "argument": "1[()",
+    "expectedResult": false
+},
+{
+    "argument": "1[(]",
+    "expectedResult": false
+},
+{
+    "argument": "1[(1",
+    "expectedResult": false
+},
+{
+    "argument": "1[[(",
+    "expectedResult": false
+},
+{
+    "argument": "1[[[",
+    "expectedResult": false
+},
+{
+    "argument": "1[[)",
+    "expectedResult": false
+},
+{
+    "argument": "1[[]",
+    "expectedResult": false
+},
+{
+    "argument": "1[[1",
+    "expectedResult": false
+},
+{
+    "argument": "1[)(",
+    "expectedResult": false
+},
+{
+    "argument": "1[)[",
+    "expectedResult": false
+},
+{
+    "argument": "1[))",
+    "expectedResult": false
+},
+{
+    "argument": "1[)]",
+    "expectedResult": false
+},
+{
+    "argument": "1[)1",
+    "expectedResult": false
+},
+{
+    "argument": "1[](",
+    "expectedResult": false
+},
+{
+    "argument": "1[][",
+    "expectedResult": false
+},
+{
+    "argument": "1[])",
+    "expectedResult": false
+},
+{
+    "argument": "1[]]",
+    "expectedResult": false
+},
+{
+    "argument": "1[]1",
+    "expectedResult": false
+},
+{
+    "argument": "1[1(",
+    "expectedResult": false
+},
+{
+    "argument": "1[1[",
+    "expectedResult": false
+},
+{
+    "argument": "1[1)",
+    "expectedResult": false
+},
+{
+    "argument": "1[1]",
+    "expectedResult": false
+},
+{
+    "argument": "1[11",
+    "expectedResult": false
+},
+{
+    "argument": "1)((",
+    "expectedResult": false
+},
+{
+    "argument": "1)([",
+    "expectedResult": false
+},
+{
+    "argument": "1)()",
+    "expectedResult": false
+},
+{
+    "argument": "1)(]",
+    "expectedResult": false
+},
+{
+    "argument": "1)(1",
+    "expectedResult": false
+},
+{
+    "argument": "1)[(",
+    "expectedResult": false
+},
+{
+    "argument": "1)[[",
+    "expectedResult": false
+},
+{
+    "argument": "1)[)",
+    "expectedResult": false
+},
+{
+    "argument": "1)[]",
+    "expectedResult": false
+},
+{
+    "argument": "1)[1",
+    "expectedResult": false
+},
+{
+    "argument": "1))(",
+    "expectedResult": false
+},
+{
+    "argument": "1))[",
+    "expectedResult": false
+},
+{
+    "argument": "1)))",
+    "expectedResult": false
+},
+{
+    "argument": "1))]",
+    "expectedResult": false
+},
+{
+    "argument": "1))1",
+    "expectedResult": false
+},
+{
+    "argument": "1)](",
+    "expectedResult": false
+},
+{
+    "argument": "1)][",
+    "expectedResult": false
+},
+{
+    "argument": "1)])",
+    "expectedResult": false
+},
+{
+    "argument": "1)]]",
+    "expectedResult": false
+},
+{
+    "argument": "1)]1",
+    "expectedResult": false
+},
+{
+    "argument": "1)1(",
+    "expectedResult": false
+},
+{
+    "argument": "1)1[",
+    "expectedResult": false
+},
+{
+    "argument": "1)1)",
+    "expectedResult": false
+},
+{
+    "argument": "1)1]",
+    "expectedResult": false
+},
+{
+    "argument": "1)11",
+    "expectedResult": false
+},
+{
+    "argument": "1]((",
+    "expectedResult": false
+},
+{
+    "argument": "1]([",
+    "expectedResult": false
+},
+{
+    "argument": "1]()",
+    "expectedResult": false
+},
+{
+    "argument": "1](]",
+    "expectedResult": false
+},
+{
+    "argument": "1](1",
+    "expectedResult": false
+},
+{
+    "argument": "1][(",
+    "expectedResult": false
+},
+{
+    "argument": "1][[",
+    "expectedResult": false
+},
+{
+    "argument": "1][)",
+    "expectedResult": false
+},
+{
+    "argument": "1][]",
+    "expectedResult": false
+},
+{
+    "argument": "1][1",
+    "expectedResult": false
+},
+{
+    "argument": "1])(",
+    "expectedResult": false
+},
+{
+    "argument": "1])[",
+    "expectedResult": false
+},
+{
+    "argument": "1]))",
+    "expectedResult": false
+},
+{
+    "argument": "1])]",
+    "expectedResult": false
+},
+{
+    "argument": "1])1",
+    "expectedResult": false
+},
+{
+    "argument": "1]](",
+    "expectedResult": false
+},
+{
+    "argument": "1]][",
+    "expectedResult": false
+},
+{
+    "argument": "1]])",
+    "expectedResult": false
+},
+{
+    "argument": "1]]]",
+    "expectedResult": false
+},
+{
+    "argument": "1]]1",
+    "expectedResult": false
+},
+{
+    "argument": "1]1(",
+    "expectedResult": false
+},
+{
+    "argument": "1]1[",
+    "expectedResult": false
+},
+{
+    "argument": "1]1)",
+    "expectedResult": false
+},
+{
+    "argument": "1]1]",
+    "expectedResult": false
+},
+{
+    "argument": "1]11",
+    "expectedResult": false
+},
+{
+    "argument": "11((",
+    "expectedResult": false
+},
+{
+    "argument": "11([",
+    "expectedResult": false
+},
+{
+    "argument": "11()",
+    "expectedResult": false
+},
+{
+    "argument": "11(]",
+    "expectedResult": false
+},
+{
+    "argument": "11(1",
+    "expectedResult": false
+},
+{
+    "argument": "11[(",
+    "expectedResult": false
+},
+{
+    "argument": "11[[",
+    "expectedResult": false
+},
+{
+    "argument": "11[)",
+    "expectedResult": false
+},
+{
+    "argument": "11[]",
+    "expectedResult": false
+},
+{
+    "argument": "11[1",
+    "expectedResult": false
+},
+{
+    "argument": "11)(",
+    "expectedResult": false
+},
+{
+    "argument": "11)[",
+    "expectedResult": false
+},
+{
+    "argument": "11))",
+    "expectedResult": false
+},
+{
+    "argument": "11)]",
+    "expectedResult": false
+},
+{
+    "argument": "11)1",
+    "expectedResult": false
+},
+{
+    "argument": "11](",
+    "expectedResult": false
+},
+{
+    "argument": "11][",
+    "expectedResult": false
+},
+{
+    "argument": "11])",
+    "expectedResult": false
+},
+{
+    "argument": "11]]",
+    "expectedResult": false
+},
+{
+    "argument": "11]1",
+    "expectedResult": false
+},
+{
+    "argument": "111(",
+    "expectedResult": false
+},
+{
+    "argument": "111[",
+    "expectedResult": false
+},
+{
+    "argument": "111)",
+    "expectedResult": false
+},
+{
+    "argument": "111]",
+    "expectedResult": false
+},
+{
+    "argument": "1111",
+    "expectedResult": false
+},
+{
+    "argument": null,
+    "expectedResult": false
+},
+{
+    "argument": 0,
+    "expectedResult": false
+},
+{
+    "argument": 1,
+    "expectedResult": false
+},
+{
+    "argument": 100,
+    "expectedResult": false
+},
+{
+    "argument": 1.1,
+    "expectedResult": false
+},
+{
+    "argument": 1281,
+    "expectedResult": false
+},
+{
+    "argument": {},
+    "expectedResult": false
+},
+{
+    "argument": [],
+    "expectedResult": false
+},
+{
+    "argument": "\"{'BBB':'A'}\"",
+    "expectedResult": false
+},
+{
+    "argument": false,
+    "expectedResult": false
+},
+{
+    "argument": true,
+    "expectedResult": false
+}
+]

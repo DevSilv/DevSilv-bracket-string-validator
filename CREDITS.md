@@ -1,0 +1,1 @@
+Thanks to the user [Mr.YaHooo](https://4programmers.net/Profile/70446), the author of [this post on the 4programmers.net forum](https://4programmers.net/Forum/C_i_C++/327138-sprawdzenie_czy_wyrazenie_jest_nawiasowe?p=1594101#id1594101), for providing the algorithm (originally written in C).

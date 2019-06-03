@@ -1,0 +1,13 @@
+#!/bin/bash
+
+ARG="$1"
+
+if [ -f "$ARG" ] ; then
+    node --experimental-modules "../modules/benchmark/run-benchmark.mjs" "$ARG"
+elif [ "$ARG" == "" ] ; then
+    node --experimental-modules "../modules/benchmark/run-benchmark.mjs"
+elif [ -e "$ARG" ] ; then
+    printf "File of wrong type specified: $ARG. You may use only regular files. Exiting\n"
+else
+    printf "The specified file does not exist: $ARG. Exiting\n"
+fi
