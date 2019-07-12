@@ -14,19 +14,19 @@ const methods = new Map(Object.entries({
 
 const actualArgs = process.argv.slice(2);
 if (actualArgs.length < 2) {
-    throw new Error("To little arguments provided. Exiting");
+    throw new Error("To little arguments provided.");
 } else if (actualArgs.length > 2) {
-    console.log("Warning: too many arguments provided. there will be used only the first two arguments.")
+    console.log("Warning: too many arguments provided. There will be used only the first two arguments.")
 }
 
-const method = actualArgs[0];
-if (!Array.from(methods.keys()).includes(method)) {
-    throw new Error("Unknown method provided. Exiting");
+const methodName = actualArgs[0];
+if (!Array.from(methods.keys()).includes(methodName)) {
+    throw new Error("Unknown method provided.");
 }
 
 const bracketString = actualArgs[1];
 
-const func = methods.get(method);
+const func = methods.get(methodName);
 
 const result = func(bracketString);
 

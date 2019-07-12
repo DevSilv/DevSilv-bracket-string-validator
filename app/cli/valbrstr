@@ -7,24 +7,24 @@ THIRD_ARG="$3"
 
 function printUsage {
     printf "Usage:\n"
-    printf "\t$THIS_SCRIPT_NAME run-benchmark (or b) [OWN_BENCHMARK_DATA_FILE]\n"
-    printf "\t$THIS_SCRIPT_NAME run-tests (or t) [OWN_TEST_CASES_FILE]\n"
     printf "\t$THIS_SCRIPT_NAME validate (or v) counter-method (or c) STRING_TO_VALIDATE\n"
     printf "\t$THIS_SCRIPT_NAME validate (or v) recursion-method (or r) STRING_TO_VALIDATE\n"
     printf "\t$THIS_SCRIPT_NAME validate (or v) shortest-method (or sh) STRING_TO_VALIDATE\n"
     printf "\t$THIS_SCRIPT_NAME validate (or v) stack-method (or st) STRING_TO_VALIDATE\n"
     printf "\t$THIS_SCRIPT_NAME validate (or v) stack-list-method (or stl) STRING_TO_VALIDATE\n"
+    printf "\t$THIS_SCRIPT_NAME run-benchmark (or b) [OWN_BENCHMARK_DATA_FILE]\n"
+    printf "\t$THIS_SCRIPT_NAME run-tests (or t) [OWN_TEST_CASES_FILE]\n"
 }
 
 case "$FIRST_ARG" in
     "run-benchmark"|"b")
-        bash "benchmark-cli/run-benchmark" "$SECOND_ARG"
+        bash "./app/cli/benchmark-cli/run-benchmark" "$SECOND_ARG"
         ;;
     "run-tests"|"t")
-        bash "tests-cli/run-tests" "$SECOND_ARG"
+        bash "./app/cli/tests-cli/run-tests" "$SECOND_ARG"
         ;;
     "validate"|"v")
-        bash "validate-cli/validate" "$SECOND_ARG" "$THIRD_ARG"
+        bash "./app/cli/validate-cli/validate" "$SECOND_ARG" "$THIRD_ARG"
         ;;
     "")
         printf "$THIS_SCRIPT_NAME: no particular subcommand specified.\n"
