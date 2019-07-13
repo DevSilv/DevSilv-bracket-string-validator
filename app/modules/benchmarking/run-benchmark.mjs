@@ -1,8 +1,8 @@
-import isBracketStringValidCounter from "../src/is-bracket-string-valid-counter.mjs";
-import isBracketStringValidRecursion from "../src/is-bracket-string-valid-recursion.mjs";
-import isBracketStringValidShortest from "../src/is-bracket-string-valid-shortest.mjs";
-import isBracketStringValidStack from "../src/is-bracket-string-valid-stack.mjs";
-import isBracketStringValidStackList from "../src/is-bracket-string-valid-stack-list.mjs";
+import isBracketStringValidCounter from "../validation/is-bracket-string-valid-counter.mjs";
+import isBracketStringValidRecursion from "../validation/is-bracket-string-valid-recursion.mjs";
+import isBracketStringValidShortest from "../validation/is-bracket-string-valid-shortest.mjs";
+import isBracketStringValidStack from "../validation/is-bracket-string-valid-stack.mjs";
+import isBracketStringValidStackList from "../validation/is-bracket-string-valid-stack-list.mjs";
 import * as benchmarkParametersJSON from "./benchmark-parameters.json";
 import generateBenchmarkData from "./benchmark-data/generate-benchmark-data.mjs";
 
