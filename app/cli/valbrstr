@@ -18,10 +18,10 @@ function printUsage {
 
 case "$FIRST_ARG" in
     "run-benchmark"|"b")
-        bash "./app/cli/benchmark-cli/run-benchmark" "$SECOND_ARG"
+        bash "./app/cli/benchmarking-cli/run-benchmark" "$SECOND_ARG"
         ;;
     "run-unit-tests"|"t")
-        bash "./app/cli/unit-tests-cli/run-unit-tests" "$SECOND_ARG"
+        bash "./app/cli/unit-testing-cli/run-unit-tests" "$SECOND_ARG"
         ;;
     "validate"|"v")
         bash "./app/cli/validate-cli/validate" "$SECOND_ARG" "$THIRD_ARG"
