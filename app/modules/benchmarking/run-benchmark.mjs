@@ -4,7 +4,7 @@ import isBracketStringValidShortest from "../validation/is-bracket-string-valid-
 import isBracketStringValidStack from "../validation/is-bracket-string-valid-stack.mjs";
 import isBracketStringValidStackList from "../validation/is-bracket-string-valid-stack-list.mjs";
 import * as benchmarkParametersJSON from "./benchmark-parameters.json";
-import generateBenchmarkData from "./benchmark-data/generate-benchmark-data.mjs";
+import generateBenchmarkData from "./generate-benchmark-data.mjs";
 
 const benchmarkedFunctions = [
     isBracketStringValidCounter,
