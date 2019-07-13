@@ -1,0 +1,27 @@
+#!/bin/bash
+
+FIRST_ARG="$1"
+SECOND_ARG="$2"
+
+case "$FIRST_ARG" in
+    "counter-method"|"c")
+        node --experimental-modules "./app/modules/validate/validate.mjs" "counter" "$SECOND_ARG"
+        ;;
+    "recursion-method"|"r")
+        node --experimental-modules "./app/modules/validate/validate.mjs" "recursion" "$SECOND_ARG"
+        ;;
+    "shortest-method"|"sh")
+        node --experimental-modules "./app/modules/validate/validate.mjs" "shortest" "$SECOND_ARG"
+        ;;
+    "stack-method"|"st")
+        node --experimental-modules "./app/modules/validate/validate.mjs" "stack" "$SECOND_ARG"
+        ;;
+    "stack-list-method"|"stl")
+        node --experimental-modules "./app/modules/validate/validate.mjs" "stack-list" "$SECOND_ARG"
+        ;;
+    *)
+        # It works because when there is provided only the bracket string,
+        #   it becomes the first argument instead of a name of a method
+        node --experimental-modules "./app/modules/validate/validate.mjs" "stack-list" "$FIRST_ARG"
+        ;;
+esac
