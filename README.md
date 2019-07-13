@@ -45,7 +45,7 @@ Checking the string (speaking differently, validating the string) may be perform
 
 **_Info:_** _The purpose of implementing multiple methods with the same logic is to show that the author of this repository is able to write the same logic in different ways in JavaScript._
 
-In case of benchmarking and unit-testing, the user may optionally provide their own file with, respectively, benchmarking data or unit test cases. For information about the format of those files, see the pages "[Benchmarking](https://github.com/silvuss/silvuss-bracket-string-validator-4p/wiki/Benchmarking)" and "[Unit testing](https://github.com/silvuss/silvuss-bracket-string-validator-4p/wiki/Unit-testing)" of the wiki.
+When benchmarking, the application generate benchmarking data on the fly. When unit-testing, the application uses a predefined set of unit tests.
 
 ## How to install this application?
 
@@ -76,7 +76,7 @@ This application may be run in the following ways:
     valbrstr v [validation method ID] ["string to validate"]
     ```
 
-    If no argument is given, the application assumes that the validation method is the stack list  method, and that the string to validate is an empty string.
+    If no argument is given, the application assumes that the validation method is the stack list method, and that the string to validate is an empty string.
 
     If only the validation method ID is given, the application assumes that the string to validate is an empty string.
 
@@ -84,27 +84,23 @@ This application may be run in the following ways:
 
 - To **benchmark** a certain validation method that the application provides:
     ```
-    valbrstr run-benchmark [/path/to/a/file]
+    valbrstr run-benchmark
     ```
     or equally
     ```
-    valbrstr b [/path/to/a/file]
+    valbrstr b
     ```
-
-    If no argument is given, the application will generate benchmark data on the fly.
 
     _For details on benchmarking, see the page "[Benchmarking](https://github.com/silvuss/silvuss-bracket-string-validator-4p/wiki/Benchmarking)" of the wiki._
 
 - To **unit-test** a certain validation method that the application provides:
     ```
-    valbrstr run-unit-tests [/path/to/a/file]
+    valbrstr run-unit-tests
     ```
     or equally
     ```
-    valbrstr t [/path/to/a/file]
+    valbrstr t
     ```
-
-    If no argument is given, the application uses its own file with test cases.
 
     **_Info:_** _For details on unit-testing, see the page "[Unit testing](https://github.com/silvuss/silvuss-bracket-string-validator-4p/wiki/Unit-testing)" of the wiki._
 
