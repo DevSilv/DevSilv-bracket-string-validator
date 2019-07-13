@@ -77,6 +77,8 @@ All of the following software must be installed before running the application:
     valbrstr v [validation method ID] ["string to validate"]
     ```
 
+    Both arguments are optional.
+
     If no argument is given, the application assumes that the validation method is the stack list method, and that the string to validate is an empty string.
 
     If only the validation method ID is given, the application assumes that the string to validate is an empty string.
