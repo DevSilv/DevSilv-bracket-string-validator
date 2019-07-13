@@ -45,27 +45,28 @@ Checking the string (speaking differently, validating the string) may be perform
 
 **_Info:_** _The purpose of implementing multiple methods with the same logic is to show that the author of this repository is able to write the same logic in different ways in JavaScript._
 
-In case of benchmarking and unit-testing, the user may optionally provide their own file with, respectively, benchmarking data or unit test cases. For information about the format of those files, see the pages "[Benchmarking](https://github.com/silvuss/silvuss-bracket-string-validator-4p/wiki/Benchmarking)" and "[Unit testing](https://github.com/silvuss/silvuss-bracket-string-validator-4p/wiki/Unit-testing)" of the wiki.
+When benchmarking, the application generate benchmarking data on the fly. When unit-testing, the application uses a predefined set of unit tests.
 
-## How to install this application?
-
-**_Info:_** _Current release of this application neither can be installed (onto neither operating system), nor require it. For information about whether installation will be possible, or also required, in future releases, see the [corresponding issue](https://github.com/silvuss/silvuss-bracket-string-validator-4p/issues/2#issue-467473279)._
-
-## How to run this application?
+## How to use this application?
 
 **_Info:_** _It is adviced to run this application in the same environment as it has been tested. In case of other environments this application may work properly, or its usage may cause unknown side effects, or it may not work at all. For details on the environment, see the section "[Environment, tools and technologies used](#environment-tools-and-technologies-used)" of this README. For more information about possible side effects, see the page "[Caveats for running in different environments than advised](https://github.com/silvuss/silvuss-bracket-string-validator-4p/wiki/Caveats-for-running-in-different-environments-than-advised)" of the wiki. For information about possibilities of other environments in future releases, see the [corresponding issue](https://github.com/silvuss/silvuss-bracket-string-validator-4p/issues/3#issue-467474906)._
 
-### What does this application require to run?
+1. Download the application sources (into whatever directory you like).
+2. install the required software (see [the section](#required-software) below);
+3. from within the application's main directory, execute one of the commands that the application provides (see [the section](#available-commands) below).
 
-This application requires the following software to be installed:
-- the [Node.js environment](https://en.wikipedia.org/wiki/Node.js); its version should be 10.16.0 (optimal), or higher compatible (i.e. with compatible public API); it must be in the `PATH` variable under the name `node`;
-- the [Bash interpreter](https://en.wikipedia.org/wiki/Bash_(Unix_shell)); its version should be `5.0.7(1)-release (x86_64-redhat-linux-gnu)` (optimal), or higher compatible (i.e. with compatible public API); it must be in the `PATH` variable under the name `bash` AND must be available under the path `/bin/bash`.
-
-### Running possibilities
+**_Info:_** _Current release of this application neither can be installed (onto neither operating system), nor require it. For information about whether installation will be possible, or also required, in future releases, see the [corresponding issue](https://github.com/silvuss/silvuss-bracket-string-validator-4p/issues/2#issue-467473279)._
 
 **_Info:_** _Current release of this application can be run only in the console. For information about running possibilities in future releases, see the [corresponding issue](https://github.com/silvuss/silvuss-bracket-string-validator-4p/issues/4)._
 
-This application may be run in the following ways:
+### Required software
+
+All of the following software must be installed before running the application:
+
+1. The [Node.js environment](https://en.wikipedia.org/wiki/Node.js); its version should be 10.16.0 (optimal), or higher compatible (i.e. with compatible public API); it must be in the `PATH` variable under the name `node`.
+2. The [Bash interpreter](https://en.wikipedia.org/wiki/Bash_(Unix_shell)); its version should be `5.0.7(1)-release (x86_64-redhat-linux-gnu)` (optimal), or higher compatible (i.e. with compatible public API); it must be in the `PATH` variable under the name `bash` AND must be available under the path `/bin/bash`.
+
+### Available commands
 
 - To **validate** a string:
     ```
@@ -76,7 +77,9 @@ This application may be run in the following ways:
     valbrstr v [validation method ID] ["string to validate"]
     ```
 
-    If no argument is given, the application assumes that the validation method is the stack list  method, and that the string to validate is an empty string.
+    Both arguments are optional.
+
+    If no argument is given, the application assumes that the validation method is the stack list method, and that the string to validate is an empty string.
 
     If only the validation method ID is given, the application assumes that the string to validate is an empty string.
 
@@ -84,27 +87,23 @@ This application may be run in the following ways:
 
 - To **benchmark** a certain validation method that the application provides:
     ```
-    valbrstr run-benchmark [/path/to/a/file]
+    valbrstr run-benchmark
     ```
     or equally
     ```
-    valbrstr b [/path/to/a/file]
+    valbrstr b
     ```
-
-    If no argument is given, the application will generate benchmark data on the fly.
 
     _For details on benchmarking, see the page "[Benchmarking](https://github.com/silvuss/silvuss-bracket-string-validator-4p/wiki/Benchmarking)" of the wiki._
 
 - To **unit-test** a certain validation method that the application provides:
     ```
-    valbrstr run-unit-tests [/path/to/a/file]
+    valbrstr run-unit-tests
     ```
     or equally
     ```
-    valbrstr t [/path/to/a/file]
+    valbrstr t
     ```
-
-    If no argument is given, the application uses its own file with test cases.
 
     **_Info:_** _For details on unit-testing, see the page "[Unit testing](https://github.com/silvuss/silvuss-bracket-string-validator-4p/wiki/Unit-testing)" of the wiki._
 
