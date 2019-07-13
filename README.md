@@ -70,11 +70,11 @@ All of the following software must be installed before running the application:
 
 - To **validate** a string:
     ```
-    valbrstr validate [validation method ID] ["string to validate"]
+    app/cli/valbrstr validate [validation method ID] ["string to validate"]
     ```
     or equally
     ```
-    valbrstr v [validation method ID] ["string to validate"]
+    app/cli/valbrstr v [validation method ID] ["string to validate"]
     ```
 
     Both arguments are optional.
@@ -87,22 +87,22 @@ All of the following software must be installed before running the application:
 
 - To **benchmark** a certain validation method that the application provides:
     ```
-    valbrstr run-benchmark
+    app/cli/valbrstr run-benchmark
     ```
     or equally
     ```
-    valbrstr b
+    app/cli/valbrstr b
     ```
 
     _For details on benchmarking, see the page "[Benchmarking](https://github.com/silvuss/silvuss-bracket-string-validator-4p/wiki/Benchmarking)" of the wiki._
 
 - To **unit-test** a certain validation method that the application provides:
     ```
-    valbrstr run-unit-tests
+    app/cli/valbrstr run-unit-tests
     ```
     or equally
     ```
-    valbrstr t
+    app/cli/valbrstr t
     ```
 
     **_Info:_** _For details on unit-testing, see the page "[Unit testing](https://github.com/silvuss/silvuss-bracket-string-validator-4p/wiki/Unit-testing)" of the wiki._
