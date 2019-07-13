@@ -97,7 +97,7 @@ This application may be run in the following ways:
 
 - To **unit-test** a certain validation method that the application provides:
     ```
-    valbrstr run-tests [/path/to/a/file]
+    valbrstr run-unit-tests [/path/to/a/file]
     ```
     or equally
     ```

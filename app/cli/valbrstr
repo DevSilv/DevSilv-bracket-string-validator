@@ -13,15 +13,15 @@ function printUsage {
     printf "\t$THIS_SCRIPT_NAME validate (or v) stack-method (or st) STRING_TO_VALIDATE\n"
     printf "\t$THIS_SCRIPT_NAME validate (or v) stack-list-method (or stl) STRING_TO_VALIDATE\n"
     printf "\t$THIS_SCRIPT_NAME run-benchmark (or b) [OWN_BENCHMARK_DATA_FILE]\n"
-    printf "\t$THIS_SCRIPT_NAME run-tests (or t) [OWN_TEST_CASES_FILE]\n"
+    printf "\t$THIS_SCRIPT_NAME run-unit-tests (or t) [OWN_TEST_CASES_FILE]\n"
 }
 
 case "$FIRST_ARG" in
     "run-benchmark"|"b")
         bash "./app/cli/benchmark-cli/run-benchmark" "$SECOND_ARG"
         ;;
-    "run-tests"|"t")
-        bash "./app/cli/tests-cli/run-tests" "$SECOND_ARG"
+    "run-unit-tests"|"t")
+        bash "./app/cli/unit-tests-cli/run-unit-tests" "$SECOND_ARG"
         ;;
     "validate"|"v")
         bash "./app/cli/validate-cli/validate" "$SECOND_ARG" "$THIRD_ARG"

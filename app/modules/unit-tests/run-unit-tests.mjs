@@ -3,8 +3,8 @@ import isBracketStringValidRecursion from "../src/is-bracket-string-valid-recurs
 import isBracketStringValidShortest from "../src/is-bracket-string-valid-shortest.mjs";
 import isBracketStringValidStack from "../src/is-bracket-string-valid-stack.mjs";
 import isBracketStringValidStackList from "../src/is-bracket-string-valid-stack-list.mjs";
-import * as singleBracketTestCasesJSON from "./test-cases/single-bracket-test-cases.json";
-import * as bracketListTestCasesJSON from "./test-cases/bracket-list-test-cases.json";
+import * as singleBracketTestCasesJSON from "./unit-test-cases/single-bracket-unit-test-cases.json";
+import * as bracketListTestCasesJSON from "./unit-test-cases/bracket-list-unit-test-cases.json";
 
 const singleBracketTestedFunctions = [
     isBracketStringValidCounter,
@@ -54,14 +54,14 @@ bracketListTestedFunctions.forEach(f => {
     });
 });
 
-console.log("Results of tests including brackets of single types:");
+console.log("Results of unit tests including brackets of single types:");
 const singleBracketTestsResults = bracketListResults.filter(r => r.actualResult !== r.expectedResult);
 console.log(singleBracketTestsResults.length === 0 ?
     "ALL TESTS PASSED" :
     `FOLLOWING TESTS NOT PASSED:\n${singleBracketTestsResults}`
 );
 
-console.log("\nResults of tests including brackets of multiple types:");
+console.log("\nResults of unit tests including brackets of multiple types:");
 const bracketListTestsResults = singleBracketResults.filter(r => r.actualResult !== r.expectedResult);
 console.log(bracketListTestsResults.length === 0 ?
     "ALL TESTS PASSED" :
