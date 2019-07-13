@@ -91,7 +91,7 @@ This application may be run in the following ways:
     valbrstr b [/path/to/a/file]
     ```
 
-    If no argument is given, the application uses its own file with benchmark data.
+    If no argument is given, the application will generate benchmark data on the fly.
 
     _For details on benchmarking, see the page "[Benchmarking](https://github.com/silvuss/silvuss-bracket-string-validator-4p/wiki/Benchmarking)" of the wiki._
 
