@@ -24,7 +24,7 @@ case "$FIRST_ARG" in
         bash "./app/cli/unit-testing-cli/run-unit-tests"
         ;;
     "validate"|"v")
-        bash "./app/cli/validate-cli/validate" "$SECOND_ARG" "$THIRD_ARG"
+        bash "./app/cli/validation-cli/validate" "$SECOND_ARG" "$THIRD_ARG"
         ;;
     "")
         printf "$THIS_SCRIPT_NAME: no particular subcommand specified.\n"
