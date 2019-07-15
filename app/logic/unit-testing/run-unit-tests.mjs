@@ -3,8 +3,8 @@ import isBracketStringValidRecursion from "../validation/is-bracket-string-valid
 import isBracketStringValidShortest from "../validation/is-bracket-string-valid-shortest.mjs";
 import isBracketStringValidStack from "../validation/is-bracket-string-valid-stack.mjs";
 import isBracketStringValidStackList from "../validation/is-bracket-string-valid-stack-list.mjs";
-import * as singleBracketTestCasesJSON from "./unit-test-cases/single-bracket-unit-test-cases.json";
-import * as bracketListTestCasesJSON from "./unit-test-cases/bracket-list-unit-test-cases.json";
+import * as singleBracketTestCasesJSON from "./test-cases/single-bracket-test-cases.json";
+import * as bracketListTestCasesJSON from "./test-cases/bracket-list-test-cases.json";
 
 const singleBracketTestedFunctions = [
     isBracketStringValidCounter,
