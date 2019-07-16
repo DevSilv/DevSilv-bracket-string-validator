@@ -58,12 +58,14 @@ console.log("Results of unit tests including brackets of single types:");
 const singleBracketTestsResults = bracketListResults.filter(r => r.actualResult !== r.expectedResult);
 console.log(singleBracketTestsResults.length === 0 ?
     "ALL TESTS PASSED" :
-    `FOLLOWING TESTS NOT PASSED:\n${singleBracketTestsResults}`
+    `FOLLOWING TESTS NOT PASSED:\n`
 );
+console.log(singleBracketTestsResults);
 
 console.log("\nResults of unit tests including brackets of multiple types:");
 const bracketListTestsResults = singleBracketResults.filter(r => r.actualResult !== r.expectedResult);
 console.log(bracketListTestsResults.length === 0 ?
     "ALL TESTS PASSED" :
-    `FOLLOWING TESTS NOT PASSED:\n${bracketListTestsResults}`
+    `FOLLOWING TESTS NOT PASSED:\n`
 );
+console.log(bracketListTestsResults);
