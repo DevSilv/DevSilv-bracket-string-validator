@@ -4,7 +4,7 @@ bracket-string-validator is an application that can check whether a given string
 
 A "bracket string" is a string that consists only of properly closed brackets (be it `()`, `[]` or `{}`); what is more, brackets of each type must be closed properly in relation to all of the other types that exist in the string. Examples of bracket strings: `()` or `({()})[]`. Examples of "non-bracket strings": `)(` or `([)]`.
 
-I have found the idea of "bracket strings" on the forum 4programmers.net. It also seems to occur across the internet, at least on Polish websites. For details on that term, see the page "[The term bracket string](https://github.com/silvuss/silvuss-bracket-string-validator-4p/wiki/The-term-bracket-string)" of the wiki.
+I have found the idea of "bracket strings" on the forum 4programmers.net. It also seems to occur across the internet, at least on Polish websites. For details on that term, see the page "[The term bracket string](https://github.com/silvuss/silvuss-bracket-string-validator/wiki/The-term-bracket-string)" of the wiki.
 
 **Read before use:** This application **is not** intended to be used according to the purpose described above. You may use it **only** to test whether the code is written the way it is expected (i.e. it produces expected results) and **only** when you know what the code will really do. For details, see the section "[Disclaimers](#disclaimers)" of this README.
 
@@ -49,15 +49,15 @@ When benchmarking, the application generate benchmarking data on the fly. When u
 
 ## How to use this application?
 
-**_Info:_** _It is adviced to run this application in the same environment as it has been tested. In case of other environments this application may work properly, or its usage may cause unknown side effects, or it may not work at all. For details on the environment, see the section "[Environment, tools and technologies used](#environment-tools-and-technologies-used)" of this README. For more information about possible side effects, see the page "[Caveats for running in different environments than advised](https://github.com/silvuss/silvuss-bracket-string-validator-4p/wiki/Caveats-for-running-in-different-environments-than-advised)" of the wiki. For information about possibilities of other environments in future releases, see the [corresponding issue](https://github.com/silvuss/silvuss-bracket-string-validator-4p/issues/3#issue-467474906)._
+**_Info:_** _It is adviced to run this application in the same environment as it has been tested. In case of other environments this application may work properly, or its usage may cause unknown side effects, or it may not work at all. For details on the environment, see the section "[Environment, tools and technologies used](#environment-tools-and-technologies-used)" of this README. For more information about possible side effects, see the page "[Caveats for running in different environments than advised](https://github.com/silvuss/silvuss-bracket-string-validator/wiki/Caveats-for-running-in-different-environments-than-advised)" of the wiki. For information about possibilities of other environments in future releases, see the [corresponding issue](https://github.com/silvuss/silvuss-bracket-string-validator/issues/3#issue-467474906)._
 
 1. Download the application sources (into whatever directory you like).
 2. install the required software (see [the section](#required-software) below);
 3. from within the application's main directory, execute one of the commands that the application provides (see [the section](#available-commands) below).
 
-**_Info:_** _Current release of this application neither can be installed (onto neither operating system), nor require it. For information about whether installation will be possible, or also required, in future releases, see the [corresponding issue](https://github.com/silvuss/silvuss-bracket-string-validator-4p/issues/2#issue-467473279)._
+**_Info:_** _Current release of this application neither can be installed (onto neither operating system), nor require it. For information about whether installation will be possible, or also required, in future releases, see the [corresponding issue](https://github.com/silvuss/silvuss-bracket-string-validator/issues/2#issue-467473279)._
 
-**_Info:_** _Current release of this application can be run only in the console. For information about running possibilities in future releases, see the [corresponding issue](https://github.com/silvuss/silvuss-bracket-string-validator-4p/issues/4)._
+**_Info:_** _Current release of this application can be run only in the console. For information about running possibilities in future releases, see the [corresponding issue](https://github.com/silvuss/silvuss-bracket-string-validator/issues/4)._
 
 ### Required software
 
@@ -94,7 +94,7 @@ All of the following software must be installed before running the application:
     app/cli/valbrstr b
     ```
 
-    _For details on benchmarking, see the page "[Benchmarking](https://github.com/silvuss/silvuss-bracket-string-validator-4p/wiki/Benchmarking)" of the wiki._
+    _For details on benchmarking, see the page "[Benchmarking](https://github.com/silvuss/silvuss-bracket-string-validator/wiki/Benchmarking)" of the wiki._
 
 - To **unit-test** a certain validation method that the application provides:
     ```
@@ -105,9 +105,9 @@ All of the following software must be installed before running the application:
     app/cli/valbrstr t
     ```
 
-    **_Info:_** _For details on unit-testing, see the page "[Unit testing](https://github.com/silvuss/silvuss-bracket-string-validator-4p/wiki/Unit-testing)" of the wiki._
+    **_Info:_** _For details on unit-testing, see the page "[Unit testing](https://github.com/silvuss/silvuss-bracket-string-validator/wiki/Unit-testing)" of the wiki._
 
-**_Info:_** _For the list of all available validation methods and their IDs, see the page "[Validation methods](https://github.com/silvuss/silvuss-bracket-string-validator-4p/wiki/Validation-methods)" of the wiki._
+**_Info:_** _For the list of all available validation methods and their IDs, see the page "[Validation methods](https://github.com/silvuss/silvuss-bracket-string-validator/wiki/Validation-methods)" of the wiki._
 
 ## Environment, tools and technologies used
 
