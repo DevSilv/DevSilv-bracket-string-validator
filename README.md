@@ -47,7 +47,7 @@ In case of both benchmarking and unit-testing, the user may provide their file w
 
 **_Info:_** _The purpose of implementing multiple methods with the same logic is to show that the author of this repository is able to write the same logic in different ways in JavaScript._
 
-When benchmarking, the application generate benchmarking data on the fly. When unit-testing, the application uses a predefined set of unit tests.
+When benchmarking, the application generate benchmark data on the fly. When unit-testing, the application uses a predefined set of unit tests.
 
 ## How to use this application?
 
