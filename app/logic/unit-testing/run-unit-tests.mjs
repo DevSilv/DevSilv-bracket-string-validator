@@ -1,12 +1,19 @@
+// Import algorithms to be tested
 import isBracketStringValidCounter from "../validation/is-bracket-string-valid-counter.mjs";
 import isBracketStringValidRecursion from "../validation/is-bracket-string-valid-recursion.mjs";
 import isBracketStringValidShortest from "../validation/is-bracket-string-valid-shortest.mjs";
 import isBracketStringValidStack from "../validation/is-bracket-string-valid-stack.mjs";
 import isBracketStringValidStackList from "../validation/is-bracket-string-valid-stack-list.mjs";
+
+// Import predefined test cases
 import * as singleBracketTestCasesJSON from "./test-cases/single-bracket-test-cases.json";
 import * as bracketListTestCasesJSON from "./test-cases/bracket-list-test-cases.json";
 
+// Import a helper function
 import getUnitTestCasesFromFile from "./get-unit-test-cases-from-file.mjs";
+
+// Prepare algorithms to be tested
+
 const singleBracketTestedFunctions = [
     isBracketStringValidCounter,
     isBracketStringValidRecursion,
@@ -17,6 +24,8 @@ const singleBracketTestedFunctions = [
 const bracketListTestedFunctions = [
     isBracketStringValidStackList
 ];
+
+// Prepare test cases
 
 let singleBracketTestCases = [];
 let bracketListTestCases = [];
@@ -41,8 +50,12 @@ if (process.argv.length > 2) {
     bracketListTestCases = Array.from(bracketListTestCasesJSON.default);
 }
 
+// Prepare containers for the testing results
+
 const singleBracketResults = new Array();
 const bracketListResults = new Array();
+
+// Test
 
 singleBracketTestedFunctions.forEach(f => {
     singleBracketTestCases.forEach(c => {
@@ -74,6 +87,8 @@ bracketListTestedFunctions.forEach(f => {
         });
     });
 });
+
+// Return testing results
 
 console.log("Results of unit tests including brackets of single types:");
 const singleBracketTestsResults = bracketListResults.filter(r => r.actualResult !== r.expectedResult);

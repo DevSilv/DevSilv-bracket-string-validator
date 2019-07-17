@@ -1,12 +1,21 @@
+// Import algorithms to be benchmarked
 import isBracketStringValidCounter from "../validation/is-bracket-string-valid-counter.mjs";
 import isBracketStringValidRecursion from "../validation/is-bracket-string-valid-recursion.mjs";
 import isBracketStringValidShortest from "../validation/is-bracket-string-valid-shortest.mjs";
 import isBracketStringValidStack from "../validation/is-bracket-string-valid-stack.mjs";
 import isBracketStringValidStackList from "../validation/is-bracket-string-valid-stack-list.mjs";
+
+// Import benchmark parameters
 import * as benchmarkParametersJSON from "./benchmark-parameters.json";
+
+// Import function to generate benchmark data
 import generateBenchmarkData from "./generate-benchmark-data.mjs";
 
+// Import helper function
 import getBenchmarkDataFromFile from "./get-benchmark-data-from-file.mjs";
+
+// Prepare algorithms to be benchmarked
+
 const benchmarkedFunctions = [
     isBracketStringValidCounter,
     isBracketStringValidRecursion,
@@ -15,12 +24,15 @@ const benchmarkedFunctions = [
     isBracketStringValidStackList
 ];
 
-// Set parameters
+// Prepare benchmarking parameters
+
 const benchmarkCaseCount = benchmarkParametersJSON.default.benchmarkCaseCount;
 const maxBenchmarkCaseLength = benchmarkParametersJSON.default.maxBenchmarkCaseLength;
 const onlyBracketProbability = benchmarkParametersJSON.default.onlyBracketProbability;
 const bracketDominancePercent = benchmarkParametersJSON.default.bracketDominancePercent;
 const benchmarkRepeatNumber = 10;
+
+// Prepare benchmark data
 
 let customBenchmarkData = null;
 if (process.argv.length > 2) {
@@ -33,26 +45,34 @@ if (process.argv.length > 2) {
         throw new Error("The provided data contain benchmark data in an invalid form");
     }
 }
+
+// Prepare container for the benchmarking result
+
 const averageTimes = new Object();
 benchmarkedFunctions.forEach(func => Object.defineProperty(averageTimes, func.name, {
     value: [],
     enumerable: true,
     writable: true
 }));
+
+// Benchmark
+
 for (let k = 0; k < benchmarkRepeatNumber; ++k) {
     benchmarkedFunctions.forEach(func => {
         let oneDataSetTotalTime = 0; // miliseconds
+
+        // Get the benchmark data
 
         let benchmarkData;
         if (customBenchmarkData === null) {
             // There are not custom benchmark data, generate them
 
             benchmarkData = generateBenchmarkData(
-            benchmarkCaseCount,
-            maxBenchmarkCaseLength,
-            onlyBracketProbability,
-            bracketDominancePercent
-        );
+                benchmarkCaseCount,
+                maxBenchmarkCaseLength,
+                onlyBracketProbability,
+                bracketDominancePercent
+            );
         } else {
             // There are custom benchmark data, use them
 
@@ -79,5 +99,7 @@ for (let k = 0; k < benchmarkRepeatNumber; ++k) {
         });
     });
 }
+
+// Output benchmarking result
 
 console.log(averageTimes);
