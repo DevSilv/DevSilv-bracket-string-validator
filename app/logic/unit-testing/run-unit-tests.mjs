@@ -6,6 +6,7 @@ import isBracketStringValidStackList from "../validation/is-bracket-string-valid
 import * as singleBracketTestCasesJSON from "./test-cases/single-bracket-test-cases.json";
 import * as bracketListTestCasesJSON from "./test-cases/bracket-list-test-cases.json";
 
+import getUnitTestCasesFromFile from "./get-unit-test-cases-from-file.mjs";
 const singleBracketTestedFunctions = [
     isBracketStringValidCounter,
     isBracketStringValidRecursion,
@@ -17,8 +18,28 @@ const bracketListTestedFunctions = [
     isBracketStringValidStackList
 ];
 
-const singleBracketTestCases = Array.from(singleBracketTestCasesJSON.default);
-const bracketListTestCases = Array.from(bracketListTestCasesJSON.default);
+let singleBracketTestCases = [];
+let bracketListTestCases = [];
+if (process.argv.length > 2) {
+    // There is a custom file, use it
+
+    const path = process.argv[2];
+    const allCustomTestCases = getUnitTestCasesFromFile(path);
+
+    if (allCustomTestCases !== null) {
+        // Custom data are good
+        singleBracketTestCases = allCustomTestCases.singleBracketTestCases;
+        bracketListTestCases = allCustomTestCases.bracketListTestCases;
+    } else {
+        // Custom data are bad
+        throw new Error("The provided data contain at least one test case in an invalid form");
+    }
+} else {
+    // There is no custom file, use the predefined sets of test cases
+
+    singleBracketTestCases = Array.from(singleBracketTestCasesJSON.default);
+    bracketListTestCases = Array.from(bracketListTestCasesJSON.default);
+}
 
 const singleBracketResults = new Array();
 const bracketListResults = new Array();

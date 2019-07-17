@@ -1,10 +1,36 @@
 # Benchmarking
 
-The application performance may be benchmarked with an amateur set of benchmark tests. For one run of the benchmark, all of the validation algorithms are benchmarked individually.
+The application performance may be benchmarked with a custom or a predefined (amateur) set of benchmark tests. For one run of the benchmark, there are benchmarked all of the validation algorithms (each one individually).
 
 ## Input
 
-The benchmark data sets are generated on the fly. When generating, the following parameters are used:
+The benchmark data may be provided by the user in a file; these are custom benchmark data. Path to this file is given as an argument to the application call.
+
+If no file is given, the benchmark data are generated on the fly.
+
+### File with custom benchmark data
+
+The file must be a JSON file. It must contain an array. Each element of this array must be also an array, and denotes one benchmark data set. Each element of the internal array may be any valid JSON value.
+
+The minimum length of both arrays is zero. The maximum length of both arrays depends on the JSON parser implementation limit for it. Since current release of this application runs in Node.js, it uses Node.js's JSON parser. For some details on what are this parser's limits, see this Stack Overflow thread: https://stackoverflow.com/questions/24153996/is-there-a-limit-on-the-size-of-a-string-in-json-with-node-js
+
+An example content of a file with custom benchmark data:
+```json
+[
+  [
+    "{}{}[][]"
+  ],
+  [
+    "()()",
+    null,
+    { "a": "1" }
+  ]
+]
+```
+
+### Generated data
+
+When generating, the following parameters are used:
 |No|Name|Description|Value|
 |-|-|-|-|
 |1|`benchmarkRepeatNumber`|Determines how many times each function will be benchmarked. Each time there is generated a new set of data.|10|
