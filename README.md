@@ -133,6 +133,7 @@ This application was tested in the following environment:
     - In particular, it makes use of [Node.js's experimental ECMAScript modules support](https://nodejs.org/api/esm.html).
 3. This application makes use of the [JSON format](https://en.wikipedia.org/wiki/JSON).
 4. This application's validation algorithm is taken from [this post on the 4programmers.net forum](https://4programmers.net/Forum/C_i_C++/327138-sprawdzenie_czy_wyrazenie_jest_nawiasowe?p=1594101#id1594101).
+5. This application makes use of the [JSDoc markup language](https://en.wikipedia.org/wiki/JSDoc).
 
 ## Sources
 
@@ -171,12 +172,16 @@ Below are some of the sources that was helpful for me when writing this applicat
 - the website of Guilherme Oenning:
     - https://goenning.net/2016/04/14/stop-reading-json-files-with-require/
 
-- the Node.js documentation:
+- the Node.js's documentation:
     - https://nodejs.org/api/fs.html#fs_fs_readfilesync_path_options
 
 - the MDN web docs:
     - https://developer.mozilla.org/en-US/docs/Glossary/Falsy
     - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures
+
+- GitHub:
+    - https://github.com/jsdoc/jsdoc/issues/1073
+    - https://github.com/jsdoc/jsdoc/issues/14
 
 - the Linux `info` pages:
     - `info bash`
