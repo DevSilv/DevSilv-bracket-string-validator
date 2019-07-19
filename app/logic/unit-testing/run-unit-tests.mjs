@@ -1,3 +1,14 @@
+/**
+ * @module
+ * @file A module for unit testing.
+ * @requires isBracketStringValidCounter
+ * @requires isBracketStringValidRecursion
+ * @requires isBracketStringValidShortest
+ * @requires isBracketStringValidStack
+ * @requires isBracketStringValidStackList
+ * @requires getUnitTestCasesFromFile
+ */
+
 // Import algorithms to be tested
 import isBracketStringValidCounter from "../validation/is-bracket-string-valid-counter.mjs";
 import isBracketStringValidRecursion from "../validation/is-bracket-string-valid-recursion.mjs";

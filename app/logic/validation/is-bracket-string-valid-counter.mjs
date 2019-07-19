@@ -1,6 +1,26 @@
-// Primary goal: with a counter
-// Secondary goal: a trade-off between maximum readability and maximum efficiency
-function isBracketStringValidCounter(bracketString, leftBracketCharacter = "(", rightBracketCharacter = ")") {
+/**
+ * @module
+ */
+
+/**
+ * @exports
+ * Validate a bracket string using the "counter" method.
+ * @param {string} bracketString
+ *  May be an empty string
+ * @param {string} leftBracketCharacter
+ *  May be an empty string; if non-empty,
+ *  must be of the length one
+ * @param {string} rightBracketCharacter
+ *  May be an empty string; if non-empty,
+ *  must be of the length one
+ * @returns {boolean} If `bracketString` is a valid
+ *  bracket string, `true`; otherwise, `false`
+ */
+export default function isBracketStringValidCounter(
+    bracketString,
+    leftBracketCharacter = "(",
+    rightBracketCharacter = ")"
+) {
     if (!bracketString) {
         // The argument is a falsy value
         //  (which includes being an empty string)
@@ -35,5 +55,3 @@ function isBracketStringValidCounter(bracketString, leftBracketCharacter = "(", 
         return false;
     }
 }
-
-export default isBracketStringValidCounter;

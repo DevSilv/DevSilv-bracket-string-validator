@@ -1,3 +1,8 @@
+/**
+ * @module
+ * @file A module for running benchmark.
+ */
+
 // Import algorithms to be benchmarked
 import isBracketStringValidCounter from "../validation/is-bracket-string-valid-counter.mjs";
 import isBracketStringValidRecursion from "../validation/is-bracket-string-valid-recursion.mjs";

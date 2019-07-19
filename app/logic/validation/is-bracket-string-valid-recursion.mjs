@@ -1,6 +1,26 @@
-// Primary goal: recursion
-// Secondary goal: a trade-off between maximum readability and maximum efficiency
-function isBracketStringValidRecursion(bracketString, leftBracketCharacter = "(", rightBracketCharacter = ")") {
+/**
+ * @module
+ */
+
+/**
+ * @exports
+ * Validate a bracket string using the "recursion" method.
+ * @param {string} bracketString
+ *  May be an empty string
+ * @param {string} leftBracketCharacter
+ *  May be an empty string; if non-empty,
+ *  must be of the length one
+ * @param {string} rightBracketCharacter
+ *  May be an empty string; if non-empty,
+ *  must be of the length one
+ * @returns {boolean} If `bracketString` is a valid
+ *  bracket string, `true`; otherwise, `false`
+ */
+export default function isBracketStringValidRecursion(
+    bracketString,
+    leftBracketCharacter = "(",
+    rightBracketCharacter = ")"
+) {
     if (!bracketString) {
         // The argument is a falsy value
         //  (which includes being an empty string)
@@ -47,5 +67,3 @@ function isBracketStringValidRecursion(bracketString, leftBracketCharacter = "("
 
     return x(0, 0);
 }
-
-export default isBracketStringValidRecursion;

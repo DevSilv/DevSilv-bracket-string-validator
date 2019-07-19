@@ -1,4 +1,26 @@
-function generateRawTestCases(minCaseLength, maxCaseLength, leftBracketsList, rightBracketsList, otherCharactersList, otherValuesList) {
+/**
+ * @module
+ * @file A module containing scripts for generating raw test cases.
+ */
+
+/**
+ * Generate a set of "raw" test cases.
+ * @param {number} minCaseLength 
+ * @param {number} maxCaseLength 
+ * @param {array} leftBracketsList 
+ * @param {array} rightBracketsList 
+ * @param {array} otherCharactersList 
+ * @param {array} otherValuesList 
+ * @returns {JSON} 
+ */
+function generateRawTestCases(
+    minCaseLength,
+    maxCaseLength,
+    leftBracketsList,
+    rightBracketsList,
+    otherCharactersList,
+    otherValuesList
+) {
     const testCases = new Array();
     const generateNLengthStringsFromArray = function (array, length) {
         const result = new Array();

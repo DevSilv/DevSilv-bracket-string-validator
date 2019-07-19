@@ -1,6 +1,30 @@
-// Primary goal: with a stack
-// Secondary goal: a trade-off between maximum readability and maximum efficiency
-function isBracketStringValidStackList(bracketString, leftBracketCharactersList = ["(", "["], rightBracketCharactersList = [")", "]"]) {
+/**
+ * @module
+ */
+
+/**
+ * @exports
+ * Validate a bracket string using the "stack-list" method.
+ * @param {string} bracketString
+ *  May be an empty string
+ * @param {array{string}} leftBracketCharactersList
+ *  May be an empty string; if non-empty, must be
+ *  of the same length as the length of the array
+ *  passed as the parameter `rightBracketCharactersList`;
+ *  each element of the type String, one character
+ * @param {array{string}} rightBracketCharactersList
+ *  May be an empty string; if non-empty, must be
+ *  of the same length as the length of the array
+ *  passed as the parameter `leftBracketCharactersList`;
+ *  each element of the type String, one character
+ * @returns {boolean} If `bracketString` is a valid
+ *  bracket string, `true`; otherwise, `false`
+ */
+export default function isBracketStringValidStackList(
+    bracketString,
+    leftBracketCharactersList = ["(", "["],
+    rightBracketCharactersList = [")", "]"]
+) {
     if (!bracketString) {
         // The argument is a falsy value
         //  (which includes being an empty string)
@@ -46,5 +70,3 @@ function isBracketStringValidStackList(bracketString, leftBracketCharactersList 
         return false;
     }
 }
-
-export default isBracketStringValidStackList;

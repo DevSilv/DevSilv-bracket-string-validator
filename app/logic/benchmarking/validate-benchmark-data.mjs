@@ -1,16 +1,15 @@
-// `dataToValidate` is expected to be a JavaScript array,
-//  but in fact may be anything
-// The expected value of `dataToValidate`:
-//  [ // `benchmarkRepeatNumber` elements, each denoting a set of benchmark cases
-//      [ // `benchmarkCaseCount` elements, each denoting a benchmark case
-//          <value>,
-//          <value>,
-//          ...
-//      ],
-//      ...
-//  ]
-// Returns `true` if the data are valid
-//  and `false` otherwise
+/**
+ * @module
+ */
+
+/**
+ * @exports
+ * Validate benchmark data.
+ * @param {any} dataToValidate
+ * @returns {boolean}
+ *  If the data are valid benchmark data, `true`;
+ *  otherwise, `false`
+ */
 export default function validateBenchmarkData(dataToValidate) {
     if (!Array.isArray(dataToValidate)) {
         return false;

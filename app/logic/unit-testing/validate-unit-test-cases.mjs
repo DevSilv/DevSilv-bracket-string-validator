@@ -1,19 +1,15 @@
-// `dataToValidate` is expected to be a JavaScript array,
-//  but in fact may be anything
-// The expected value of `dataToValidate`:
-//  [
-//      {
-//          "argument": <value>,
-//          "expectedResult": true/false
-//      },
-//      {
-//          "argument": <value>,
-//          "expectedResult": true/false
-//      }.
-//      ...
-//  ]
-// Return `true` if the data are valid
-//  and `false` otherwise
+/**
+ * @module
+ */
+
+/**
+ * @exports
+ * Validate unit test cases.
+ * @param {any} dataToValidate
+ * @returns {boolean}
+ *  If the data are valid unit test cases, `true`;
+ *  otherwise, `false`
+ */
 export default function validateUnitTestCases(dataToValidate) {
     if (Object.keys(dataToValidate).length !== 2
         || !dataToValidate.hasOwnProperty("singleBracketTestCases")

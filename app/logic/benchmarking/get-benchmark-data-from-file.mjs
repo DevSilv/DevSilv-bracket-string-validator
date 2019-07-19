@@ -1,9 +1,22 @@
+/**
+ * @module
+ */
+
 import fs from "fs";
 import validateBenchmarkData from "./validate-benchmark-data.mjs";
 
-// `path` is expected to point to a JSON file
-// Returns the content of the file pointed to by `path`
-//  if the content is valid, `null` otherwise
+/**
+ * @exports
+ * @requires validateBenchmarkData
+ * Get benchmark data from a file.
+ * @param {string} path
+ *  May not be an empty string; a filesystem path
+ *  that points to a JSON file
+ * @returns If the content of the file pointed to
+ *  by the parameter `path` is valid benchmark data,
+ *  this content (of the type String, may be empty);
+ *  otherwise, `null`
+ */
 export default function getBenchmarkDataFromFile(path) {
     // Get the file content
     const JSONFileContent = fs.readFileSync(path);

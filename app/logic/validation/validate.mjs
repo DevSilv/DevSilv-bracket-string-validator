@@ -1,3 +1,13 @@
+/**
+ * @module
+ * @file A module for validation.
+ * @requires isBracketStringValidCounter
+ * @requires isBracketStringValidRecursion
+ * @requires isBracketStringValidShortest
+ * @requires isBracketStringValidStack
+ * @requires isBracketStringValidStackList
+ */
+
 import isBracketStringValidCounter from "../validation/is-bracket-string-valid-counter.mjs";
 import isBracketStringValidRecursion from "../validation/is-bracket-string-valid-recursion.mjs";
 import isBracketStringValidShortest from "../validation/is-bracket-string-valid-shortest.mjs";

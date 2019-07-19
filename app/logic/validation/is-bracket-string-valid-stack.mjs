@@ -1,6 +1,26 @@
-// Primary goal: with a stack
-// Secondary goal: a trade-off between maximum readability and maximum efficiency
-function isBracketStringValidStack(bracketString, leftBracketCharacter = "(", rightBracketCharacter = ")") {
+/**
+ * @module
+ */
+
+/**
+ * @exports
+ * Validate a bracket string using the "stack" method.
+ * @param {string} bracketString
+ *  May be an empty string
+ * @param {string} leftBracketCharacter
+ *  May be an empty string; if non-empty,
+ *  must be of the length one
+ * @param {string} rightBracketCharacter
+ *  May be an empty string; if non-empty,
+ *  must be of the length one
+ * @returns {boolean} If `bracketString` is a valid
+ *  bracket string, `true`; otherwise, `false`
+ */
+export default function isBracketStringValidStack(
+    bracketString,
+    leftBracketCharacter = "(",
+    rightBracketCharacter = ")"
+) {
     if (!bracketString) {
         // The argument is a falsy value
         //  (which includes being an empty string)
@@ -39,5 +59,3 @@ function isBracketStringValidStack(bracketString, leftBracketCharacter = "(", ri
         return false;
     }
 }
-
-export default isBracketStringValidStack;

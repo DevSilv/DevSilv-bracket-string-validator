@@ -1,4 +1,20 @@
-const generateBenchmarkCase = function (
+/**
+ * @module
+ */
+
+/**
+ * @exports
+ * Generate a benchmark case.
+ * @param {number} maxBenchmarkCaseLength
+ *  An integer from `0` to `+Infinity`
+ * @param {number} onlyBracketProbability
+ *  A real number from `0.0` to `1.0`, both inclusive
+ * @param {number} bracketDominancePercent
+ *  An integer from `0` to `100`
+ * @returns {string}
+ *  May be an empty string
+ */ 
+export default function generateBenchmarkCase(
     maxBenchmarkCaseLength,
     onlyBracketProbability,
     bracketDominancePercent
@@ -33,5 +49,3 @@ const generateBenchmarkCase = function (
     }
     return benchmarkCase;
 };
-
-export default generateBenchmarkCase;
