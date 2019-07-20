@@ -6,6 +6,7 @@
  * @exports
  * Validate unit test cases.
  * @param {any} dataToValidate
+ *  Any JavaScript value
  * @returns {boolean}
  *  If the data are valid unit test cases, `true`;
  *  otherwise, `false`

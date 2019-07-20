@@ -1,7 +1,5 @@
 /**
  * @module
- * @requires fs
- * @requires validateUnitTestCases
  */
 
 import fs from "fs";
@@ -9,6 +7,8 @@ import validateUnitTestCases from "./validate-unit-test-cases.mjs";
 
 /**
  * @exports
+ * @requires fs
+ * @requires validateUnitTestCases
  * Get benchmark data from a file.
  * @param {string} path
  *  May not be an empty string; a filesystem path

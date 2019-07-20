@@ -6,6 +6,7 @@
  * @exports
  * Validate benchmark data.
  * @param {any} dataToValidate
+ *  Any JavaScript value
  * @returns {boolean}
  *  If the data are valid benchmark data, `true`;
  *  otherwise, `false`

@@ -8,11 +8,9 @@
  * @param {string} bracketString
  *  May be an empty string
  * @param {string} leftBracketCharacter
- *  May be an empty string; if non-empty,
- *  must be of the length one
+ *  Must be of the length one
  * @param {string} rightBracketCharacter
- *  May be an empty string; if non-empty,
- *  must be of the length one
+ *  Must be of the length one
  * @returns {boolean} If `bracketString` is a valid
  *  bracket string, `true`; otherwise, `false`
  */

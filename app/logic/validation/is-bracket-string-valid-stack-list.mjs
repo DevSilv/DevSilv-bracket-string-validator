@@ -8,15 +8,13 @@
  * @param {string} bracketString
  *  May be an empty string
  * @param {array{string}} leftBracketCharactersList
- *  May be an empty string; if non-empty, must be
- *  of the same length as the length of the array
+ *  Must be of the same length as the length of the list
  *  passed as the parameter `rightBracketCharactersList`;
- *  each element of the type String, one character
+ *  each element of the type "string", one character
  * @param {array{string}} rightBracketCharactersList
- *  May be an empty string; if non-empty, must be
- *  of the same length as the length of the array
+ *  Must be of the same length as the length of the list
  *  passed as the parameter `leftBracketCharactersList`;
- *  each element of the type String, one character
+ *  each element of the type "string", one character
  * @returns {boolean} If `bracketString` is a valid
  *  bracket string, `true`; otherwise, `false`
  */

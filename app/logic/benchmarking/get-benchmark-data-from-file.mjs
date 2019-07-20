@@ -7,6 +7,7 @@ import validateBenchmarkData from "./validate-benchmark-data.mjs";
 
 /**
  * @exports
+ * @requires fs
  * @requires validateBenchmarkData
  * Get benchmark data from a file.
  * @param {string} path
