@@ -1,5 +1,8 @@
 #!/bin/bash
 
+source ./app/cli/print-usage
+
+THIS_SCRIPT_NAME=$(basename "$0")
 FIRST_ARG="$1"
 SECOND_ARG="$2"
 
@@ -19,9 +22,15 @@ case "$FIRST_ARG" in
     "stack-list-method"|"stl")
         node --experimental-modules "./app/logic/validation/validate.mjs" "stack-list" "$SECOND_ARG"
         ;;
-    *)
+    "")
         # It works because when there is provided only the bracket string,
-        #   it becomes the first argument instead of a name of a method
+        #   it becomes the first argument instead of the name of a method
         node --experimental-modules "./app/logic/validation/validate.mjs" "stack-list" "$FIRST_ARG"
+        ;;
+    *)
+        # If the first argument is invalid,
+        #   the other do not matter
+        printf "$THIS_SCRIPT_NAME: $FIRST_ARG: subcommand uknown.\n"
+        printUsage
         ;;
 esac

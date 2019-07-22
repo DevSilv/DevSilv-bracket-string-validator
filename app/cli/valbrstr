@@ -1,20 +1,11 @@
 #!/bin/bash
 
+source ./app/cli/print-usage
+
 THIS_SCRIPT_NAME=$(basename "$0")
 FIRST_ARG="$1"
 SECOND_ARG="$2"
 THIRD_ARG="$3"
-
-function printUsage {
-    printf "Usage:\n"
-    printf "\t$THIS_SCRIPT_NAME validate (or v) counter-method (or c) STRING_TO_VALIDATE\n"
-    printf "\t$THIS_SCRIPT_NAME validate (or v) recursion-method (or r) STRING_TO_VALIDATE\n"
-    printf "\t$THIS_SCRIPT_NAME validate (or v) shortest-method (or sh) STRING_TO_VALIDATE\n"
-    printf "\t$THIS_SCRIPT_NAME validate (or v) stack-method (or st) STRING_TO_VALIDATE\n"
-    printf "\t$THIS_SCRIPT_NAME validate (or v) stack-list-method (or stl) STRING_TO_VALIDATE\n"
-    printf "\t$THIS_SCRIPT_NAME run-benchmark (or b) [OWN_FILE_WITH_BENCHMARK_DATA]\n"
-    printf "\t$THIS_SCRIPT_NAME run-unit-tests (or t) [OWN_FILE_WITH_UNIT_TEST_CASES]\n"
-}
 
 case "$FIRST_ARG" in
     "run-benchmark"|"b")
