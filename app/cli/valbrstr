@@ -7,6 +7,14 @@ FIRST_ARG="$1"
 SECOND_ARG="$2"
 THIRD_ARG="$3"
 
+if [[ "$#" == 0 ]] ; then
+    printf "$THIS_SCRIPT_NAME: no particular subcommand specified.\n"
+    printUsage
+elif [[ "$#" > 3 ]] ; then
+    printf "$THIS_SCRIPT_NAME: too many arguments provided.\n"
+    printUsage
+fi
+
 case "$FIRST_ARG" in
     "run-benchmark"|"b")
         bash "./app/cli/benchmarking-cli/run-benchmark" "$SECOND_ARG"
@@ -15,7 +23,14 @@ case "$FIRST_ARG" in
         bash "./app/cli/unit-testing-cli/run-unit-tests" "$SECOND_ARG"
         ;;
     "validate"|"v")
-        bash "./app/cli/validation-cli/validate" "$SECOND_ARG" "$THIRD_ARG"
+        if [[ "$#" == 3 ]] ; then
+            bash "./app/cli/validation-cli/validate" "$SECOND_ARG" "$THIRD_ARG"
+        elif [[ "$#" == 2 ]] ; then
+            bash "./app/cli/validation-cli/validate" "$SECOND_ARG"
+        elif [[ "$#" == 1 ]] ; then
+            printf "$THIS_SCRIPT_NAME: no string to validate provided.\n"
+            printUsage
+        fi
         ;;
     "")
         printf "$THIS_SCRIPT_NAME: no particular subcommand specified.\n"
