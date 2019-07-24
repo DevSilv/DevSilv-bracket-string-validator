@@ -20,21 +20,21 @@ export default function validateUnitTestCases(dataToValidate) {
         return false;
     }
 
-    // Now, we assume that `dataToValidate` is a "proper"
-    //  object. This is on the assumption that a user
-    //  will not accidentally add the specified properties
-    //  to another "thing" of type "object". This of course
-    //  DOES NOT prevent from having them added intentionally
-    //  for any reason; such cases should most probably
-    //  be handled somehow in the future.
+    // Now, we assume that the data to validate is a proper
+    //  object with test cases. This is on the assumption
+    //  that a user will not accidentally add the specified
+    //  properties to another "thing" of the type `object`.
+    //  This of course DOES NOT prevent from having them
+    //  added intentionally for any reason; such cases should
+    //  most probably be handled somehow in the future
 
     if (!Array.isArray(dataToValidate.singleBracketTestCases)
         || !Array.isArray(dataToValidate.bracketListTestCases)) {
         return false;
     }
 
-    // Now, we are sure that `dataToValidate.singleBracketTestCases`
-    //  and `dataToValidate.bracketListTestCases` are Arrays
+    // Now, we are sure that both properties
+    //  are of the type `array`
 
     function isDataValidTestCase(data) {
         if (!data) {

@@ -26,7 +26,6 @@ export default function getBenchmarkDataFromFile(path) {
     // Validate the content
     const valid = validateBenchmarkData(fileContent);
 
-    // Output the result
     if (valid) {
         return fileContent;
     } else {

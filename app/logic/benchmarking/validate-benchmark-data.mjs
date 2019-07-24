@@ -16,7 +16,7 @@ export default function validateBenchmarkData(dataToValidate) {
         return false;
     }
 
-    // Now we are sure that `dataToValidate` is an array
+    // Now we are sure that the data to validate are an array
     //  (but still – is it of the Array type?)
 
     return dataToValidate.every(x => {

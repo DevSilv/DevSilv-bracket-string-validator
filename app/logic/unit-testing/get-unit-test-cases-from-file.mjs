@@ -26,7 +26,6 @@ export default function getUnitTestCasesFromFile(path) {
     // Validate the content
     const valid = validateUnitTestCases(fileContent);
 
-    // Output the result
     if (valid) {
         return fileContent;
     } else {
