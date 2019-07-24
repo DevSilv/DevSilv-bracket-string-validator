@@ -2,9 +2,9 @@
 
 bracket-string-validator is an application that can check whether a given string is a so-called bracket string.
 
-A "bracket string" is a string that consists only of properly closed brackets (be it `()`, `[]` or `{}`); what is more, brackets of each type must be closed properly in relation to all of the other types that exist in the string. Examples of bracket strings: `()` or `({()})[]`. Examples of "non-bracket strings": `)(` or `([)]`.
+A "bracket string" is a string that consists only of properly closed brackets (be it `()`, `[]` or `{}`); what is more, brackets of each type must be closed properly in relation to all of the other types that exist in the string. Examples of bracket strings: `()` or `({()})[]`. Examples of "non-bracket strings": `)(` or `([)]`. An empty string is NOT considered a proper bracket string. This definition is based on a definition by M. Kubica, available on [this webpage (in Polish)](http://edu.pjwstk.edu.pl/wyklady/jfa/scb/frames-jfa-main-node11.html).
 
-I have found the idea of "bracket strings" on the forum 4programmers.net. It also seems to occur across the internet, at least on Polish websites. For details on that term, see the page "[The term bracket string](https://github.com/silvuss/silvuss-bracket-string-validator/wiki/The-term-bracket-string)" of the wiki.
+I have found the idea of "bracket strings" on the forum 4programmers.net. It also seems to occur across the internet, at least on Polish websites. For details on the English term itself, see the page "[The term "bracket string"](https://github.com/silvuss/silvuss-bracket-string-validator/wiki/The-term-bracket-string)" of the wiki.
 
 **Read before use:** This application **is not** intended to be used according to the purpose described above. You may use it **only** to test whether the code is written the way it is expected (i.e. it produces expected results) and **only** when you know what the code will really do. For details, see the section "[Disclaimers](#disclaimers)" of this README.
 
@@ -128,12 +128,13 @@ This application was tested in the following environment:
 
 ### Tools and technologies
 
-1. This application is written partially in the [Bash language](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) and partially in the [JavaScript language](https://en.wikipedia.org/wiki/JavaScript).
-2. This application makes use of the [Node.js runtime environment](https://en.wikipedia.org/wiki/Node.js).
+1. The application is written partially in the [Bash language](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) and partially in the [JavaScript language](https://en.wikipedia.org/wiki/JavaScript).
+2. The application makes use of the [Node.js runtime environment](https://en.wikipedia.org/wiki/Node.js).
     - In particular, it makes use of [Node.js's experimental ECMAScript modules support](https://nodejs.org/api/esm.html).
-3. This application makes use of the [JSON format](https://en.wikipedia.org/wiki/JSON).
-4. This application's validation algorithm is taken from [this post on the 4programmers.net forum](https://4programmers.net/Forum/C_i_C++/327138-sprawdzenie_czy_wyrazenie_jest_nawiasowe?p=1594101#id1594101).
-5. This application makes use of the [JSDoc markup language](https://en.wikipedia.org/wiki/JSDoc).
+3. The application makes use of the [JSON format](https://en.wikipedia.org/wiki/JSON).
+4. The application's validation algorithm is taken from [this post on the 4programmers.net forum](https://4programmers.net/Forum/C_i_C++/327138-sprawdzenie_czy_wyrazenie_jest_nawiasowe?p=1594101#id1594101).
+5. The application makes use of the [JSDoc markup language](https://en.wikipedia.org/wiki/JSDoc).
+6. The project makes use of the [Semantic Versioning, v2.0.0](https://semver.org/spec/v2.0.0.html).
 
 ## Sources
 
@@ -152,6 +153,7 @@ Below are some of the sources that was helpful for me when writing this applicat
     - https://stackoverflow.com/a/36644558
     - https://stackoverflow.com/a/34358661
     - https://unix.stackexchange.com/questions/210602/how-to-determine-if-current-locale-uses-utf-8-encoding
+    - https://softwareengineering.stackexchange.com/questions/231057/exceptions-why-throw-early-why-catch-late
 
 - the Linux Documentation Project (LDP):
     - https://www.tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_03.html
