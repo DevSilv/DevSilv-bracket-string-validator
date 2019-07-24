@@ -2,6 +2,8 @@
  * @module
  */
 
+import ValbrstrException from "../helpers/valbrstr-exception.mjs";
+
 /**
  * @exports
  * Validate a bracket string using the "shortest" method.
@@ -19,7 +21,21 @@ export default function isBracketStringValidShortest(
     leftBracketCharacter = "(",
     rightBracketCharacter = ")"
 ) {
-    let sum = ((!bracketString || !bracketString.substring) ? -1 : 0);
+    if ((!bracketString && bracketString !== "")
+        || !bracketString.substring) {
+        // The argument is not a string
+        throw new ValbrstrException(`The bracket string must be of the type "string", but now is: ${bracketString}`);
+    }
+
+    if (leftBracketCharacter.length > 1) {
+        throw new ValbrstrException(`The left bracket character must be one-character long, but now is: ${leftBracketCharacter.length}`);
+    }
+
+    if (rightBracketCharacter.length > 1) {
+        throw new ValbrstrException(`The right bracket character must be one-character long, but now is: ${rightBracketCharacter.length}`);
+    }
+
+    let sum = 0;
     return sum >= 0 && Array.from(bracketString).every(element => {
         // The following line automatically prevents "string"
         //  from containing characters other than parentheses

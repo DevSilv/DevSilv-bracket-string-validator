@@ -2,6 +2,8 @@
  * @module
  */
 
+import ValbrstrException from "../helpers/valbrstr-exception.mjs";
+
 /**
  * @exports
  * Validate a bracket string using the "stack-list" method.
@@ -23,15 +25,41 @@ export default function isBracketStringValidStackList(
     leftBracketCharactersList = ["(", "["],
     rightBracketCharactersList = [")", "]"]
 ) {
-    if (!bracketString) {
-        // The argument is a falsy value
-        //  (which includes being an empty string)
-        // See https://developer.mozilla.org/en-US/docs/Glossary/Falsy
-        return false;
+    if ((!bracketString && bracketString !== "")
+        || !bracketString.substring) {
+        // The argument is not a string
+        throw new ValbrstrException(`The bracket string must be of the type "string", but now is: ${bracketString}`);
     }
 
-    if (!bracketString.substring) {
-        // The argument is not a string
+    if (!Array.isArray(leftBracketCharactersList)) {
+        throw new ValbrstrException(`The list with left bracket characters must be an array`);
+    }
+
+    if (!Array.isArray(rightBracketCharactersList)) {
+        throw new ValbrstrException(`The list with right bracket characters must be an array`);
+    }
+
+    if (leftBracketCharactersList.length !== rightBracketCharactersList.length) {
+        throw new ValbrstrException(`The lists must have the same length`);
+    }
+
+    if (leftBracketCharactersList.length === 0) {
+        throw new ValbrstrException(`The list with left bracket characters must not be empty`);
+    }
+
+    if (rightBracketCharactersList.length === 0) {
+        throw new ValbrstrException(`The list with right bracket characters must not be empty`);
+    }
+
+    if (!leftBracketCharactersList.every(x => x.length === 1)) {
+        throw new ValbrstrException(`Each string with a left bracket character must be one-character long`);
+    }
+
+    if (!rightBracketCharactersList.every(x => x.length === 1)) {
+        throw new ValbrstrException(`Each string with a right bracket character must be one-character long`);
+    }
+
+    if (bracketString.length === 0) {
         return false;
     }
 

@@ -12,7 +12,9 @@
  *  otherwise, `false`
  */
 export default function validateUnitTestCases(dataToValidate) {
-    if (Object.keys(dataToValidate).length !== 2
+    if (typeof dataToValidate !== "object"
+        || typeof dataToValidate === null
+        || Object.keys(dataToValidate).length !== 2
         || !dataToValidate.hasOwnProperty("singleBracketTestCases")
         || !dataToValidate.hasOwnProperty("bracketListTestCases")) {
         return false;

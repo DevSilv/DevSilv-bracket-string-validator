@@ -16,9 +16,11 @@ import * as benchmarkParametersJSON from "./benchmark-parameters.json";
 // Import function to generate benchmark data
 import generateBenchmarkData from "./generate-benchmark-data.mjs";
 
-// Import helper function
+// Import helper functions
 import getBenchmarkDataFromFile from "./get-benchmark-data-from-file.mjs";
+import ValbrstrException from "../helpers/valbrstr-exception.mjs";
 
+try {
 // Prepare algorithms to be benchmarked
 
 const benchmarkedFunctions = [
@@ -47,7 +49,7 @@ if (process.argv.length > 2) {
     customBenchmarkData = getBenchmarkDataFromFile(path);
     if (customBenchmarkData === null) {
         // Custom data are bad
-        throw new Error("The provided data contain benchmark data in an invalid form");
+            throw new ValbrstrException("The provided data contain benchmark data in an invalid form");
     }
 }
 
@@ -108,3 +110,7 @@ for (let k = 0; k < benchmarkRepeatNumber; ++k) {
 // Output benchmarking result
 
 console.log(averageTimes);
+} catch (e) {
+    console.error(e.message);
+    process.exit(1);
+}

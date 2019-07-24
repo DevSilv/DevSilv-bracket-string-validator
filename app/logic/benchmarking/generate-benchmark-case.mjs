@@ -2,6 +2,8 @@
  * @module
  */
 
+import ValbrstrException from "../helpers/valbrstr-exception.mjs";
+
 /**
  * @exports
  * Generate a benchmark case.
@@ -13,12 +15,42 @@
  *  An integer from `0` to `100`
  * @returns {string}
  *  May be an empty string
- */ 
+ */
 export default function generateBenchmarkCase(
     maxBenchmarkCaseLength,
     onlyBracketProbability,
     bracketDominancePercent
 ) {
+    if (!Number.isInteger(maxBenchmarkCaseLength)) {
+        throw new ValbrstrException(`The maximum length of a benchmark case must be an integer of the type "number", but instead is: ${maxBenchmarkCaseLength}`);
+    }
+
+    if (maxBenchmarkCaseLength < 0) {
+        throw new ValbrstrException(`The maximum length of a benchmark case must be greater or equal to 0, but instead is: ${maxBenchmarkCaseLength}`);
+    }
+
+    if (typeof onlyBracketProbability !== "number") {
+        throw new ValbrstrException(`The probability of a bracket occurrance must be of the type "number", but instead is: ${onlyBracketProbability}`);
+    }
+
+    if (onlyBracketProbability % 1 === 0
+        && onlyBracketProbability !== 0) {
+        throw new ValbrstrException(`The probability of the occurrance of a bracket must be a floating point number, but instead is: ${onlyBracketProbability}`);
+    }
+
+    if (onlyBracketProbability < 0
+        && onlyBracketProbability > 1) {
+        throw new ValbrstrException(`The probability of the occurance of a bracket must be between 0.0 and 1.0, both inclusive, but instead is: ${onlyBracketProbability}`);
+    }
+
+    if (!Number.isInteger(bracketDominancePercent)) {
+        throw new ValbrstrException(`The percent of brackets in a string must be an integer of the type "number", but instead is: ${bracketDominancePercent}`);
+    }
+
+    if (bracketDominancePercent < 0) {
+        throw new ValbrstrException(`The percent of brackets in a string must be greater or equal than zero, but instead is: ${bracketDominancePercent}`);
+    }
+
     let benchmarkCase = "";
     const benchmarkCaseLength = Math.floor(Math.random() * (maxBenchmarkCaseLength - 1)) + 1; // Start inclusive, end exclusive
     let character;

@@ -20,9 +20,11 @@ import isBracketStringValidStackList from "../validation/is-bracket-string-valid
 import * as singleBracketTestCasesJSON from "./test-cases/single-bracket-test-cases.json";
 import * as bracketListTestCasesJSON from "./test-cases/bracket-list-test-cases.json";
 
-// Import a helper function
+// Import helper functions
 import getUnitTestCasesFromFile from "./get-unit-test-cases-from-file.mjs";
+import ValbrstrException from "../helpers/valbrstr-exception.mjs";
 
+try {
 // Prepare algorithms to be tested
 
 const singleBracketTestedFunctions = [
@@ -52,7 +54,7 @@ if (process.argv.length > 2) {
         bracketListTestCases = allCustomTestCases.bracketListTestCases;
     } else {
         // Custom data are bad
-        throw new Error("The provided data contain at least one test case in an invalid form");
+            throw new ValbrstrException("The provided data contain at least one test case in an invalid form");
     }
 } else {
     // There is no custom file, use the predefined sets of test cases
@@ -73,7 +75,17 @@ singleBracketTestedFunctions.forEach(f => {
         singleBracketResults.push({
             "functionName": f.name,
             "testCase": c.argument,
-            "actualResult": f(c.argument),
+                "actualResult": (() => {
+                    try {
+                        return f(c.argument);
+                    } catch (e) {
+                        if (e instanceof ValbrstrException) {
+                            return "ValbrstrException";
+                        } else {
+                            throw e;
+                        }
+                    }
+                })(),
             "expectedResult": c.expectedResult
         });
     });
@@ -84,7 +96,17 @@ bracketListTestedFunctions.forEach(f => {
         singleBracketResults.push({
             "functionName": f.name,
             "testCase": c.argument,
-            "actualResult": f(c.argument),
+                "actualResult": (() => {
+                    try {
+                        return f(c.argument);
+                    } catch (e) {
+                        if (e instanceof ValbrstrException) {
+                            return "ValbrstrException";
+                        } else {
+                            throw e;
+                        }
+                    }
+                })(),
             "expectedResult": c.expectedResult
         });
     });
@@ -93,7 +115,17 @@ bracketListTestedFunctions.forEach(f => {
         bracketListResults.push({
             "functionName": f.name,
             "testCase": c.argument,
-            "actualResult": f(c.argument),
+                "actualResult": (() => {
+                    try {
+                        return f(c.argument);
+                    } catch (e) {
+                        if (e instanceof ValbrstrException) {
+                            return "ValbrstrException";
+                        } else {
+                            throw e;
+                        }
+                    }
+                })(),
             "expectedResult": c.expectedResult
         });
     });
@@ -116,3 +148,7 @@ console.log(bracketListTestsResults.length === 0 ?
     `FOLLOWING TESTS NOT PASSED:\n`
 );
 console.log(bracketListTestsResults);
+} catch (e) {
+    console.error(e.message);
+    process.exit(1);
+}

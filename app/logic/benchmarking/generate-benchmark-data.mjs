@@ -3,6 +3,7 @@
  */
 
 import generateBenchmarkCase from "./generate-benchmark-case.mjs"
+import ValbrstrException from "../helpers/valbrstr-exception.mjs";
 
 /**
  * @exports
@@ -25,6 +26,14 @@ export default function generateBenchmarkData(
     onlyBracketProbability,
     bracketDominancePercent
 ) {
+    if (!Number.isInteger(benchmarkCaseCount)) {
+        throw new ValbrstrException(`The number of benchmark cases must be an integer of the type "number", but instead is: ${benchmarkCaseCount}`);
+    }
+
+    if (benchmarkCaseCount < 0) {
+        throw new ValbrstrException(`The number of benchmark cases must be greater or equal to 0, but instead is: ${benchmarkCaseCount}`);
+    }
+
     const benchmarkData = new Array();
 
     for (let i = 0; i < benchmarkCaseCount; ++i) {

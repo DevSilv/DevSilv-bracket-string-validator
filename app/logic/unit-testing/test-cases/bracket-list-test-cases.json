@@ -3120,35 +3120,35 @@
 },
 {
     "argument": null,
-    "expectedResult": false
+    "expectedResult": "ValbrstrException"
 },
 {
     "argument": 0,
-    "expectedResult": false
+    "expectedResult": "ValbrstrException"
 },
 {
     "argument": 1,
-    "expectedResult": false
+    "expectedResult": "ValbrstrException"
 },
 {
     "argument": 100,
-    "expectedResult": false
+    "expectedResult": "ValbrstrException"
 },
 {
     "argument": 1.1,
-    "expectedResult": false
+    "expectedResult": "ValbrstrException"
 },
 {
     "argument": 1281,
-    "expectedResult": false
+    "expectedResult": "ValbrstrException"
 },
 {
     "argument": {},
-    "expectedResult": false
+    "expectedResult": "ValbrstrException"
 },
 {
     "argument": [],
-    "expectedResult": false
+    "expectedResult": "ValbrstrException"
 },
 {
     "argument": "\"{'BBB':'A'}\"",
@@ -3156,10 +3156,10 @@
 },
 {
     "argument": false,
-    "expectedResult": false
+    "expectedResult": "ValbrstrException"
 },
 {
     "argument": true,
-    "expectedResult": false
+    "expectedResult": "ValbrstrException"
 }
 ]

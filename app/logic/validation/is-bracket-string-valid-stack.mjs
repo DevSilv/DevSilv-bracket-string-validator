@@ -2,6 +2,8 @@
  * @module
  */
 
+import ValbrstrException from "../helpers/valbrstr-exception.mjs";
+
 /**
  * @exports
  * Validate a bracket string using the "stack" method.
@@ -19,16 +21,18 @@ export default function isBracketStringValidStack(
     leftBracketCharacter = "(",
     rightBracketCharacter = ")"
 ) {
-    if (!bracketString) {
-        // The argument is a falsy value
-        //  (which includes being an empty string)
-        // See https://developer.mozilla.org/en-US/docs/Glossary/Falsy
-        return false;
+    if ((!bracketString && bracketString !== "")
+        || !bracketString.substring) {
+        // The argument is not a string
+        throw new ValbrstrException(`The bracket string must be of the type "string", but now is: ${bracketString}`);
     }
 
-    if (!bracketString.substring) {
-        // The argument is not a string
-        return false;
+    if (leftBracketCharacter.length > 1) {
+        throw new ValbrstrException(`The left bracket character must be one-character long, but now is: ${leftBracketCharacter.length}`);
+    }
+
+    if (rightBracketCharacter.length > 1) {
+        throw new ValbrstrException(`The right bracket character must be one-character long, but now is: ${rightBracketCharacter.length}`);
     }
 
     // JavaScript does not have the stack implemented as such,
