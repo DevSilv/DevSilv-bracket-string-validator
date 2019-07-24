@@ -20,6 +20,7 @@ export default function validateBenchmarkData(dataToValidate) {
     //  (but still – is it of the Array type?)
 
     return dataToValidate.every(x => {
-        return Array.isArray(x);
+        return Array.isArray(x)
+            && x.every(y => y.substring);
     });
 }
