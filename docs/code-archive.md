@@ -1,3 +1,10 @@
+# I
+
+|Previously in the file|Language|Why removed from the application sources|
+|-|-|-|
+|`app/logic/unit-testing/generate-raw-test-cases.mjs`|JavaScript|The raw test cases were to be generated only once.|
+
+```javascript
 /**
  * @module
  * @file A module containing scripts for generating raw test cases.
@@ -86,3 +93,4 @@ function generateRawTestCases(
 //     null, 0, 1, 100, 1.1, 0x501, {},
 //     [], JSON.stringify("{'BBB':'A'}"), false, true
 // ]));
+```
