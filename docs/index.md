@@ -1,6 +1,6 @@
-# The "bracket-string-validator" wiki
+# The "bracket-string-validator"
 
-This is the home page of the wiki of the "bracket-string-validator" project. The wiki contains more detailed information about the project than the project's [README](https://github.com/silvuss/silvuss-bracket-string-validator/blob/master/README.md).
+This is the home page of the extended documentation of the "bracket-string-validator" project. The extended documentation contains more detailed information about the project than the project's [README](https://github.com/silvuss/silvuss-bracket-string-validator/blob/master/README.md).
 
 For more general information about this project, see the [README](https://github.com/silvuss/silvuss-bracket-string-validator/blob/master/README.md). Particularly, the README includes:
 - the licence of this project,
@@ -10,12 +10,8 @@ For more general information about this project, see the [README](https://github
 - environment, tools and technologies used to develop this utility,
 - sources helpful in development of this utility.
 
-## Wiki pages
+## List of documentation articles
 
-The list is sorted alphabetically.
-
-- Benchmarking
-- Caveats for running in different environments than advised
-- The term "bracket string"
-- Unit testing
-- Validation
+For the list of available articles, examine the following directories:
+- `usage-docs` if you want to see the documentation for using the application;
+- `dev-docs` if you want to see the development documentation.

@@ -4,7 +4,7 @@ bracket-string-validator is an application that can check whether a given string
 
 A "bracket string" is a string that consists only of properly closed brackets (be it `()`, `[]` or `{}`); what is more, brackets of each type must be closed properly in relation to all of the other types that exist in the string. Examples of bracket strings: `()` or `({()})[]`. Examples of "non-bracket strings": `)(` or `([)]`. An empty string is NOT considered a proper bracket string. This definition is based on a definition by M. Kubica, available on [this webpage (in Polish)](http://edu.pjwstk.edu.pl/wyklady/jfa/scb/frames-jfa-main-node11.html).
 
-I have found the idea of "bracket strings" on the forum 4programmers.net. It also seems to occur across the internet, at least on Polish websites. For details on the English term itself, see the page "[The term "bracket string"](https://github.com/silvuss/silvuss-bracket-string-validator/wiki/The-term-bracket-string)" of the wiki.
+I have found the idea of "bracket strings" on the forum 4programmers.net. It also seems to occur across the internet, at least on Polish websites. For details on the English term itself, see the page "[The term "bracket string"](https://github.com/silvuss/silvuss-bracket-string-validator/wiki/The-term-bracket-string)" of this project's wiki.
 
 **Read before use:** This application **is not** intended to be used according to the purpose described above. You may use it **only** to test whether the code is written the way it is expected (i.e. it produces expected results) and **only** when you know what the code will really do. For details, see the section "[Disclaimers](#disclaimers)" of this README.
 
@@ -130,20 +130,24 @@ This application was tested in the following environment:
 
 1. The application is written partially in the [Bash language](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) and partially in the [JavaScript language](https://en.wikipedia.org/wiki/JavaScript).
 2. The application makes use of the [Node.js runtime environment](https://en.wikipedia.org/wiki/Node.js).
-    - In particular, it makes use of [Node.js's experimental ECMAScript modules support](https://nodejs.org/api/esm.html).
+    - In particular, in the past, it has been making use of [Node.js's experimental ECMAScript modules support](https://nodejs.org/api/esm.html). Now, it makes use of the [CommonJS](https://en.wikipedia.org/wiki/CommonJS) module format.
 3. The application makes use of the [JSON format](https://en.wikipedia.org/wiki/JSON).
 4. The application's validation algorithm is taken from [this post on the 4programmers.net forum](https://4programmers.net/Forum/C_i_C++/327138-sprawdzenie_czy_wyrazenie_jest_nawiasowe?p=1594101#id1594101).
 5. The application makes use of the [JSDoc markup language](https://en.wikipedia.org/wiki/JSDoc).
 6. The project makes use of the [Semantic Versioning, v2.0.0](https://semver.org/spec/v2.0.0.html).
+7. The project makes use of the [Jest testing framework](https://en.wikipedia.org/wiki/Jest_(JavaScript_framework)).
+8. The project makes use of the [Mocha testing framework](https://en.wikipedia.org/wiki/Mocha_(JavaScript_framework)).
 
 ## Sources
 
-Below are some of the sources that was helpful for me when writing this application. They are presented in no particular order.
+### Helpful sources
 
-- Lifewire:
+Below are some of the sources that was helpful for me when developing this application. They are presented in no particular order. I tried to put in this section only the sources not already mentioned in the documentation.
+
+- The website of Lifewire:
     - https://www.lifewire.com/pass-arguments-to-bash-script-2200571
 
-- the Stack Exchange network:
+- The Stack Exchange network:
     - https://unix.stackexchange.com/a/29620/238409
     - https://stackoverflow.com/a/8467449/4752834
     - https://askubuntu.com/a/503129
@@ -152,43 +156,115 @@ Below are some of the sources that was helpful for me when writing this applicat
     - https://unix.stackexchange.com/a/168259/238409
     - https://stackoverflow.com/a/36644558
     - https://stackoverflow.com/a/34358661
-    - https://unix.stackexchange.com/questions/210602/how-to-determine-if-current-locale-uses-utf-8-encoding
-    - https://softwareengineering.stackexchange.com/questions/231057/exceptions-why-throw-early-why-catch-late
+    - https://unix.stackexchange.com/q/210602
+    - https://softwareengineering.stackexchange.com/q/231057
+    - https://stackoverflow.com/q/1066572
+    - https://stackoverflow.com/q/42179046
+    - https://stackoverflow.com/q/10753288
+    - https://stackoverflow.com/q/3812154
+    - https://stackoverflow.com/q/47397208
+    - https://stackoverflow.com/q/7163061
+    - https://stackoverflow.com/q/37395114
+    - https://stackoverflow.com/q/22009364
+    - https://stackoverflow.com/q/19376648
+    - https://stackoverflow.com/a/6482403
+    - https://unix.stackexchange.com/q/280430
+    - https://stackoverflow.com/q/7422072
 
-- the Linux Documentation Project (LDP):
+- The Linux Documentation Project (LDP):
     - https://www.tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_03.html
     - http://tldp.org/LDP/abs/html/here-docs.html
     - http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html
     - http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-8.html
+    - http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-6.html
 
-- Computer Hope:
+- The website of Computer Hope:
     - https://www.computerhope.com/jargon/r/regular-file.htm
 
-- the NixCraft online community:
+- The NixCraft online community:
     - https://www.cyberciti.biz/tips/bash-shell-parameter-substitution-2.html
     - https://www.cyberciti.biz/faq/bash-get-basename-of-filename-or-directory-name/
 
-- the Linux Information Project (LINFO):
+- The Linux Information Project (LINFO):
     - http://www.linfo.org/find_kernel_version.html
 
-- the website of Guilherme Oenning:
+- The website of Guilherme Oenning:
     - https://goenning.net/2016/04/14/stop-reading-json-files-with-require/
 
-- the Node.js's documentation:
-    - https://nodejs.org/api/fs.html#fs_fs_readfilesync_path_options
+- Node.js's documentation:
+    - https://nodejs.org/api/esm.html
+    - https://nodejs.org/api/fs.html
+    - https://nodejs.org/api/assert.html
+    - https://nodejs.org/api/modules.html
 
-- the MDN web docs:
+- npm's documentation:
+    - https://docs.npmjs.com/files/package.json#directories
+
+- The MDN web docs:
     - https://developer.mozilla.org/en-US/docs/Glossary/Falsy
     - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures
+    - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+    - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+    - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+    - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+    - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 
-- GitHub:
+- JSDoc's documentation and issues:
     - https://github.com/jsdoc/jsdoc/issues/1073
     - https://github.com/jsdoc/jsdoc/issues/14
 
-- the Linux `info` pages:
+- Jest's documentation:
+    - https://jestjs.io/docs/en/getting-started.html
+    - https://jestjs.io/docs/en/using-matchers#exceptions
+    - https://jestjs.io/docs/en/setup-teardown
+    - https://jestjs.io/docs/en/expect
+
+- Mocha's documentation:
+    - https://mochajs.org/#assertions
+    - https://mochajs.org/#installation
+    - https://mochajs.org/#getting-started
+    - https://github.com/mochajs/mocha/wiki/Using-mocha-programmatically
+    - https://mochajs.org/#reporters
+    - https://mochajs.org/#command-line-usage
+
+- Christopher Hiller's blog:
+    - https://boneskull.com/mocha-v6/#things-to-know-about-options
+
+- GitHub's documentation:
+    - https://help.github.com/en/articles/closing-issues-using-keywords
+
+- Adrian Mejiha's blog:
+    - https://adrianmejia.com/getting-started-with-node-js-modules-require-exports-imports-npm-and-beyond/#Exports
+
+- Travis CI's documentation:
+    - https://docs.travis-ci.com/user/status-images/
+
+- The Linux `info` pages:
     - `info bash`
 
-- various Linux `man` pages.
+- Various Linux `man` pages.
+
+- The website of Grammarly:
+    - https://www.grammarly.com/blog/comma-before-but/
+
+### Other useful places
+
+I tried to put in this section only the sources not already mentioned in the documentation.
+
+- The website of Stackify:
+    - https://stackify.com/unit-testing-basics-best-practices/
+
+- The IBM Developer portal:
+    - https://developer.ibm.com/tutorials/learn-nodejs-unit-testing-in-nodejs/
+
+- Wikipedia:
+    - https://en.wikipedia.org/wiki/Domain-specific_language
+
+- The 2ality blog:
+    - https://2ality.com/2018/12/nodejs-esm-phases.html
+
+- Nicholas C. Zakas's blog:
+    - https://humanwhocodes.com/blog/2019/01/stop-using-default-exports-javascript-module/
 
 ## Credits
 
