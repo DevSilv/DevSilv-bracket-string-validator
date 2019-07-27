@@ -1,8 +1,12 @@
 /**
  * @module
+ * @file A module for generating one benchmark case.
+ * @requires ValbrstrException
+ * @requires BenchmarkCaseRandomizer
  */
 
-import ValbrstrException from "../helpers/valbrstr-exception.mjs";
+// Import helpers
+const ValbrstrException = require("../../common/testable/valbrstr-exception");
 
 /**
  * @exports
@@ -14,12 +18,14 @@ import ValbrstrException from "../helpers/valbrstr-exception.mjs";
  * @param {number} bracketDominancePercent
  *  An integer from `0` to `100`
  * @returns {string}
- *  May be an empty string
+ *  May be an empty string; of length
+ *  less than `maxBenchmarkCaseLength`
  */
-export default function generateBenchmarkCase(
+function generateBenchmarkCase(
     maxBenchmarkCaseLength,
     onlyBracketProbability,
-    bracketDominancePercent
+    bracketDominancePercent,
+    BenchmarkCaseRandomizerClass
 ) {
     if (!Number.isInteger(maxBenchmarkCaseLength)) {
         throw new ValbrstrException(`The maximum length of a benchmark case must be an integer of the type "number", but instead is: ${maxBenchmarkCaseLength}`);
@@ -38,8 +44,8 @@ export default function generateBenchmarkCase(
         throw new ValbrstrException(`The probability of the occurrance of a bracket must be a floating point number, but instead is: ${onlyBracketProbability}`);
     }
 
-    if (onlyBracketProbability < 0
-        && onlyBracketProbability > 1) {
+    if (onlyBracketProbability < 0.0
+        || onlyBracketProbability > 1.0) {
         throw new ValbrstrException(`The probability of the occurance of a bracket must be between 0.0 and 1.0, both inclusive, but instead is: ${onlyBracketProbability}`);
     }
 
@@ -47,33 +53,32 @@ export default function generateBenchmarkCase(
         throw new ValbrstrException(`The percent of brackets in a string must be an integer of the type "number", but instead is: ${bracketDominancePercent}`);
     }
 
-    if (bracketDominancePercent < 0) {
-        throw new ValbrstrException(`The percent of brackets in a string must be greater or equal than zero, but instead is: ${bracketDominancePercent}`);
+    if (bracketDominancePercent < 0
+        || bracketDominancePercent > 100) {
+        throw new ValbrstrException(`The percent of brackets in a string must be between 0 and 100, both inclusive, but instead is: ${bracketDominancePercent}`);
     }
 
     let benchmarkCase = "";
-    const benchmarkCaseLength = Math.floor(Math.random() * (maxBenchmarkCaseLength - 1)) + 1; // Start inclusive, end exclusive
+    const benchmarkCaseLength = BenchmarkCaseRandomizerClass.getRandomBenchmarkCaseLength(
+        maxBenchmarkCaseLength
+    );
     let character;
 
-    if (Math.random() < onlyBracketProbability) {
+    if (BenchmarkCaseRandomizerClass.getRandomOnlyBracketProbability() < onlyBracketProbability) {
         // Generate only parentheses
         for (let i = 0; i < benchmarkCaseLength; ++i) {
-            const bracketProbability = Math.random();
+            const bracketProbability = BenchmarkCaseRandomizerClass.getRandomBracketProbability();
             character = bracketProbability > 0.5 ? "(" : ")";
             benchmarkCase += character;
         }
     } else {
-        // Generate random Latin-1 characters with parentheses' dominance
+        // Generate random characters with parentheses' dominance
         for (let i = 0; i < benchmarkCaseLength; ++i) {
-            if (Math.random() < bracketDominancePercent / 100) {
-                character = Math.random() > 0.5 ? "(" : ")";
+            if (BenchmarkCaseRandomizerClass.getRandomBracketDominancePercent() < bracketDominancePercent / 100) {
+                character = BenchmarkCaseRandomizerClass.getRandomBracketProbability() > 0.5 ? "(" : ")";
             } else {
                 do {
-                    // See https://en.wikipedia.org/wiki/Latin-1_Supplement_(Unicode_block),
-                    //  https://unicode-table.com/en/,
-                    //  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode,
-                    //  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-                    character = String.fromCharCode(Math.floor(Math.random() * (255 - 161)) + 161);
+                    character = BenchmarkCaseRandomizerClass.getRandomCharacter();
                 } while (character === "(" || character === ")");
             }
             benchmarkCase += character;
@@ -81,3 +86,5 @@ export default function generateBenchmarkCase(
     }
     return benchmarkCase;
 };
+
+exports.generateBenchmarkCase = generateBenchmarkCase;

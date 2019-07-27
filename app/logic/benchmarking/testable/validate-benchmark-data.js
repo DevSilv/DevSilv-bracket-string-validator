@@ -1,5 +1,6 @@
 /**
  * @module
+ * @file A module for validating benchmark data.
  */
 
 /**
@@ -11,7 +12,7 @@
  *  If the data are valid benchmark data, `true`;
  *  otherwise, `false`
  */
-export default function validateBenchmarkData(dataToValidate) {
+function validateBenchmarkData(dataToValidate) {
     if (!Array.isArray(dataToValidate)) {
         return false;
     }
@@ -24,3 +25,5 @@ export default function validateBenchmarkData(dataToValidate) {
             && x.every(y => y.substring);
     });
 }
+
+exports.validateBenchmarkData = validateBenchmarkData;

@@ -6,17 +6,18 @@
  * @requires isBracketStringValidShortest
  * @requires isBracketStringValidStack
  * @requires isBracketStringValidStackList
+ * @requires ValbrstrException
  */
 
 // Import the functions implementing algorithms to be used to validate
-import isBracketStringValidCounter from "../validation/is-bracket-string-valid-counter.mjs";
-import isBracketStringValidRecursion from "../validation/is-bracket-string-valid-recursion.mjs";
-import isBracketStringValidShortest from "../validation/is-bracket-string-valid-shortest.mjs";
-import isBracketStringValidStack from "../validation/is-bracket-string-valid-stack.mjs";
-import isBracketStringValidStackList from "../validation/is-bracket-string-valid-stack-list.mjs"
+const { isBracketStringValidCounter } = require("../testable/is-bracket-string-valid-counter");
+const { isBracketStringValidRecursion } = require("../testable/is-bracket-string-valid-recursion");
+const { isBracketStringValidShortest } = require("../testable/is-bracket-string-valid-shortest");
+const { isBracketStringValidStack } = require("../testable/is-bracket-string-valid-stack");
+const { isBracketStringValidStackList } = require("../testable/is-bracket-string-valid-stack-list");
 
-// Import a helper function
-import ValbrstrException from "../helpers/valbrstr-exception.mjs";
+// Import a helper
+const ValbrstrException = require("../../common/testable/valbrstr-exception");
 
 try {
     const methods = new Map(Object.entries({

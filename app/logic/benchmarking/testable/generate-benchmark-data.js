@@ -1,14 +1,20 @@
 /**
  * @module
+ * @file A module for generating all benchmark data.
+ * @requires generateBenchmarkCase
+ * @requires ValbrstrException
  */
 
-import generateBenchmarkCase from "./generate-benchmark-case.mjs"
-import ValbrstrException from "../helpers/valbrstr-exception.mjs";
+const { generateBenchmarkCase } = require("./generate-benchmark-case");
+
+// Import helpers
+const ValbrstrException = require("../../common/testable/valbrstr-exception");
+const BenchmarkCaseRandomizerClass = require("../../benchmarking/testable/benchmark-case-randomizer");
 
 /**
  * @exports
  * @requires generateBenchmarkCase
- * Generate a set of benchmark cases.
+ * @description Generate a set of benchmark cases.
  * @param {number} benchmarkCaseCount
  *  An integer from `0` to `+Infinity`
  * @param {number} maxBenchmarkCaseLength
@@ -18,9 +24,9 @@ import ValbrstrException from "../helpers/valbrstr-exception.mjs";
  * @param {number} bracketDominancePercent
  *  An integer from `0` to `100`
  * @returns {array}
- *  May be an empty array; elements of the type strings
+ *  May be an empty array; elements are strings
  */
-export default function generateBenchmarkData(
+function generateBenchmarkData(
     benchmarkCaseCount,
     maxBenchmarkCaseLength,
     onlyBracketProbability,
@@ -41,10 +47,13 @@ export default function generateBenchmarkData(
             generateBenchmarkCase(
                 maxBenchmarkCaseLength,
                 onlyBracketProbability,
-                bracketDominancePercent
+                bracketDominancePercent,
+                BenchmarkCaseRandomizerClass
             )
         );
     }
 
     return benchmarkData;
 }
+
+exports.generateBenchmarkData = generateBenchmarkData;

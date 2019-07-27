@@ -6,23 +6,26 @@
  * @requires isBracketStringValidShortest
  * @requires isBracketStringValidStack
  * @requires isBracketStringValidStackList
+ * @requires singleBracketTestCasesJSON
+ * @requires bracketListTestCasesJSON
  * @requires getUnitTestCasesFromFile
+ * @requires ValbrstrException
  */
 
 // Import the functions implementing the algorithms to be tested
-import isBracketStringValidCounter from "../validation/is-bracket-string-valid-counter.mjs";
-import isBracketStringValidRecursion from "../validation/is-bracket-string-valid-recursion.mjs";
-import isBracketStringValidShortest from "../validation/is-bracket-string-valid-shortest.mjs";
-import isBracketStringValidStack from "../validation/is-bracket-string-valid-stack.mjs";
-import isBracketStringValidStackList from "../validation/is-bracket-string-valid-stack-list.mjs";
+const { isBracketStringValidCounter } = require("../../validation/testable/is-bracket-string-valid-counter");
+const { isBracketStringValidRecursion } = require("../../validation/testable/is-bracket-string-valid-recursion");
+const { isBracketStringValidShortest } = require("../../validation/testable/is-bracket-string-valid-shortest");
+const { isBracketStringValidStack } = require("../../validation/testable/is-bracket-string-valid-stack");
+const { isBracketStringValidStackList } = require("../../validation/testable/is-bracket-string-valid-stack-list");
 
 // Import predefined test cases
-import * as singleBracketTestCasesJSON from "./test-cases/single-bracket-test-cases.json";
-import * as bracketListTestCasesJSON from "./test-cases/bracket-list-test-cases.json";
+const singleBracketTestCasesJSON = require("../../unit-testing/non-testable/test-cases/single-bracket-test-cases.json");
+const bracketListTestCasesJSON = require("../../unit-testing/non-testable/test-cases/bracket-list-test-cases.json");
 
-// Import helper functions
-import getUnitTestCasesFromFile from "./get-unit-test-cases-from-file.mjs";
-import ValbrstrException from "../helpers/valbrstr-exception.mjs";
+// Import helpers
+const { getUnitTestCasesFromFile } = require("../testable/get-unit-test-cases-from-file");
+const ValbrstrException = require("../../common/testable/valbrstr-exception");
 
 try {
     // Prepare algorithms to be tested
@@ -59,8 +62,8 @@ try {
     } else {
         // There is no custom file, use the predefined sets of test cases
 
-        singleBracketTestCases = Array.from(singleBracketTestCasesJSON.default);
-        bracketListTestCases = Array.from(bracketListTestCasesJSON.default);
+        singleBracketTestCases = Array.from(singleBracketTestCasesJSON);
+        bracketListTestCases = Array.from(bracketListTestCasesJSON);
     }
 
     // Prepare containers for the testing results

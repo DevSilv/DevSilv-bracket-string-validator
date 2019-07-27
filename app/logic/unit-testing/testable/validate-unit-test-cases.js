@@ -1,5 +1,6 @@
 /**
  * @module
+ * @file A module for validating unit test cases.
  */
 
 /**
@@ -11,9 +12,9 @@
  *  If the data are valid unit test cases, `true`;
  *  otherwise, `false`
  */
-export default function validateUnitTestCases(dataToValidate) {
+function validateUnitTestCases(dataToValidate) {
     if (typeof dataToValidate !== "object"
-        || typeof dataToValidate === null
+        || dataToValidate === null
         || Object.keys(dataToValidate).length !== 2
         || !dataToValidate.hasOwnProperty("singleBracketTestCases")
         || !dataToValidate.hasOwnProperty("bracketListTestCases")) {
@@ -54,3 +55,5 @@ export default function validateUnitTestCases(dataToValidate) {
     return dataToValidate.singleBracketTestCases.every(isDataValidTestCase)
         && dataToValidate.bracketListTestCases.every(isDataValidTestCase);
 }
+
+exports.validateUnitTestCases = validateUnitTestCases;

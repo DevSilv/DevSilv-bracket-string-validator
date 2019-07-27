@@ -3,9 +3,9 @@
 ARG="$1"
 
 if [ -f "$ARG" ] ; then
-    node --experimental-modules "./app/logic/benchmarking/run-benchmark.mjs" "$ARG"
+    node "./app/logic/benchmarking/non-testable/run-benchmark.js" "$ARG"
 elif [ "$ARG" == "" ] ; then
-    node --experimental-modules "./app/logic/benchmarking/run-benchmark.mjs"
+    node "./app/logic/benchmarking/non-testable/run-benchmark.js"
 elif [ -e "$ARG" ] ; then
     printf "File of wrong type specified: $ARG. You may use only regular files.\n"
 else

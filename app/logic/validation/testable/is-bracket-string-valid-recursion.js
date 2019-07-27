@@ -1,12 +1,14 @@
 /**
  * @module
+ * @file A module for the "recursion" validation algorithm.
+ * @requires ValbrstrException
  */
 
-import ValbrstrException from "../helpers/valbrstr-exception.mjs";
+const ValbrstrException = require("../../common/testable/valbrstr-exception");
 
 /**
  * @exports
- * Validate a bracket string using the "recursion" method.
+ * @description Validate a bracket string using the "recursion" method.
  * @param {string} bracketString
  *  May be an empty string
  * @param {string} leftBracketCharacter
@@ -16,7 +18,7 @@ import ValbrstrException from "../helpers/valbrstr-exception.mjs";
  * @returns {boolean} If `bracketString` is a valid
  *  bracket string, `true`; otherwise, `false`
  */
-export default function isBracketStringValidRecursion(
+function isBracketStringValidRecursion(
     bracketString,
     leftBracketCharacter = "(",
     rightBracketCharacter = ")"
@@ -24,14 +26,24 @@ export default function isBracketStringValidRecursion(
     if ((!bracketString && bracketString !== "")
         || !bracketString.substring) {
         // The argument is not a string
-        throw new ValbrstrException(`The bracket string must be of the type "string", but now is: ${bracketString}`);
+        throw new ValbrstrException(`The bracket string must be a string, but now is: ${bracketString}`);
     }
 
-    if (leftBracketCharacter.length > 1) {
+    if (!leftBracketCharacter ||
+        !leftBracketCharacter.substring) {
+        throw new ValbrstrException(`The left bracket character must be a string, but now is: ${leftBracketCharacter}`);
+    }
+
+    if (leftBracketCharacter.length !== 1) {
         throw new ValbrstrException(`The left bracket character must be one-character long, but now is: ${leftBracketCharacter.length}`);
     }
 
-    if (rightBracketCharacter.length > 1) {
+    if (!rightBracketCharacter ||
+        !rightBracketCharacter.substring) {
+        throw new ValbrstrException(`The right bracket character must be a string, but now is: ${rightBracketCharacter}`);
+    }
+
+    if (rightBracketCharacter.length !== 1) {
         throw new ValbrstrException(`The right bracket character must be one-character long, but now is: ${rightBracketCharacter.length}`);
     }
 
@@ -69,3 +81,5 @@ export default function isBracketStringValidRecursion(
 
     return x(0, 0);
 }
+
+exports.isBracketStringValidRecursion = isBracketStringValidRecursion;

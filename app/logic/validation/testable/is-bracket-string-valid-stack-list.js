@@ -1,8 +1,10 @@
 /**
  * @module
+ * @file A module for the "stack-list" validation algorithm.
+ * @requires ValbrstrException
  */
 
-import ValbrstrException from "../helpers/valbrstr-exception.mjs";
+const ValbrstrException = require("../../common/testable/valbrstr-exception");
 
 /**
  * @exports
@@ -12,15 +14,15 @@ import ValbrstrException from "../helpers/valbrstr-exception.mjs";
  * @param {array{string}} leftBracketCharactersList
  *  Must be of the same length as the length of the list
  *  passed as the parameter `rightBracketCharactersList`;
- *  each element of the type "string", one character
+ *  each element is a string, one character
  * @param {array{string}} rightBracketCharactersList
  *  Must be of the same length as the length of the list
  *  passed as the parameter `leftBracketCharactersList`;
- *  each element of the type "string", one character
+ *  each element is a string, one character
  * @returns {boolean} If `bracketString` is a valid
  *  bracket string, `true`; otherwise, `false`
  */
-export default function isBracketStringValidStackList(
+function isBracketStringValidStackList(
     bracketString,
     leftBracketCharactersList = ["(", "["],
     rightBracketCharactersList = [")", "]"]
@@ -28,7 +30,7 @@ export default function isBracketStringValidStackList(
     if ((!bracketString && bracketString !== "")
         || !bracketString.substring) {
         // The argument is not a string
-        throw new ValbrstrException(`The bracket string must be of the type "string", but now is: ${bracketString}`);
+        throw new ValbrstrException(`The bracket string must be a string, but now is: ${bracketString}`);
     }
 
     if (!Array.isArray(leftBracketCharactersList)) {
@@ -51,8 +53,16 @@ export default function isBracketStringValidStackList(
         throw new ValbrstrException(`The list with right bracket characters must not be empty`);
     }
 
+    if (!leftBracketCharactersList.every(x => x.substring)) {
+        throw new ValbrstrException(`Each element of the list of left bracket characters must be a string`);
+    }
+
     if (!leftBracketCharactersList.every(x => x.length === 1)) {
         throw new ValbrstrException(`Each string with a left bracket character must be one-character long`);
+    }
+
+    if (!rightBracketCharactersList.every(x => x.substring)) {
+        throw new ValbrstrException(`Each element of the list of right bracket characters must be a string`);
     }
 
     if (!rightBracketCharactersList.every(x => x.length === 1)) {
@@ -96,3 +106,5 @@ export default function isBracketStringValidStackList(
         return false;
     }
 }
+
+exports.isBracketStringValidStackList = isBracketStringValidStackList;

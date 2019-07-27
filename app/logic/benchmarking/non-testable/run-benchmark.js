@@ -1,24 +1,34 @@
 /**
  * @module
  * @file A module for benchmarking.
+ * @requires isBracketStringValidCounter
+ * @requires isBracketStringValidRecursion
+ * @requires isBracketStringValidShortest
+ * @requires isBracketStringValidStack
+ * @requires isBracketStringValidStackList
+ * @requires getUnitTestCasesFromFile
+ * @requires benchmarkParametersJSON
+ * @requires generateBenchmarkData
+ * @requires getBenchmarkDataFromFile
+ * @requires ValbrstrException
  */
 
 // Import the functions implementing the algorithms to be benchmarked
-import isBracketStringValidCounter from "../validation/is-bracket-string-valid-counter.mjs";
-import isBracketStringValidRecursion from "../validation/is-bracket-string-valid-recursion.mjs";
-import isBracketStringValidShortest from "../validation/is-bracket-string-valid-shortest.mjs";
-import isBracketStringValidStack from "../validation/is-bracket-string-valid-stack.mjs";
-import isBracketStringValidStackList from "../validation/is-bracket-string-valid-stack-list.mjs";
+const { isBracketStringValidCounter } = require("../../validation/testable/is-bracket-string-valid-counter");
+const { isBracketStringValidRecursion } = require("../../validation/testable/is-bracket-string-valid-recursion");
+const { isBracketStringValidShortest } = require("../../validation/testable/is-bracket-string-valid-shortest");
+const { isBracketStringValidStack } = require("../../validation/testable/is-bracket-string-valid-stack");
+const { isBracketStringValidStackList } = require("../../validation/testable/is-bracket-string-valid-stack-list");
 
 // Import the benchmark parameters
-import * as benchmarkParametersJSON from "./benchmark-parameters.json";
+const benchmarkParametersJSON = require("../non-testable/benchmark-parameters.json");
 
 // Import the function to generate benchmark data
-import generateBenchmarkData from "./generate-benchmark-data.mjs";
+const { generateBenchmarkData } = require("../testable/generate-benchmark-data");
 
-// Import helper functions
-import getBenchmarkDataFromFile from "./get-benchmark-data-from-file.mjs";
-import ValbrstrException from "../helpers/valbrstr-exception.mjs";
+// Import helpers
+const { getBenchmarkDataFromFile } = require("../testable/get-benchmark-data-from-file");
+const ValbrstrException = require("../../common/testable/valbrstr-exception");
 
 try {
     // Prepare algorithms to be benchmarked
@@ -33,10 +43,10 @@ try {
 
     // Prepare benchmarking parameters
 
-    const benchmarkCaseCount = benchmarkParametersJSON.default.benchmarkCaseCount;
-    const maxBenchmarkCaseLength = benchmarkParametersJSON.default.maxBenchmarkCaseLength;
-    const onlyBracketProbability = benchmarkParametersJSON.default.onlyBracketProbability;
-    const bracketDominancePercent = benchmarkParametersJSON.default.bracketDominancePercent;
+    const benchmarkCaseCount = benchmarkParametersJSON.benchmarkCaseCount;
+    const maxBenchmarkCaseLength = benchmarkParametersJSON.maxBenchmarkCaseLength;
+    const onlyBracketProbability = benchmarkParametersJSON.onlyBracketProbability;
+    const bracketDominancePercent = benchmarkParametersJSON.bracketDominancePercent;
     const benchmarkRepeatNumber = 10;
 
     // Prepare benchmark data
