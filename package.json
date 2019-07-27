@@ -1,0 +1,35 @@
+{
+  "name": "silvuss-bracket-string-validator",
+  "version": "1.0.0",
+  "description": "bracket-string-validator is an application that can check whether a given string is a so-called bracket string.",
+  "main": "app/cli/valbrstr",
+  "directories": {},
+  "scripts": {
+    "test": "echo ; echo '--- RUNNING UNIT TESTS USING JEST ---' ; echo ; jest ; echo ; echo '--- RUNNING UNIT TESTS USING MOCHA ---' ; echo ; mocha --reporter progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silvuss/silvuss-bracket-string-validator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/silvuss/silvuss-bracket-string-validator/issues"
+  },
+  "homepage": "https://github.com/silvuss/silvuss-bracket-string-validator#readme",
+  "private": true,
+  "devDependencies": {
+    "jest": "^24.8.0",
+    "mocha": "^6.2.0"
+  },
+  "jest": {
+    "testRegex": [
+      "app/tests/unit-tests/jest-tests/.*\\.js$"
+    ]
+  },
+  "mocha": {
+    "spec": [
+      "app/tests/unit-tests/mocha-tests/**/*.js"
+    ]
+  }
+}
