@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/silvuss/silvuss-bracket-string-validator.svg?branch=master)](https://travis-ci.org/silvuss/silvuss-bracket-string-validator)
+
 # bracket-string-validator
 
 bracket-string-validator is an application that can check whether a given string is a so-called bracket string.
