@@ -56,8 +56,8 @@ When benchmarking, the application generate benchmark data on the fly. When unit
 **_Info:_** _It is adviced to run this application in the same environment as it has been tested. In case of other environments this application may work properly, or its usage may cause unknown side effects, or it may not work at all. For details on the environment, see the section "[Environment, tools and technologies used](#environment-tools-and-technologies-used)" of this README. For more information about possible side effects, see the page "[Caveats for running in different environments than advised](https://github.com/silvuss/silvuss-bracket-string-validator/wiki/Caveats-for-running-in-different-environments-than-advised)" of the wiki. For information about possibilities of other environments in future releases, see the [corresponding issue](https://github.com/silvuss/silvuss-bracket-string-validator/issues/3#issue-467474906)._
 
 1. Download the application sources (into whatever directory you like).
-2. install the required software (see [the section](#required-software) below);
-3. from within the application's main directory, execute one of the commands that the application provides (see [the section](#available-commands) below).
+2. Install the required software (see [the section](#required-software) below).
+3. From within the application's main directory, execute one of the commands that the application provides (see [the section](#available-commands) below).
 
 **_Info:_** _Current release of this application neither can be installed (onto neither operating system), nor require it. For information about whether installation will be possible, or also required, in future releases, see the [corresponding issue](https://github.com/silvuss/silvuss-bracket-string-validator/issues/2#issue-467473279)._
 
