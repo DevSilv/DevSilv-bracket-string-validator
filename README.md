@@ -10,6 +10,8 @@ I have found the idea of "bracket strings" on the forum 4programmers.net. It als
 
 **Read before use:** This application **is not** intended to be used according to the purpose described above. You may use it **only** to test whether the code is written the way it is expected (i.e. it produces expected results) and **only** when you know what the code will really do. For details, see the section "[Disclaimers](#disclaimers)" of this README.
 
+**_Info:_** _There is a term "documentation" used across commit messages, comments in the files with code, this README and other Markdown files in this project. By this term, one should understand all of those places._
+
 ## Table of contents
 
 - [Copyright note](#copyright-note)
@@ -174,6 +176,7 @@ Below are some of the sources that was helpful for me when developing this appli
     - https://stackoverflow.com/a/6482403
     - https://unix.stackexchange.com/q/280430
     - https://stackoverflow.com/q/7422072
+    - https://stackoverflow.com/q/46653833
 
 - The Linux Documentation Project (LDP):
     - https://www.tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_03.html
@@ -243,10 +246,16 @@ Below are some of the sources that was helpful for me when developing this appli
 - Travis CI's documentation:
     - https://docs.travis-ci.com/user/status-images/
 
+- The Atlassian's Git tutorial:
+    - https://www.atlassian.com/pl/git/tutorials/inspecting-a-repository/git-tag
+
 - The Linux `info` pages:
     - `info bash`
 
 - Various Linux `man` pages.
+
+- Vim Tips Wiki:
+    - https://vim.fandom.com/wiki/Moving_lines_up_or_down
 
 - The website of Grammarly:
     - https://www.grammarly.com/blog/comma-before-but/
@@ -269,6 +278,13 @@ I tried to put in this section only the sources not already mentioned in the doc
 
 - Nicholas C. Zakas's blog:
     - https://humanwhocodes.com/blog/2019/01/stop-using-default-exports-javascript-module/
+
+- Travis CI's documentation:
+    - https://changelog.travis-ci.com/npm-ci-support-62786 (thanks to [this comment on a Travis CI's issue](https://github.com/travis-ci/travis-ci/issues/10113#issuecomment-421121316))
+    - https://docs.travis-ci.com/user/languages/javascript-with-nodejs/#npm-ci-support
+
+- npm's documentation:
+    - https://docs.npmjs.com/cli/ci.html
 
 ## Credits
 
