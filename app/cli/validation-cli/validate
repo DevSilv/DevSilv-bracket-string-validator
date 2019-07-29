@@ -13,7 +13,7 @@ elif [[ "$#" == 2 || "$#" == 1 ]] ; then
     case "$FIRST_ARG" in
         "counter-method"|"c")
             if [[ "$#" == 2 ]] ; then
-                node --experimental-modules "./app/logic/validation/validate.mjs" "counter" "$SECOND_ARG"
+                node "./app/logic/validation/non-testable/validate.js" "counter" "$SECOND_ARG"
             else
                 printf "$THIS_SCRIPT_NAME: no string to validate provided.\n"
                 printUsage
@@ -21,7 +21,7 @@ elif [[ "$#" == 2 || "$#" == 1 ]] ; then
             ;;
         "recursion-method"|"r")
             if [[ "$#" == 2 ]] ; then
-                node --experimental-modules "./app/logic/validation/validate.mjs" "recursion" "$SECOND_ARG"
+                node "./app/logic/validation/non-testable/validate.js" "recursion" "$SECOND_ARG"
             else
                 printf "$THIS_SCRIPT_NAME: no string to validate provided.\n"
                 printUsage
@@ -29,7 +29,7 @@ elif [[ "$#" == 2 || "$#" == 1 ]] ; then
             ;;
         "shortest-method"|"sh")
             if [[ "$#" == 2 ]] ; then
-                node --experimental-modules "./app/logic/validation/validate.mjs" "shortest" "$SECOND_ARG"
+                node "./app/logic/validation/non-testable/validate.js" "shortest" "$SECOND_ARG"
             else
                 printf "$THIS_SCRIPT_NAME: no string to validate provided.\n"
                 printUsage
@@ -37,7 +37,7 @@ elif [[ "$#" == 2 || "$#" == 1 ]] ; then
             ;;
         "stack-method"|"st")
             if [[ "$#" == 2 ]] ; then
-                node --experimental-modules "./app/logic/validation/validate.mjs" "stack" "$SECOND_ARG"
+                node "./app/logic/validation/non-testable/validate.js" "stack" "$SECOND_ARG"
             else
                 printf "$THIS_SCRIPT_NAME: no string to validate provided.\n"
                 printUsage
@@ -45,7 +45,7 @@ elif [[ "$#" == 2 || "$#" == 1 ]] ; then
             ;;
         "stack-list-method"|"stl")
             if [[ "$#" == 2 ]] ; then
-                node --experimental-modules "./app/logic/validation/validate.mjs" "stack-list" "$SECOND_ARG"
+                node "./app/logic/validation/non-testable/validate.js" "stack-list" "$SECOND_ARG"
             else
                 printf "$THIS_SCRIPT_NAME: no string to validate provided.\n"
                 printUsage
@@ -61,7 +61,7 @@ elif [[ "$#" == 2 || "$#" == 1 ]] ; then
                 printUsage
             else
                 # Assume it was passed only the bracket string, not method
-                node --experimental-modules "./app/logic/validation/validate.mjs" "stack-list" "$FIRST_ARG"
+                node "./app/logic/validation/non-testable/validate.js" "stack-list" "$FIRST_ARG"
             fi
             ;;
     esac  
