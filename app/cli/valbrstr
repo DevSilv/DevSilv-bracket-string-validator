@@ -8,11 +8,11 @@ SECOND_ARG="$2"
 THIRD_ARG="$3"
 
 if [[ "$#" == 0 ]] ; then
-    printf "$THIS_SCRIPT_NAME: no particular subcommand specified.\n"
+    printf "\n$THIS_SCRIPT_NAME: no particular subcommand specified.\n"
     printUsage
     exit 1
 elif [[ "$#" > 3 ]] ; then
-    printf "$THIS_SCRIPT_NAME: too many arguments provided.\n"
+    printf "\n$THIS_SCRIPT_NAME: too many arguments provided.\n"
     printUsage
     exit 1
 fi
@@ -30,18 +30,18 @@ case "$FIRST_ARG" in
         elif [[ "$#" == 2 ]] ; then
             bash "./app/cli/validation-cli/validate" "$SECOND_ARG"
         elif [[ "$#" == 1 ]] ; then
-            printf "$THIS_SCRIPT_NAME: no string to validate provided.\n"
+            printf "\n$THIS_SCRIPT_NAME: no string to validate provided.\n"
             printUsage
             exit 1
         fi
         ;;
     "")
-        printf "$THIS_SCRIPT_NAME: no particular subcommand specified.\n"
+        printf "\n$THIS_SCRIPT_NAME: no particular subcommand specified.\n"
         printUsage
         exit 1
         ;;
     *)
-        printf "$THIS_SCRIPT_NAME: $FIRST_ARG: subcommand uknown.\n"
+        printf "\n$THIS_SCRIPT_NAME: $FIRST_ARG: subcommand uknown.\n"
         printUsage
         exit 1
         ;;

@@ -1,6 +1,7 @@
 #!/bin/bash
 
 function printUsage {
+    printf "\n"
     printf "Usage:\n"
     printf "\tvalbrstr validate (or v) counter-method (or c) STRING_TO_VALIDATE\n"
     printf "\tvalbrstr validate (or v) recursion-method (or r) STRING_TO_VALIDATE\n"
@@ -9,4 +10,5 @@ function printUsage {
     printf "\tvalbrstr validate (or v) stack-list-method (or stl) STRING_TO_VALIDATE\n"
     printf "\tvalbrstr run-benchmark (or b) [OWN_FILE_WITH_BENCHMARK_DATA]\n"
     printf "\tvalbrstr run-unit-tests (or t) [OWN_FILE_WITH_UNIT_TEST_CASES]\n"
+    printf "\n"
 }
