@@ -130,15 +130,17 @@ This application was tested in the following environment:
 
 ### Tools and technologies
 
-1. The application is written partially in the [Bash language](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) and partially in the [JavaScript language](https://en.wikipedia.org/wiki/JavaScript).
-2. The application makes use of the [Node.js runtime environment](https://en.wikipedia.org/wiki/Node.js).
-    - In particular, in the past, it has been making use of [Node.js's experimental ECMAScript modules support](https://nodejs.org/api/esm.html). Now, it makes use of the [CommonJS](https://en.wikipedia.org/wiki/CommonJS) module format.
-3. The application makes use of the [JSON format](https://en.wikipedia.org/wiki/JSON).
-4. The application's validation algorithm is taken from [this post on the 4programmers.net forum](https://4programmers.net/Forum/C_i_C++/327138-sprawdzenie_czy_wyrazenie_jest_nawiasowe?p=1594101#id1594101).
-5. The application makes use of the [JSDoc markup language](https://en.wikipedia.org/wiki/JSDoc).
-6. The project makes use of the [Semantic Versioning, v2.0.0](https://semver.org/spec/v2.0.0.html).
-7. The project makes use of the [Jest testing framework](https://en.wikipedia.org/wiki/Jest_(JavaScript_framework)).
-8. The project makes use of the [Mocha testing framework](https://en.wikipedia.org/wiki/Mocha_(JavaScript_framework)).
+- Production:
+    - The application is written partially in the [Bash language](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) and partially in the [JavaScript language](https://en.wikipedia.org/wiki/JavaScript).
+    - The application makes use of the [JSDoc markup language](https://en.wikipedia.org/wiki/JSDoc).
+    - The application makes use of the [Node.js runtime environment](https://en.wikipedia.org/wiki/Node.js). In particular, it makes use of the [CommonJS](https://en.wikipedia.org/wiki/CommonJS) module format. In the past, it has been making use of [Node.js's experimental ECMAScript modules support](https://nodejs.org/api/esm.html).
+    - The application makes use of the [JSON data format](https://en.wikipedia.org/wiki/JSON).
+    - The application's validation algorithm is taken from [this post on the 4programmers.net forum](https://4programmers.net/Forum/C_i_C++/327138-sprawdzenie_czy_wyrazenie_jest_nawiasowe?p=1594101#id1594101).
+    - The project makes use of [Semantic Versioning, v2.0.0](https://semver.org/spec/v2.0.0.html).
+- Development:
+    - The [Jest testing framework](https://en.wikipedia.org/wiki/Jest_(JavaScript_framework)).
+    - The [Mocha testing framework](https://en.wikipedia.org/wiki/Mocha_(JavaScript_framework)).
+    - The [Travis CI continuous integration service](https://en.wikipedia.org/wiki/Travis_CI).
 
 ## Sources
 
