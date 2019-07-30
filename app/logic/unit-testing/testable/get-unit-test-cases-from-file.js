@@ -7,6 +7,7 @@
 const fs = require("fs");
 const { validateUnitTestCases } = require("./validate-unit-test-cases");
 const ValbrstrException = require("../../common/testable/valbrstr-exception");
+const TypeChecker = require("../../common/testable/type-checker");
 
 /**
  * @exports
@@ -23,7 +24,7 @@ const ValbrstrException = require("../../common/testable/valbrstr-exception");
  *  otherwise, `null`
  */
 function getUnitTestCasesFromFile(path) {
-    if (!path || !path.substring) {
+    if (!path || !TypeChecker.isString(path, true)) {
         // This check is not necessary for this function's logic,
         //  but for the next check to be valid
         throw new ValbrstrException(`The path should be a string, but now is: ${typeof path}`);

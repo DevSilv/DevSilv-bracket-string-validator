@@ -3,6 +3,9 @@
  * @file A module for validating benchmark data.
  */
 
+// Import a helper
+const TypeChecker = require("../../common/testable/type-checker");
+
 /**
  * @exports
  * Validate benchmark data.
@@ -22,7 +25,7 @@ function validateBenchmarkData(dataToValidate) {
 
     return dataToValidate.every(x => {
         return Array.isArray(x)
-            && x.every(y => y.substring);
+            && x.every(y => TypeChecker.isString(y, true));
     });
 }
 

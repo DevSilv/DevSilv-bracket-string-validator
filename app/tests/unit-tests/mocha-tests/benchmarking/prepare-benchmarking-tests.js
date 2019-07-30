@@ -1,6 +1,7 @@
 try {
     // Import helpers
     const ValbrstrException = require("../../../../logic/common/testable/valbrstr-exception");
+    const TypeChecker = require("../../../../logic/common/testable/type-checker");
     const mocha = require("mocha");
     const assert = require("assert");
 
@@ -68,7 +69,7 @@ try {
             mocha.describe(`Testing the method "${BenchmarkCaseRandomizer.getRandomCharacter.name}"`, () => {
                 mocha.it("Should return a string", () => {
                     const result = BenchmarkCaseRandomizer.getRandomCharacter();
-                    assert(result.substring);
+                    assert(TypeChecker.isString(result));
                 });
                 mocha.it("Should return a value of length 1", () => {
                     const result = BenchmarkCaseRandomizer.getRandomCharacter();
@@ -151,7 +152,7 @@ try {
             mocha.it("Should return a string", () => {
                 const args = validArgs.slice();
                 const result = generateBenchmarkCase.apply(this, args);
-                assert(result.substring);
+                assert(TypeChecker.isString(result));
             });
             mocha.it("Should return a value of length less or equal to the first argument", () => {
                 const args = validArgs.slice();
@@ -188,7 +189,7 @@ try {
             mocha.it("Should return a value with all of the elements being strings", () => {
                 const args = validArgs.slice();
                 const result = generateBenchmarkData.apply(this, args);
-                assert.equal(result.every(x => x.substring), true);
+                assert.equal(result.every(x => TypeChecker.isString(x)), true);
             });
         });
 

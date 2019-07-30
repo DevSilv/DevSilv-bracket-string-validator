@@ -5,6 +5,7 @@
  */
 
 const ValbrstrException = require("../../common/testable/valbrstr-exception");
+const TypeChecker = require("../../common/testable/type-checker");
 
 /**
  * @exports
@@ -24,13 +25,13 @@ function isBracketStringValidStack(
     rightBracketCharacter = ")"
 ) {
     if ((!bracketString && bracketString !== "")
-        || !bracketString.substring) {
+        || !TypeChecker.isString(bracketString, true)) {
         // The argument is not a string
         throw new ValbrstrException(`The bracket string must be a string, but now is: ${bracketString}`);
     }
 
     if (!leftBracketCharacter ||
-        !leftBracketCharacter.substring) {
+        !TypeChecker.isString(leftBracketCharacter, true)) {
         throw new ValbrstrException(`The left bracket character must be a string, but now is: ${leftBracketCharacter}`);
     }
 
@@ -39,7 +40,7 @@ function isBracketStringValidStack(
     }
 
     if (!rightBracketCharacter ||
-        !rightBracketCharacter.substring) {
+        !TypeChecker.isString(rightBracketCharacter, true)) {
         throw new ValbrstrException(`The right bracket character must be a string, but now is: ${rightBracketCharacter}`);
     }
 

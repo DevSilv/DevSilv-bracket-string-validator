@@ -5,6 +5,7 @@
  */
 
 const ValbrstrException = require("../../common/testable/valbrstr-exception");
+const TypeChecker = require("../../common/testable/type-checker");
 
 /**
  * @exports
@@ -28,7 +29,7 @@ function isBracketStringValidStackList(
     rightBracketCharactersList = [")", "]"]
 ) {
     if ((!bracketString && bracketString !== "")
-        || !bracketString.substring) {
+        || !TypeChecker.isString(bracketString, true)) {
         // The argument is not a string
         throw new ValbrstrException(`The bracket string must be a string, but now is: ${bracketString}`);
     }
@@ -53,7 +54,7 @@ function isBracketStringValidStackList(
         throw new ValbrstrException(`The list with right bracket characters must not be empty`);
     }
 
-    if (!leftBracketCharactersList.every(x => x.substring)) {
+    if (!leftBracketCharactersList.every(x => TypeChecker.isString(x))) {
         throw new ValbrstrException(`Each element of the list of left bracket characters must be a string`);
     }
 
@@ -61,7 +62,7 @@ function isBracketStringValidStackList(
         throw new ValbrstrException(`Each string with a left bracket character must be one-character long`);
     }
 
-    if (!rightBracketCharactersList.every(x => x.substring)) {
+    if (!rightBracketCharactersList.every(x => TypeChecker.isString(x))) {
         throw new ValbrstrException(`Each element of the list of right bracket characters must be a string`);
     }
 

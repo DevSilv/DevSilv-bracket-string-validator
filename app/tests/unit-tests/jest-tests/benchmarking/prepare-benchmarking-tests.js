@@ -1,6 +1,7 @@
 try {
     // Import helpers
     const ValbrstrException = require("../../../../logic/common/testable/valbrstr-exception");
+    const TypeChecker = require("../../../../logic/common/testable/type-checker");
 
     // Import units to be tested
     const BenchmarkCaseRandomizer = require("../../../../logic/benchmarking/testable/benchmark-case-randomizer");
@@ -65,7 +66,8 @@ try {
             describe(`Testing the method "${BenchmarkCaseRandomizer.getRandomCharacter.name}"`, () => {
                 test("Expect the result to be a string", () => {
                     const result = BenchmarkCaseRandomizer.getRandomCharacter();
-                    expect(result).toHaveProperty("substring");
+                    expect(TypeChecker.isString(result))
+                        .toStrictEqual(true);
                 });
                 test("Expect the result's length to be 1 character long", () => {
                     const result = BenchmarkCaseRandomizer.getRandomCharacter();
@@ -148,7 +150,8 @@ try {
             test("Expect the result to be a string", () => {
                 const args = validArgs.slice();
                 const result = generateBenchmarkCase.apply(this, args);
-                expect(result).toHaveProperty("substring");
+                expect(TypeChecker.isString(result))
+                    .toStrictEqual(true);
             });
             test("Expect the result's length to be less or equal to the first argument", () => {
                 const args = validArgs.slice();
@@ -185,7 +188,7 @@ try {
             test("Expect all of the result's elements to be a string", () => {
                 const args = validArgs.slice();
                 const result = generateBenchmarkData.apply(this, args);
-                expect(result.every(x => x.substring)).toBe(true);
+                expect(result.every(x => TypeChecker.isString(x))).toBe(true);
             });
         });
 
