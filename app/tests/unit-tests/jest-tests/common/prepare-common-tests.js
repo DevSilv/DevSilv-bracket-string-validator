@@ -9,7 +9,7 @@ try {
         describe(`Testing the class "${TypeChecker.name}"`, () => {
             describe(`Testing the method "${TypeChecker.isString.name}"`, () => {
                 const validArgs = [null, true];
-                test(`Expect the method to throw ${ValbrstrException.name} for the argument "mayBeEmpty" not a boolean value"`, () => {
+                test(`Expect the method to throw ${ValbrstrException.name} for the argument "mayBeEmpty" neither undefined nor a boolean value"`, () => {
                     const args = validArgs.slice();
                     args.splice(1, 1, null);
                     expect(() => TypeChecker.isString.apply(this, args))

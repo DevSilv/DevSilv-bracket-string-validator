@@ -20,16 +20,27 @@ class TypeChecker {
      *  `true` if `data` is a string;
      *  otherwise, `false`
      */
-    static isString(data, mayBeEmpty = true) {
-        if (mayBeEmpty !== true && mayBeEmpty !== false) {
-            throw new ValbrstrException(`The second parameter must be a boolean value, but instead is: ${mayBeEmpty}`);
+    static isString(data, mayBeEmpty = undefined) {
+        if (![true, false, undefined].includes(mayBeEmpty)) {
+            throw new ValbrstrException(`The second parameter must be undefined or a boolean value, but instead is: ${mayBeEmpty}`);
         }
 
-        if (data === "") {
-            return mayBeEmpty === false ? false : true;
-        }
+        switch (mayBeEmpty) {
+            case undefined:
+                // If the argument "mayBeEmpty" is undefined
+                //  and there has been passed a string,
+                //  it means that it shall not matter
+                //  whether the string is empty or not
+                return ![false, 0, null, undefined].includes(data)
+                    && !Number.isNaN(data)
+                    && !!data.substring;
 
-        return !!data && !!data.substring;
+            case true:
+                return data === "" || !!data && !!data.substring;
+
+            case false:
+                return data !== "" && !!data && !!data.substring;
+        }
     }
 }
 
