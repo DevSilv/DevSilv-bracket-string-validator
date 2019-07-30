@@ -216,6 +216,7 @@ Below are some of the sources that was helpful for me when developing this appli
     - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
     - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
     - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
+    - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators
 
 - JSDoc's documentation and issues:
     - https://github.com/jsdoc/jsdoc/issues/1073
