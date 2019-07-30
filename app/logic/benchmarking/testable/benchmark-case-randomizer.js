@@ -8,7 +8,7 @@ const ValbrstrException = require("../../../logic/common/testable/valbrstr-excep
 
 /**
  * @exports
- * @description A class containing methods for randomizing a benchmark case.
+ * @description A class serving as a container for functions for randomizing a benchmark case.
  */
 class BenchmarkCaseRandomizer {
     /**

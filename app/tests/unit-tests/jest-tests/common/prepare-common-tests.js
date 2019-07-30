@@ -20,7 +20,7 @@ try {
                     expect([true, false])
                         .toContain(TypeChecker.isString.apply(this, args));
                 });
-                test("Expect the result to be 'true' for an empty string given as the argument 'data', and the argument 'mayBeEmpty' being omitted", () => {
+                test("Expect the result to be 'true' for an empty string given as the argument 'data', and the argument 'mayBeEmpty' omitted", () => {
                     const args = validArgs.slice();
                     args.splice(0, 1, "");
                     args.splice(1, 1);
