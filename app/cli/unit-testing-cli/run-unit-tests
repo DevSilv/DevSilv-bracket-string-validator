@@ -1,5 +1,6 @@
 #!/bin/bash
 
+THIS_SCRIPT_NAME=$(basename "$0")
 ARG="$1"
 
 if [ -f "$ARG" ] ; then
@@ -7,9 +8,9 @@ if [ -f "$ARG" ] ; then
 elif [ "$ARG" == "" ] ; then
     node "./app/logic/unit-testing/non-testable/run-unit-tests.js"
 elif [ -e "$ARG" ] ; then
-    printf "\nFile of wrong type specified: $ARG. You may use only regular files.\n"
+    printf "\n$THIS_SCRIPT_NAME: $ARG: file of wrong type specified. You may use only regular files.\n"
     exit 1
 else
-    printf "\nThe specified file does not exist: $ARG.\n"
+    printf "\n$THIS_SCRIPT_NAME: $ARG: the specified file does not exist.\n"
     exit 1
 fi
