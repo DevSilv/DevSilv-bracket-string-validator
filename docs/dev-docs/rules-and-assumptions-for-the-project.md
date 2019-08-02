@@ -31,6 +31,24 @@ The tag for a release is named the same as the corresponding release but without
 - Issues are to store the actual project state (what is to be done) and its history (what has been done). Therefore, they may be created even after the actual changes have been done (in the code, in the project configuration etc.) to keep the history of the changes.
 - An issue corresponds to one and only one commit. Nonetheless, closing/fixing one issue may involve closing/fixing multiple other issues; in such case, the last commit corresponds to this issue.
 
+### Issues with some information missing
+
+These issues shall be labeled with the label "question".
+
+### Issues describing enhancements, improvements and updates
+
+These issues shall be labeled with the label "enhancement".
+
+### Issues referring to documentation
+
+These issues shall be labeled with the label "documentation".
+
+### Issues not to be fixed
+
+Some issues, after the analysis, might seem ambiguous, or might refer to problems already assumed as "non-fixable". This may be especially true if the project is maintained by more than one person.
+
+These issues shall be labeled with the label "wontfix".
+
 ### Issues describing bugs
 
 Issues desribing bugs shall describe a behavior:
@@ -42,7 +60,7 @@ There is no differentiation neither in the release title nor its description for
 - a bug that could be considered as major is named "bug";
 - a bug that could be considered as minor is also named "bug".
 
-These issues shall be marked with the label "Bug".
+These issues shall be labeled with the label "bug".
 
 ### Issues describing invalid behavior
 
@@ -50,7 +68,14 @@ Issues describing invalid behavior shall describe a behavior:
 - the expected result of which **indirectly** results from the documentation;
 - the expected result of which differs from its actual result in any way.
 
-These issues shall be marked with the label "Invalid".
+These issues shall be labeled with the label "invalid".
+
+### Issues describing deprecation and removal of functionalities provided by the public API
+
+1. For the deprecation of a functionality, there shall be created a separate issue.
+2. For the removal of a functionality, there shall be created a separate issue. This issue cannot be created when there is no issue for deprecation of this functionality created. This issue has to be scheduled in the next minor-or-major release from the issue with deprecation of this functionality.
+
+These issues shall be labeled with the labels "public API deprecation" and "public API removal".
 
 ## Releases
 
