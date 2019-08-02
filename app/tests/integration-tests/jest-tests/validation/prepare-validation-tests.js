@@ -6,7 +6,7 @@ try {
     //  but I gave up since I could not understand
     //  its behavior
 
-    describe("Integration tests for validation", () => {
+    describe("Integration tests for the validation module", () => {
         const mainScriptPath = "app/cli/valbrstr";
         const validArgs = ["'validate'", "'counter-method'", "'()'"];
         test("Testing the application to exit NOT successfully when run with one, valid argument", () => {

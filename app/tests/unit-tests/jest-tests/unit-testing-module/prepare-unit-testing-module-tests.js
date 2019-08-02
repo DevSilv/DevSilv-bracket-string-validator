@@ -3,13 +3,13 @@ try {
     const ValbrstrException = require("../../../../logic/common/testable/valbrstr-exception");
 
     // Import units to be tested
-    const { validateUnitTestCases } = require("../../../../logic/unit-testing/testable/validate-unit-test-cases");
-    const { getUnitTestCasesFromFile } = require("../../../../logic/unit-testing/testable/get-unit-test-cases-from-file");
+    const { validateUnitTestCases } = require("../../../../logic/unit-testing-module/testable/validate-unit-test-cases");
+    const { getUnitTestCasesFromFile } = require("../../../../logic/unit-testing-module/testable/get-unit-test-cases-from-file");
 
-    describe("Testing unit-testing units", () => {
+    describe("Testing units of the unit-testing module", () => {
         describe(`Testing the function ${getUnitTestCasesFromFile.name}`, () => {
             // It demands the tests to be run from within the project's root directory
-            const validArgs = ["app/tests/unit-tests/jest-tests/unit-testing/mocks/mock-filesystem/mock-file-valid-unit-test-cases.json"];
+            const validArgs = ["app/tests/unit-tests/jest-tests/unit-testing-module/mocks/mock-filesystem/mock-file-valid-unit-test-cases.json"];
             test(`Expect the function to throw ${ValbrstrException.name} for the argument not a string`, () => {
                 const args = validArgs.slice();
                 args.splice(0, 1, null);
@@ -48,7 +48,7 @@ try {
             });
             test(`Expect the result to be "null" for a file with an invalid content`, () => {
                 const args = validArgs.slice();
-                args.splice(0, 1, "app/tests/unit-tests/jest-tests/unit-testing/mocks/mock-filesystem/mock-file-invalid-unit-test-cases.json");
+                args.splice(0, 1, "app/tests/unit-tests/jest-tests/unit-testing-module/mocks/mock-filesystem/mock-file-invalid-unit-test-cases.json");
                 const result = getUnitTestCasesFromFile.apply(this, args);
                 expect(result).toBeNull();
             });

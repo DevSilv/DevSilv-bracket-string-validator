@@ -5,13 +5,13 @@ try {
     const assert = require("assert");
 
     // Import units to be tested
-    const { validateUnitTestCases } = require("../../../../logic/unit-testing/testable/validate-unit-test-cases");
-    const { getUnitTestCasesFromFile } = require("../../../../logic/unit-testing/testable/get-unit-test-cases-from-file");
+    const { validateUnitTestCases } = require("../../../../logic/unit-testing-module/testable/validate-unit-test-cases");
+    const { getUnitTestCasesFromFile } = require("../../../../logic/unit-testing-module/testable/get-unit-test-cases-from-file");
 
-    mocha.describe("Testing unit-testing units", () => {
+    mocha.describe("Testing units of the unit-testing module", () => {
         mocha.describe(`Testing the function ${getUnitTestCasesFromFile.name}`, () => {
             // It demands the tests to be run from within the project's root directory
-            const validArgs = ["app/tests/unit-tests/jest-tests/unit-testing/mocks/mock-filesystem/mock-file-valid-unit-test-cases.json"];
+            const validArgs = ["app/tests/unit-tests/jest-tests/unit-testing-module/mocks/mock-filesystem/mock-file-valid-unit-test-cases.json"];
             mocha.it(`Expect the function to throw ${ValbrstrException.name} for the argument not a string`, () => {
                 const args = validArgs.slice();
                 args.splice(0, 1, null);
@@ -50,7 +50,7 @@ try {
             });
             mocha.it(`Expect the result to be "null" for a file with an invalid content`, () => {
                 const args = validArgs.slice();
-                args.splice(0, 1, "app/tests/unit-tests/jest-tests/unit-testing/mocks/mock-filesystem/mock-file-invalid-unit-test-cases.json");
+                args.splice(0, 1, "app/tests/unit-tests/jest-tests/unit-testing-module/mocks/mock-filesystem/mock-file-invalid-unit-test-cases.json");
                 const result = getUnitTestCasesFromFile.apply(this, args);
                 assert.equal(result, null);
             });

@@ -9,7 +9,7 @@ const { generateBenchmarkCase } = require("./generate-benchmark-case");
 
 // Import helpers
 const ValbrstrException = require("../../common/testable/valbrstr-exception");
-const BenchmarkCaseRandomizerClass = require("../../benchmarking/testable/benchmark-case-randomizer");
+const BenchmarkCaseRandomizerClass = require("../../benchmark-module/testable/benchmark-case-randomizer");
 
 /**
  * @exports

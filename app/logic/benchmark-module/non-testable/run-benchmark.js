@@ -14,11 +14,11 @@
  */
 
 // Import the functions implementing the algorithms to be benchmarked
-const { isBracketStringValidCounter } = require("../../validation/testable/is-bracket-string-valid-counter");
-const { isBracketStringValidRecursion } = require("../../validation/testable/is-bracket-string-valid-recursion");
-const { isBracketStringValidShortest } = require("../../validation/testable/is-bracket-string-valid-shortest");
-const { isBracketStringValidStack } = require("../../validation/testable/is-bracket-string-valid-stack");
-const { isBracketStringValidStackList } = require("../../validation/testable/is-bracket-string-valid-stack-list");
+const { isBracketStringValidCounter } = require("../../validation-module/testable/is-bracket-string-valid-counter");
+const { isBracketStringValidRecursion } = require("../../validation-module/testable/is-bracket-string-valid-recursion");
+const { isBracketStringValidShortest } = require("../../validation-module/testable/is-bracket-string-valid-shortest");
+const { isBracketStringValidStack } = require("../../validation-module/testable/is-bracket-string-valid-stack");
+const { isBracketStringValidStackList } = require("../../validation-module/testable/is-bracket-string-valid-stack-list");
 
 // Import the benchmark parameters
 const benchmarkParametersJSON = require("../non-testable/benchmark-parameters.json");

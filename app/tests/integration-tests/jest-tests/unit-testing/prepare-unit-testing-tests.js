@@ -6,7 +6,7 @@ try {
     //  but I gave up since I could not understand
     //  its behavior
 
-    describe("Integration tests for unit-testing", () => {
+    describe("Integration tests for the unit-testing module", () => {
         const mainScriptPath = "app/cli/valbrstr";
         const validArgs = ["'run-unit-tests'", "'./app/tests/integration-tests/jest-tests/unit-testing/mocks/mock-filesystem/mock-file-valid-unit-test-cases.json'"];
         test("Testing the application to exit NOT successfully when run with one, NOT valid argument", () => {

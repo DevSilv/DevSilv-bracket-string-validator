@@ -4,9 +4,9 @@ THIS_SCRIPT_NAME=$(basename "$0")
 ARG="$1"
 
 if [ -f "$ARG" ] ; then
-    node "./app/logic/benchmarking/non-testable/run-benchmark.js" "$ARG"
+    node "./app/logic/benchmark-module/non-testable/run-benchmark.js" "$ARG"
 elif [ "$ARG" == "" ] ; then
-    node "./app/logic/benchmarking/non-testable/run-benchmark.js"
+    node "./app/logic/benchmark-module/non-testable/run-benchmark.js"
 elif [ -e "$ARG" ] ; then
     printf "\n$THIS_SCRIPT_NAME: $ARG: file of wrong type specified. You may use only regular files.\n"
     exit 1

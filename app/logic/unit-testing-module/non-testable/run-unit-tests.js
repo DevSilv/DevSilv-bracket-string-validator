@@ -13,15 +13,15 @@
  */
 
 // Import the functions implementing the algorithms to be tested
-const { isBracketStringValidCounter } = require("../../validation/testable/is-bracket-string-valid-counter");
-const { isBracketStringValidRecursion } = require("../../validation/testable/is-bracket-string-valid-recursion");
-const { isBracketStringValidShortest } = require("../../validation/testable/is-bracket-string-valid-shortest");
-const { isBracketStringValidStack } = require("../../validation/testable/is-bracket-string-valid-stack");
-const { isBracketStringValidStackList } = require("../../validation/testable/is-bracket-string-valid-stack-list");
+const { isBracketStringValidCounter } = require("../../validation-module/testable/is-bracket-string-valid-counter");
+const { isBracketStringValidRecursion } = require("../../validation-module/testable/is-bracket-string-valid-recursion");
+const { isBracketStringValidShortest } = require("../../validation-module/testable/is-bracket-string-valid-shortest");
+const { isBracketStringValidStack } = require("../../validation-module/testable/is-bracket-string-valid-stack");
+const { isBracketStringValidStackList } = require("../../validation-module/testable/is-bracket-string-valid-stack-list");
 
 // Import predefined test cases
-const singleBracketTestCasesJSON = require("../../unit-testing/non-testable/test-cases/single-bracket-test-cases.json");
-const bracketListTestCasesJSON = require("../../unit-testing/non-testable/test-cases/bracket-list-test-cases.json");
+const singleBracketTestCasesJSON = require("../../unit-testing-module/non-testable/test-cases/single-bracket-test-cases.json");
+const bracketListTestCasesJSON = require("../../unit-testing-module/non-testable/test-cases/bracket-list-test-cases.json");
 
 // Import helpers
 const { getUnitTestCasesFromFile } = require("../testable/get-unit-test-cases-from-file");

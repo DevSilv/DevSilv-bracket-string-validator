@@ -6,9 +6,9 @@ try {
     //  but I gave up since I could not understand
     //  its behavior
 
-    describe("Integration tests for benchmarking", () => {
+    describe("Integration tests for the benchmark module", () => {
         const mainScriptPath = "app/cli/valbrstr";
-        const validArgs = ["'run-benchmark'", "'./app/tests/integration-tests/jest-tests/benchmarking/mocks/mock-filesystem/mock-file-valid-benchmark-data.json'"];
+        const validArgs = ["'run-benchmark'", "'./app/tests/integration-tests/jest-tests/benchmark-module/mocks/mock-filesystem/mock-file-valid-benchmark-data.json'"];
         test("Testing the application to exit NOT successfully when run with one, NOT valid argument", () => {
             const args = validArgs.slice();
             args.splice(0, 2, "'abc'");

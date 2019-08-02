@@ -5,13 +5,13 @@ try {
     const assert = require("assert");
 
     // Import units to be tested
-    const { isBracketStringValidCounter } = require("../../../../logic/validation/testable/is-bracket-string-valid-counter");
-    const { isBracketStringValidRecursion } = require("../../../../logic/validation/testable/is-bracket-string-valid-recursion");
-    const { isBracketStringValidShortest } = require("../../../../logic/validation/testable/is-bracket-string-valid-shortest");
-    const { isBracketStringValidStack } = require("../../../../logic/validation/testable/is-bracket-string-valid-stack");
-    const { isBracketStringValidStackList } = require("../../../../logic/validation/testable/is-bracket-string-valid-stack-list");
+    const { isBracketStringValidCounter } = require("../../../../logic/validation-module/testable/is-bracket-string-valid-counter");
+    const { isBracketStringValidRecursion } = require("../../../../logic/validation-module/testable/is-bracket-string-valid-recursion");
+    const { isBracketStringValidShortest } = require("../../../../logic/validation-module/testable/is-bracket-string-valid-shortest");
+    const { isBracketStringValidStack } = require("../../../../logic/validation-module/testable/is-bracket-string-valid-stack");
+    const { isBracketStringValidStackList } = require("../../../../logic/validation-module/testable/is-bracket-string-valid-stack-list");
 
-    mocha.describe("Testing validation units", () => {
+    mocha.describe("Testing units within the validation module", () => {
         mocha.describe(`Testing the function ${isBracketStringValidCounter.name}`, () => {
             const validArgs = ["()", "(", ")"];
             mocha.it(`Expect the function to throw ${ValbrstrException.name} for the first argument not a string`, () => {

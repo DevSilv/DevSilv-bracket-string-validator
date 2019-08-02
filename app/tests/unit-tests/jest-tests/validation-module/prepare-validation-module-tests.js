@@ -3,13 +3,13 @@ try {
     const ValbrstrException = require("../../../../logic/common/testable/valbrstr-exception");
 
     // Import units to be tested
-    const { isBracketStringValidCounter } = require("../../../../logic/validation/testable/is-bracket-string-valid-counter");
-    const { isBracketStringValidRecursion } = require("../../../../logic/validation/testable/is-bracket-string-valid-recursion");
-    const { isBracketStringValidShortest } = require("../../../../logic/validation/testable/is-bracket-string-valid-shortest");
-    const { isBracketStringValidStack } = require("../../../../logic/validation/testable/is-bracket-string-valid-stack");
-    const { isBracketStringValidStackList } = require("../../../../logic/validation/testable/is-bracket-string-valid-stack-list");
+    const { isBracketStringValidCounter } = require("../../../../logic/validation-module/testable/is-bracket-string-valid-counter");
+    const { isBracketStringValidRecursion } = require("../../../../logic/validation-module/testable/is-bracket-string-valid-recursion");
+    const { isBracketStringValidShortest } = require("../../../../logic/validation-module/testable/is-bracket-string-valid-shortest");
+    const { isBracketStringValidStack } = require("../../../../logic/validation-module/testable/is-bracket-string-valid-stack");
+    const { isBracketStringValidStackList } = require("../../../../logic/validation-module/testable/is-bracket-string-valid-stack-list");
 
-    describe("Testing validation units", () => {
+    describe("Testing units within the validation module", () => {
         describe(`Testing the function ${isBracketStringValidCounter.name}`, () => {
             const validArgs = ["()", "(", ")"];
             test(`Expect the function to throw ${ValbrstrException.name} for the first argument not a string`, () => {

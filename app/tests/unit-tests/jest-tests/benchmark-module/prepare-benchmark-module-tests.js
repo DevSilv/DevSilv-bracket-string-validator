@@ -4,13 +4,13 @@ try {
     const TypeChecker = require("../../../../logic/common/testable/type-checker");
 
     // Import units to be tested
-    const BenchmarkCaseRandomizer = require("../../../../logic/benchmarking/testable/benchmark-case-randomizer");
-    const { generateBenchmarkCase } = require("../../../../logic/benchmarking/testable/generate-benchmark-case");
-    const { generateBenchmarkData } = require("../../../../logic/benchmarking/testable/generate-benchmark-data");
-    const { getBenchmarkDataFromFile } = require("../../../../logic/benchmarking/testable/get-benchmark-data-from-file");
-    const { validateBenchmarkData } = require("../../../../logic/benchmarking/testable/validate-benchmark-data");
+    const BenchmarkCaseRandomizer = require("../../../../logic/benchmark-module/testable/benchmark-case-randomizer");
+    const { generateBenchmarkCase } = require("../../../../logic/benchmark-module/testable/generate-benchmark-case");
+    const { generateBenchmarkData } = require("../../../../logic/benchmark-module/testable/generate-benchmark-data");
+    const { getBenchmarkDataFromFile } = require("../../../../logic/benchmark-module/testable/get-benchmark-data-from-file");
+    const { validateBenchmarkData } = require("../../../../logic/benchmark-module/testable/validate-benchmark-data");
 
-    describe("Testing benchmarking units", () => {
+    describe("Testing units within the benchmark module", () => {
         describe(`Testing the class "${BenchmarkCaseRandomizer.name}"`, () => {
             describe(`Testing the method "${BenchmarkCaseRandomizer.getRandomBenchmarkCaseLength.name}"`, () => {
                 test(`Expect the method to throw ${ValbrstrException.name} for an argument less than 0`, () => {
@@ -194,7 +194,7 @@ try {
 
         describe(`Testing the function "${getBenchmarkDataFromFile.name}"`, () => {
             // It demands the tests to be run from within the project's root directory
-            const validArgs = ["app/tests/unit-tests/jest-tests/benchmarking/mocks/mock-filesystem/mock-file-valid-benchmark-data.json"];
+            const validArgs = ["app/tests/unit-tests/jest-tests/benchmark-module/mocks/mock-filesystem/mock-file-valid-benchmark-data.json"];
             test(`Expect the function to throw ${ValbrstrException.name} for the argument not a string`, () => {
                 const args = validArgs.slice();
                 args.splice(0, 1, null);
@@ -220,7 +220,7 @@ try {
             });
             test(`Expect the result to be "null" for a file with an invalid content`, () => {
                 const args = validArgs.slice();
-                args.splice(0, 1, "app/tests/unit-tests/jest-tests/benchmarking/mocks/mock-filesystem/mock-file-invalid-benchmark-data.json");
+                args.splice(0, 1, "app/tests/unit-tests/jest-tests/benchmark-module/mocks/mock-filesystem/mock-file-invalid-benchmark-data.json");
                 const result = getBenchmarkDataFromFile.apply(this, args);
                 expect(result).toBeNull();
             });

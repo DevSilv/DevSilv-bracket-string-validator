@@ -6,13 +6,13 @@ try {
     const assert = require("assert");
 
     // Import units to be tested
-    const BenchmarkCaseRandomizer = require("../../../../logic/benchmarking/testable/benchmark-case-randomizer");
-    const { generateBenchmarkCase } = require("../../../../logic/benchmarking/testable/generate-benchmark-case");
-    const { generateBenchmarkData } = require("../../../../logic/benchmarking/testable/generate-benchmark-data");
-    const { getBenchmarkDataFromFile } = require("../../../../logic/benchmarking/testable/get-benchmark-data-from-file");
-    const { validateBenchmarkData } = require("../../../../logic/benchmarking/testable/validate-benchmark-data");
+    const BenchmarkCaseRandomizer = require("../../../../logic/benchmark-module/testable/benchmark-case-randomizer");
+    const { generateBenchmarkCase } = require("../../../../logic/benchmark-module/testable/generate-benchmark-case");
+    const { generateBenchmarkData } = require("../../../../logic/benchmark-module/testable/generate-benchmark-data");
+    const { getBenchmarkDataFromFile } = require("../../../../logic/benchmark-module/testable/get-benchmark-data-from-file");
+    const { validateBenchmarkData } = require("../../../../logic/benchmark-module/testable/validate-benchmark-data");
 
-    mocha.describe("Testing benchmarking units", () => {
+    mocha.describe("Testing within the benchmark module", () => {
         mocha.describe(`Testing the class "${BenchmarkCaseRandomizer.name}"`, () => {
             mocha.describe(`Testing the method "${BenchmarkCaseRandomizer.getRandomBenchmarkCaseLength.name}"`, () => {
                 const validArgument = 0;
@@ -195,7 +195,7 @@ try {
 
         mocha.describe(`Testing the function "${getBenchmarkDataFromFile.name}"`, () => {
             // It demands the tests to be run from within the project's root directory
-            const validArgs = ["app/tests/unit-tests/mocha-tests/benchmarking/mocks/mock-filesystem/mock-file-valid-benchmark-data.json"];
+            const validArgs = ["app/tests/unit-tests/mocha-tests/benchmark-module/mocks/mock-filesystem/mock-file-valid-benchmark-data.json"];
             mocha.it(`Should throw ${ValbrstrException.name} for the argument not a string`, () => {
                 const args = validArgs.slice();
                 args.splice(0, 1, null);
@@ -222,7 +222,7 @@ try {
             });
             mocha.it("Should return 'null' for a file with an invalid content", () => {
                 const args = validArgs.slice();
-                args.splice(0, 1, "app/tests/unit-tests/mocha-tests/benchmarking/mocks/mock-filesystem/mock-file-invalid-benchmark-data.json");
+                args.splice(0, 1, "app/tests/unit-tests/mocha-tests/benchmark-module/mocks/mock-filesystem/mock-file-invalid-benchmark-data.json");
                 const result = getBenchmarkDataFromFile.apply(this, args);
                 assert.equal(result, null);
             });
