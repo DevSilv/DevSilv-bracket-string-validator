@@ -203,6 +203,7 @@ Below are some of the sources that was helpful for me when developing this appli
     - https://nodejs.org/api/fs.html
     - https://nodejs.org/api/assert.html
     - https://nodejs.org/api/modules.html
+    - https://nodejs.org/api/child_process.html
 
 - npm's documentation:
     - https://docs.npmjs.com/files/package.json#directories

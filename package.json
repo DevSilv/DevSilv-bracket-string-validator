@@ -24,7 +24,8 @@
   },
   "jest": {
     "testRegex": [
-      "app/tests/unit-tests/jest-tests/.*\\.js$"
+      "app/tests/unit-tests/jest-tests/.*\\.js$",
+      "app/tests/integration-tests/jest-tests/.*\\.js$"
     ]
   },
   "mocha": {

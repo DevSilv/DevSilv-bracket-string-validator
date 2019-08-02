@@ -1,0 +1,13 @@
+{
+    "singleBracketTestCases": [
+        {
+            "argument": "",
+            "expectedResult": true
+        }
+    ], "bracketListTestCases": [
+        {
+            "argument": "",
+            "expectedResult": false
+        }
+    ]
+}
