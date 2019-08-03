@@ -80,15 +80,19 @@ try {
 
             // Get the benchmark data
 
-            let benchmarkData;
+            let benchmarkData = [];
             if (customBenchmarkData === null) {
                 // There are not custom benchmark data, generate them
 
-                benchmarkData = generateBenchmarkData(
-                    benchmarkCaseCount,
-                    maxBenchmarkCaseLength,
-                    onlyBracketProbability,
-                    bracketDominancePercent
+                // Monkey patch for making the variable "benchmarkData"
+                //  a single set of benchmark data (according to spec)
+                benchmarkData.push(
+                    generateBenchmarkData(
+                        benchmarkCaseCount,
+                        maxBenchmarkCaseLength,
+                        onlyBracketProbability,
+                        bracketDominancePercent
+                    )
                 );
             } else {
                 // There are custom benchmark data, use them
@@ -99,15 +103,17 @@ try {
                 benchmarkData = customBenchmarkData.slice();
             }
 
-            benchmarkData.forEach(benchmarkCase => {
-                // Thanks to https://blog.abelotech.com/posts/measure-execution-time-nodejs-javascript/
-                // const start = new Date(); // For Node.js and a browser
-                const start = process.hrtime(); // For Node.js only
-                func(benchmarkCase);
-                // const end = new Date(); // For Node.js and a browser
-                const end = process.hrtime(start); // For Node.js only
-                // oneDataSettotalTime += (end - start); // For Node.js and a browser
-                oneDataSetTotalTime += end[1] / 1000; // For Node.js only
+            benchmarkData.forEach(benchmarkDataSet => {
+                benchmarkDataSet.forEach(benchmarkCase => {
+                    // Thanks to https://blog.abelotech.com/posts/measure-execution-time-nodejs-javascript/
+                    // const start = new Date(); // For Node.js and a browser
+                    const start = process.hrtime(); // For Node.js only
+                    func(benchmarkCase);
+                    // const end = new Date(); // For Node.js and a browser
+                    const end = process.hrtime(start); // For Node.js only
+                    // oneDataSettotalTime += (end - start); // For Node.js and a browser
+                    oneDataSetTotalTime += end[1] / 1000; // For Node.js only
+                });
             });
 
             averageTimes[func.name].push({
