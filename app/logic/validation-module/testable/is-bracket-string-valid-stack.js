@@ -28,7 +28,7 @@ function isBracketStringValidStack(
     if ((!bracketString && bracketString !== "")
         || !TypeChecker.isString(bracketString, true)) {
         // The argument is not a string
-        throw new ValbrstrException(`The bracket string must be a string, but now is: ${bracketString}`);
+        throw new ValbrstrException(`The bracket string must be a string, but now is (in JSON): ${JSON.stringify(bracketString)}`);
     }
 
     if (!leftBracketCharacter ||
