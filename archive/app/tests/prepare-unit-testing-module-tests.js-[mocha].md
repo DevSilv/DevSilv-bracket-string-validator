@@ -1,3 +1,8 @@
+|Why removed from the application sources|
+|-|
+|Unit tests that were relying on this file have been considered not to be updated according to another, "official" set of unit tests.|
+
+```javascript
 try {
     // Import helpers
     const ValbrstrException = require("../../../../logic/common/testable/valbrstr-exception");
@@ -85,3 +90,4 @@ try {
 } catch (e) {
     throw e;
 }
+```
