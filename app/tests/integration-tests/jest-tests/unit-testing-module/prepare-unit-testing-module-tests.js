@@ -8,7 +8,7 @@ try {
 
     describe("Integration tests for the unit-testing module", () => {
         const mainScriptPath = "app/cli/valbrstr";
-        const validArgs = ["'run-unit-tests'", "'./app/tests/integration-tests/jest-tests/unit-testing/mocks/mock-filesystem/mock-file-valid-unit-test-cases.json'"];
+        const validArgs = ["'run-unit-tests'", "'./app/tests/integration-tests/jest-tests/unit-testing-module/mocks/mock-filesystem/mock-file-valid-unit-test-cases.json'"];
         test("Testing the application to exit NOT successfully when run with one, NOT valid argument", () => {
             const args = validArgs.slice();
             args.splice(0, 2, "'abc'");
