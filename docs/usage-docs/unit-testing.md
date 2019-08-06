@@ -1,5 +1,9 @@
 # Unit testing
 
+```
+INFO: The functionality for unit-testing is deprecated from the version 1.3.0 on. It is planned to be removed in the next major release (2.0.0). One should NOT rely on it any more.
+```
+
 Each of the validation algorithms has been unit-tested – and may be unit-tested again by the user – against custom or predefined sets of unit test cases.
 
 ## Input

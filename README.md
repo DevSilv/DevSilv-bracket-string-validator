@@ -43,7 +43,7 @@ Although I have made efforts to make it work as intended and described, it is no
 This application is able to do three things:
 - to check whether the given string is a bracket string;
 - to benchmark particular validation methods that it facilitates;
-- to unit-test particular validation methods that it facilitates.
+- `DEPRECATED`\* to unit-test particular validation methods that it facilitates.
 
 Checking the string (speaking differently, validating the string) may be performed using one of several methods that this application facilitates. Nonetheless, each of them shall return the same results for the same parameter, i.e., they have the same logic.
 
@@ -52,6 +52,10 @@ In case of both benchmarking and unit-testing, the user may provide their file w
 **_Info:_** _The purpose of implementing multiple methods with the same logic is to show that the author of this repository is able to write the same logic in different ways in JavaScript._
 
 When benchmarking, the application generate benchmark data on the fly. When unit-testing, the application uses a predefined set of unit tests.
+
+---
+
+\* For details, see the documentation page for "Unit testing".
 
 ## How to use this application?
 
@@ -104,7 +108,7 @@ All of the following software must be installed before running the application:
 
     **_Info:_** _For details on benchmarking, see the page "[Benchmarking](https://github.com/silvuss/silvuss-bracket-string-validator/wiki/Benchmarking)" of the wiki._
 
-- To **unit-test** a certain validation method that the application provides:
+- `DEPRECATED`\* To **unit-test** a certain validation method that the application provides:
     ```
     app/cli/valbrstr run-unit-tests [OWN_FILE_WITH_UNIT_TEST_CASES]
     ```
@@ -116,6 +120,10 @@ All of the following software must be installed before running the application:
     The argument `OWN_FILE_WITH_UNIT_TEST_CASES` is optional. If it is not provided, there are used predefined unit test cases.
 
     **_Info:_** _For details on unit-testing, see the page "[Unit testing](https://github.com/silvuss/silvuss-bracket-string-validator/wiki/Unit-testing)" of the wiki._
+
+---
+
+\* For details, see the documentation page for "Unit testing".
 
 **_Info:_** _For the list of all available validation methods and their IDs, see the page "[Validation methods](https://github.com/silvuss/silvuss-bracket-string-validator/wiki/Validation-methods)" of the wiki._
 

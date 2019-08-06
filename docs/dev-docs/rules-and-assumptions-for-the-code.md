@@ -10,7 +10,7 @@
 - Exceptions are thrown at the highest level that it is meaningful for them. The assumption is, if a variable would appear to be invalid, it is better not to mess up an additional level with it.
 - Exceptions are catched at the lowest level that is is meaningful for them. The assumption is, there is no need to mess up an additional level with it.
 
-## Unit testing
+## `DEPRECATED`\* Unit testing
 
 A function/method must do at least one of the following things to be considered testable in terms of unit-testing in this project:
 - throw exceptions;
@@ -23,3 +23,7 @@ For a function not being a method, there are checked three types of things:
 
 For a function being a method, there are checked the above things and one more:
 1. whether the method throws relevant exceptions for relevant states of its class; this is checked only if the class has a state.
+
+---
+
+\* For details, see the documentation page for "Unit testing".
