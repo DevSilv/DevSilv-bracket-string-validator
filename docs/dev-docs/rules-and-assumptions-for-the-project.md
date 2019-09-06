@@ -1,8 +1,8 @@
 # Rules and assumptions for the project
 
-## Workflow using the VCS
+## Workflow using Git
 
-My current workflow using the VCS is a simpler version of [One Flow](https://www.endoflineblog.com/oneflow-a-git-branching-model-and-workflow). Main differences:
+My current workflow using Git is a simpler version of [One Flow](https://www.endoflineblog.com/oneflow-a-git-branching-model-and-workflow). Main differences:
 - I name branches differently.
 - Since most of the time I relate one release to one new feature, I do not use feature branches, instead use only release branches (this involves that one branch may contain work on more than one feature).
 
